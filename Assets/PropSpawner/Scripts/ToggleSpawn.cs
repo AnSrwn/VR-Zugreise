@@ -17,7 +17,6 @@ public class ToggleSpawn : MonoBehaviour
             instance = Instantiate(spawner);
             instance.name = spawner.name;
             instance.SetActive(true);
-            instance.tag = spawner.name;
             return true;
         }
     }

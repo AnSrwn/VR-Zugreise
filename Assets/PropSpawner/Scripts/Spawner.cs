@@ -28,7 +28,7 @@ public class Spawner : MonoBehaviour
         {
             timeToSpawn = Random.Range(minTimeToSpawn, maxTimeToSpawn);
             GameObject newProp = objectPool.GetObject(prefab);
-            newProp.transform.position = this.transform.position + new Vector3(Random.Range(-25.0f, 25.0f), 0, 0);
+            newProp.transform.position = this.transform.position + new Vector3(Random.Range(-50.0f, 50.0f), 0, 0);
             timeSinceSpawn = 0f;
         }
     }
