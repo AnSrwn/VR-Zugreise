@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc788fe28a1947c5906bf24c0472406, type: 3}
+  m_Name: Intro Dialogue
+  m_EditorClassIdentifier: 
+  Conversations:
+  - ID: 1
+    Name: IntroConversation
+    FirstMessage: 2
+  Speakers:
+  - ID: 0
+    Name: Dude
+    Icon: {fileID: 0}
+  - ID: 3
+    Name: Attendant
+    Icon: {fileID: 0}
+  Messages:
+  - ID: 2
+    Speaker: 0
+    SpeakerName: Dude
+    PreviousMessage: -1
+    NextMessage: 4
+    MessageText: "So I just sat there contemplating my Life choices and bam, it hit
+      me! I'm stuck! I'm going nowhere! \r\nI mean, I get up every morning, go to
+      work, get home, play with the kids and go to sleep, but is that actually doing
+      something? \r\nAm I changing anything in the grand scheme of things by living
+      the life the way I do? \r\nDo the people around me think about me more than
+      just inn passing? \r\nDoes anything I'm doing actually matter? \r\nNo! \r\nI
+      mean, it doesn't have to be that way! I'm a smart guy, I work out, that's gotta
+      count for something right? \r\nI could be the change the world needs, it's
+      superhero, throwing of its blanket of apathy and disinterest! \r\nBut instead
+      I just trudge along like everyone else. Having my dreams buried unter the daily
+      slog of work and mortgage payments long ago... \r\n\r\nBut no more! I'm ripping
+      off my chains, escaping my prison and I will show everyone what I got! \r\nTrust
+      me, the world will be taken by storm from me. I will take out it's rotten parts
+      and build it new out of it's ashes! \r\nI will rip off it's shackles of convenience!
+      \r\nAnd when I walk down the street everyone will look at me in wonder. \r\nWhere
+      did this man come from? And why is he so handsome? \r\nAnd everyone will be
+      in awe of the man with the name off.... "
+    Clip: {fileID: 8300000, guid: 0ec03000073b3684b949d4057116540a, type: 3}
+  - ID: 4
+    Speaker: 3
+    SpeakerName: Attendant
+    PreviousMessage: 2
+    NextMessage: 5
+    MessageText: Would you like some coffee?
+    Clip: {fileID: 8300000, guid: 0ec03000073b3684b949d4057116540a, type: 3}
+  - ID: 5
+    Speaker: 0
+    SpeakerName: Dude
+    PreviousMessage: 4
+    NextMessage: 6
+    MessageText: Uhhm... oh... yes! That's very nice, thank you! Wow, that really
+      smells amazing.
+    Clip: {fileID: 8300000, guid: 0ec03000073b3684b949d4057116540a, type: 3}
+  - ID: 6
+    Speaker: 3
+    SpeakerName: Attendant
+    PreviousMessage: 5
+    NextMessage: 7
+    MessageText: 'Thank you! It''s actually freshly made, so it''s still quite hot!
+      Be careful while... '
+    Clip: {fileID: 8300000, guid: 0ec03000073b3684b949d4057116540a, type: 3}
+  - ID: 7
+    Speaker: 0
+    SpeakerName: Dude
+    PreviousMessage: 6
+    NextMessage: 8
+    MessageText: Oh shit! It's all over your hands!
+    Clip: {fileID: 8300000, guid: 0ec03000073b3684b949d4057116540a, type: 3}
+  - ID: 8
+    Speaker: 3
+    SpeakerName: Attendant
+    PreviousMessage: 7
+    NextMessage: 9
+    MessageText: Oh crap, I'm so, so sorry!
+    Clip: {fileID: 8300000, guid: 0ec03000073b3684b949d4057116540a, type: 3}
+  - ID: 10
+    Speaker: 3
+    SpeakerName: Attendant
+    PreviousMessage: -1
+    NextMessage: 12
+    MessageText: I'm really sorry! I hope you're alright!
+    Clip: {fileID: 8300000, guid: 0ec03000073b3684b949d4057116540a, type: 3}
+  - ID: 11
+    Speaker: 3
+    SpeakerName: Attendant
+    PreviousMessage: 9
+    NextMessage: 12
+    MessageText: Fuck you! I'm sorry, but it's not like it was on purpose! The train
+      just rocked.
+    Clip: {fileID: 8300000, guid: 0ec03000073b3684b949d4057116540a, type: 3}
+  - ID: 12
+    Speaker: 0
+    SpeakerName: Dude
+    PreviousMessage: 11
+    NextMessage: 13
+    MessageText: Quickly, wipe it off! Shit it's not going anywhere!
+    Clip: {fileID: 8300000, guid: 0ec03000073b3684b949d4057116540a, type: 3}
+  - ID: 13
+    Speaker: 3
+    SpeakerName: Attendant
+    PreviousMessage: 12
+    NextMessage: 15
+    MessageText: There's a washroom in the back!
+    Clip: {fileID: 8300000, guid: 0ec03000073b3684b949d4057116540a, type: 3}
+  - ID: 15
+    Speaker: 0
+    SpeakerName: Dude
+    PreviousMessage: 13
+    NextMessage: -1
+    MessageText: Yeah, you should probably wash that off!
+    Clip: {fileID: 8300000, guid: 0ec03000073b3684b949d4057116540a, type: 3}
+  Choices:
+  - ID: 9
+    isAction: 0
+    Choices:
+    - Stay calm.
+    - Get mad.
+    NextMessages: 0a0000000b000000
