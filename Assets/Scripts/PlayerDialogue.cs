@@ -9,7 +9,7 @@ public class PlayerDialogue : MonoBehaviour
     private float hitTime = 0.0f;
     private float selectTime = 3.0f;
     private bool isSelecting = false;
-    private int choiceId = -1;
+    private ChoiceButton currentChoice;
 
     private void Start()
     {
@@ -29,14 +29,17 @@ public class PlayerDialogue : MonoBehaviour
                 if (!isSelecting)
                 {
                     isSelecting = true;
+                    currentChoice = choiceButton;
                     hitTime = Time.time;
-                    choiceId = choiceButton.number;
+                    currentChoice.maxValue = selectTime;
                 }
-                else if (isSelecting && choiceButton.number == choiceId)
+                else if (isSelecting && choiceButton.number == currentChoice.number)
                 {
+                    currentChoice.setCurrentValue(Time.time - hitTime);
+
                     if (hitTime + selectTime <= Time.time)
                     {
-                        choiceButton.Select();
+                        currentChoice.Select();
                     }
                 }
                 else
@@ -56,9 +59,10 @@ public class PlayerDialogue : MonoBehaviour
 
     void resetSelecting()
     {
+        currentChoice.setCurrentValue(0);
         isSelecting = false;
         hitTime = 0.0f;
-        choiceId = -1;
+        currentChoice = null;
     }
 
     void StartConversation()
