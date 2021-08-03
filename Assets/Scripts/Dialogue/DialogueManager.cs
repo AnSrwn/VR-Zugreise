@@ -59,7 +59,7 @@ public class DialogueManager : MonoBehaviour
             Next();
         }
 
-        floatingCanvas.transform.forward = Camera.main.transform.forward;
+        floatingCanvas.transform.rotation = Quaternion.LookRotation(floatingCanvas.transform.position - Camera.main.transform.position);
     }
 
     private void ClearChoices()
