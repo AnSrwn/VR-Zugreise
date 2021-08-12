@@ -10,6 +10,10 @@ public class NpcDude : MonoBehaviour
     public GameObject attendant;
     public AudioSource attendantAudioSource;
 
+    private void OnEnable()
+    {
+        DialogueManager.messageActionAvailable += onMessageAction;
+    }
     public void initiateConversation()
     {
         List<Speaker> npcSpeakers = new List<Speaker>();
@@ -17,5 +21,26 @@ public class NpcDude : MonoBehaviour
         npcSpeakers.Add(new Speaker("Attendant", attendant, attendant.GetComponent<AudioSource>()));
 
         dialogueManager.initiateConversation("IntroConversation", npcSpeakers);
+    }
+
+    private void onMessageAction()
+    {
+        if (dialogueManager.activeConversation == "IntroConversation" && dialogueManager.messageAction != null)
+        {
+            if (dialogueManager.messageAction == "startTest")
+            {
+                print("startTest");
+            }
+
+            if (dialogueManager.messageAction == "endTest")
+            {
+                print("endTest");
+            }
+
+            if (dialogueManager.messageAction == "coffeeAnimation")
+            {
+                print("coffeeAnimation");
+            }
+        }
     }
 }

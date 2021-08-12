@@ -11,6 +11,8 @@ public class DialogueManager : MonoBehaviour
     public int activeActionNodeId = -1;
     public Dictionary<int, string> activeActionChoices = new Dictionary<int, string>();
     public static event Action actionChoicesAvailable;
+    public string messageAction;
+    public static event Action messageActionAvailable;
     public QuantumTek.QuantumDialogue.QD_DialogueHandler qdHandler;
 
     public GameObject floatingCanvas;
@@ -114,6 +116,7 @@ public class DialogueManager : MonoBehaviour
     {
         messageText.gameObject.SetActive(false);
         messageText.text = "";
+        messageAction = null;
         ClearChoices();
 
         if (ended)
@@ -134,7 +137,29 @@ public class DialogueManager : MonoBehaviour
             floatingCanvas.transform.position = npc.gameObject.transform.position;
             floatingCanvas.transform.parent = npc.gameObject.transform;
 
-            messageText.text = message.MessageText;
+            string text = message.MessageText;
+
+            if (text.Substring(0, 1) == "[") {
+                int fromIndex = text.IndexOf("[") + 1;
+                int toIndex = text.IndexOf("]");
+
+                messageAction = text.Substring(fromIndex, toIndex - fromIndex);
+                messageActionAvailable?.Invoke();
+
+                text = text.Replace("[" + messageAction + "]", "");
+            }
+
+            string endMessageAction = null;
+
+            if (text.Substring(text.Length - 1, 1) == "]") {
+                int fromIndex = text.IndexOf("[") + 1;
+                int toIndex = text.IndexOf("]");
+
+                endMessageAction = text.Substring(fromIndex, toIndex - fromIndex);
+                text = text.Replace("[" + endMessageAction + "]", "");
+            }
+
+            messageText.text = text;
             messageText.gameObject.SetActive(true);
 
             if (message.Clip)
@@ -142,7 +167,7 @@ public class DialogueManager : MonoBehaviour
                 float clipLength = message.Clip.length;
                 npc.audioSource.clip = message.Clip;
                 npc.audioSource.Play();
-                StartCoroutine(InvokeNext(false, clipLength));
+                StartCoroutine(InvokeNext(clipLength, endMessageAction));
             }
         }
         else if (qdHandler.currentMessageInfo.Type == QuantumTek.QuantumDialogue.QD_NodeType.Choice)
@@ -151,9 +176,16 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private IEnumerator InvokeNext(bool status, float delayTime)
+    private IEnumerator InvokeNext(float delayTime, string endMessageAction)
     {
         yield return new WaitForSeconds(delayTime);
+
+        if (endMessageAction != null)
+        {
+            this.messageAction = endMessageAction;
+            messageActionAvailable?.Invoke();
+        }
+
         Next();
     }
 

@@ -3799,8 +3799,8 @@ MonoBehaviour:
       SpeakerName: Dude
       PreviousMessage: 2
       NextMessage: 17
-      MessageText: I mean, I get up every morning, go to work, get home, play with
-        the kids and go to sleep, but is that actually doing something?
+      MessageText: '[startTest]I mean, I get up every morning, go to work, get home,
+        play with the kids and go to sleep, but is that actually doing something?[endTest]'
       Clip: {fileID: 8300000, guid: f23c71ba338c3e0418be9e2aa9c39c20, type: 3}
   - ID: 17
     Type: 3

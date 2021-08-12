@@ -52,8 +52,8 @@ MonoBehaviour:
     SpeakerName: Attendant
     PreviousMessage: 5
     NextMessage: 7
-    MessageText: 'Thank you! It''s actually freshly made, so it''s still quite hot!
-      Be careful while... '
+    MessageText: Thank you! It's actually freshly made, so it's still quite hot!
+      Be careful while...[coffeeAnimation]
     Clip: {fileID: 8300000, guid: 48f3d49838e01ac4083c1dacd0e595cc, type: 3}
   - ID: 7
     Speaker: 0
@@ -110,8 +110,8 @@ MonoBehaviour:
     SpeakerName: Dude
     PreviousMessage: 2
     NextMessage: 17
-    MessageText: I mean, I get up every morning, go to work, get home, play with
-      the kids and go to sleep, but is that actually doing something?
+    MessageText: '[startTest]I mean, I get up every morning, go to work, get home,
+      play with the kids and go to sleep, but is that actually doing something?[endTest]'
     Clip: {fileID: 8300000, guid: f23c71ba338c3e0418be9e2aa9c39c20, type: 3}
   - ID: 17
     Speaker: 0
