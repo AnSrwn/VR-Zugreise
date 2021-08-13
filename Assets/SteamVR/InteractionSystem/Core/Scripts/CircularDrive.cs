@@ -75,7 +75,10 @@ namespace Valve.VR.InteractionSystem
 		[Tooltip( "The output angle value of the drive in degrees, unlimited will increase or decrease without bound, take the 360 modulus to find number of rotations" )]
 		public float outAngle;
 
-		private Quaternion start;
+        [Tooltip("Used for the tap in the bathroom")]
+        public bool invertRotation = false;
+
+        private Quaternion start;
 
 		private Vector3 worldPlaneNormal = new Vector3( 1.0f, 0.0f, 0.0f );
 		private Vector3 localPlaneNormal = new Vector3( 1.0f, 0.0f, 0.0f );
@@ -307,7 +310,12 @@ namespace Valve.VR.InteractionSystem
 				DrawDebugPath( xForm, toTransformProjected );
 			}
 
-			return toTransformProjected;
+            if (invertRotation)
+            {
+                toTransformProjected.y = toTransformProjected.y * -1;
+            }
+
+            return toTransformProjected;
 		}
 
 
