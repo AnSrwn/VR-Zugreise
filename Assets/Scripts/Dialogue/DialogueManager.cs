@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
     public Dictionary<int, string> activeActionChoices = new Dictionary<int, string>();
     public static event Action actionChoicesAvailable;
     public string messageAction;
+    public string actionSpeaker;
     public static event Action messageActionAvailable;
     public QuantumTek.QuantumDialogue.QD_DialogueHandler qdHandler;
 
@@ -117,6 +118,7 @@ public class DialogueManager : MonoBehaviour
         messageText.gameObject.SetActive(false);
         messageText.text = "";
         messageAction = null;
+        actionSpeaker = null;
         ClearChoices();
 
         if (ended)
@@ -140,6 +142,8 @@ public class DialogueManager : MonoBehaviour
             string text = message.MessageText;
 
             if (text.Substring(0, 1) == "[") {
+                actionSpeaker = npcName;
+                
                 int fromIndex = text.IndexOf("[") + 1;
                 int toIndex = text.IndexOf("]");
 
