@@ -6,10 +6,16 @@ using Valve.VR.InteractionSystem;
 
 public class HandManager : MonoBehaviour
 {
-    public GameObject leftRenderModel;
-    public GameObject rightRenderModel;
-    public GameObject leftRenderModelSlim;
-    public GameObject rightRenderModelSlim;
+    public GameObject leftWhite;
+    public GameObject rightWhite;
+    public GameObject leftStained;
+    public GameObject rightStained;
+
+    public void Start()
+    {
+        SetRenderModel(leftStained, false);
+        SetRenderModel(rightStained, true);
+    }
 
     public void SetRenderModel(GameObject model, bool right)
     {
