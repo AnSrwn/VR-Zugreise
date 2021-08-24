@@ -723,7 +723,7 @@ MonoBehaviour:
     Window:
       serializedVersion: 2
       x: 2536.4634
-      y: 296
+      y: 334
       width: 200
       height: 175
     Inputs:
@@ -817,8 +817,8 @@ MonoBehaviour:
     Type: 3
     Window:
       serializedVersion: 2
-      x: 2551.4634
-      y: 537
+      x: 2553.4634
+      y: 554
       width: 200
       height: 175
     Inputs:
@@ -4504,8 +4504,9 @@ MonoBehaviour:
       SpeakerName: Dude
       PreviousMessage: 22
       NextMessage: 24
-      MessageText: But instead I just trudge along like everyone else. Having my
-        dreams buried unter the daily slog of work and mortgage payments long ago.
+      MessageText: '[isTalking]But instead I just trudge along like everyone else.
+        Having my dreams buried unter the daily slog of work and mortgage payments
+        long ago.'
       Clip: {fileID: 8300000, guid: 1c7f88ea9664c1647aedaa7f91de9796, type: 3}
   - ID: 24
     Type: 3
@@ -4605,8 +4606,8 @@ MonoBehaviour:
       SpeakerName: Dude
       PreviousMessage: 23
       NextMessage: 25
-      MessageText: But no more! I'm ripping off my chains, escaping my prison and
-        I will show everyone what I got!
+      MessageText: '[isAngry]But no more! I''m ripping off my chains, escaping my
+        prison and I will show everyone what I got![isTalking]'
       Clip: {fileID: 8300000, guid: 0230f1f5f40b66443817da9fb9ae8e27, type: 3}
   - ID: 25
     Type: 3
@@ -4807,7 +4808,7 @@ MonoBehaviour:
       SpeakerName: Dude
       PreviousMessage: 25
       NextMessage: 27
-      MessageText: I will rip off it's shackles of convenience![isTalking]
+      MessageText: '[isAngry]I will rip off it''s shackles of convenience![isTalking]'
       Clip: {fileID: 8300000, guid: 2440032d934d26043887ec8e0997f4b2, type: 3}
   - ID: 27
     Type: 3

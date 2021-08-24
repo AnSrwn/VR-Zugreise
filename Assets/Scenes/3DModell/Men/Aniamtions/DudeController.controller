@@ -174,8 +174,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 8530b736c52317b4a8253e80ef4def3b,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: a7f08f86195430a44bc101087534daa8, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -234,8 +233,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 7ae842b51de47904b80afacadfe5a359,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: b848d16c7ef169e4fb15734f878c442f, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -247,7 +245,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SitTalkController
+  m_Name: DudeController
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isTalking
@@ -310,8 +308,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: 39303bad8d0362f42997744942e5facc,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: efa58750dad9c6c4ab50126446a050b6, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -415,8 +412,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -203655887218126122, guid: ce091c8a0106af64ea7e71e30d4bd795,
-    type: 3}
+  m_Motion: {fileID: 7400000, guid: 0095d39491ffbfc4e9e52c157bdf29fa, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
