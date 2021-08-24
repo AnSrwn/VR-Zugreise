@@ -38,7 +38,7 @@ public class NpcDude : MonoBehaviour
         {
             if (dialogueManager.messageAction == "isIdle")
             {
-                print("isIdle");
+                print("Dude isIdle");
                 animator.SetBool("isIdle", true);
                 animator.SetBool("isTalking", false);
                 animator.SetBool("isAngry", false);
@@ -47,7 +47,7 @@ public class NpcDude : MonoBehaviour
 
             if (dialogueManager.messageAction == "isTalking")
             {
-                print("isTalking");
+                print("Dude isTalking");
                 animator.SetBool("isIdle", false);
                 animator.SetBool("isTalking", true);
                 animator.SetBool("isAngry", false);
@@ -56,7 +56,7 @@ public class NpcDude : MonoBehaviour
 
             if (dialogueManager.messageAction == "isAngry")
             {
-                print("isAngry");
+                print("Dude isAngry");
                 animator.SetBool("isIdle", false);
                 animator.SetBool("isTalking", false);
                 animator.SetBool("isAngry", true);
@@ -65,16 +65,17 @@ public class NpcDude : MonoBehaviour
 
             if (dialogueManager.messageAction == "isDisapproval")
             {
-                print("isDisapproval");
+                print("Dude isDisapproval");
                 animator.SetBool("isIdle", false);
                 animator.SetBool("isTalking", false);
                 animator.SetBool("isAngry", false);
                 animator.SetBool("isDisapproval", true);
             }
 
-            if (dialogueManager.messageAction == "coffeeAnimation")
+            if (dialogueManager.messageAction == "attendantStartWalkingToServeCoffee")
             {
-                print("coffeeAnimation");
+                print("attendantStartWalkingToServeCoffee");
+                attendant.GetComponent<Attendant>().startWalkingToServeCoffee();
             }
         }
     }

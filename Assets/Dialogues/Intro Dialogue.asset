@@ -52,7 +52,7 @@ MonoBehaviour:
     SpeakerName: Attendant
     PreviousMessage: 5
     NextMessage: 7
-    MessageText: '[isGiving]Thank you! It''s actually freshly made, so it''s still
+    MessageText: '[isTalking2]Thank you! It''s actually freshly made, so it''s still
       quite hot! Be careful while...[isDropping]'
     Clip: {fileID: 8300000, guid: 48f3d49838e01ac4083c1dacd0e595cc, type: 3}
   - ID: 7
@@ -96,7 +96,7 @@ MonoBehaviour:
     SpeakerName: Attendant
     PreviousMessage: 12
     NextMessage: 15
-    MessageText: '[isTalking1]There''s a washroom in the back![isIdle]'
+    MessageText: '[isTalking1]There''s a washroom in the back![goToBackOfTrain]'
     Clip: {fileID: 8300000, guid: e5a19e3fe3c3b8342a38939b02bff613, type: 3}
   - ID: 15
     Speaker: 0
@@ -203,7 +203,8 @@ MonoBehaviour:
     SpeakerName: Dude
     PreviousMessage: 27
     NextMessage: 29
-    MessageText: Where did this man come from? And why is he so handsome?
+    MessageText: '[attendantStartWalkingToServeCoffee]Where did this man come from?
+      And why is he so handsome?'
     Clip: {fileID: 8300000, guid: 4559e825ddb68c4408ee33c73dd38ec9, type: 3}
   - ID: 29
     Speaker: 0

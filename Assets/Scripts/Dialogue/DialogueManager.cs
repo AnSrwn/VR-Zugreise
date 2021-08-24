@@ -137,7 +137,7 @@ public class DialogueManager : MonoBehaviour
             Speaker npc = npcSpeakers.Find(speaker => speaker.name == npcName);
 
             floatingCanvas.transform.position = npc.gameObject.transform.position;
-            floatingCanvas.transform.parent = npc.gameObject.transform;
+            floatingCanvas.transform.SetParent(npc.gameObject.transform);
 
             string text = message.MessageText;
 
