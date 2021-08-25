@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: ff668a34d2e60cd4d996119bc6f81fc7
 ModelImporter:
-  serializedVersion: 20200
+  serializedVersion: 19301
   internalIDToNameTable:
   - first:
       74: 2073693694548410006
@@ -110,7 +110,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -145,7 +145,6 @@ ModelImporter:
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
-    bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
@@ -155,9 +154,6 @@ ModelImporter:
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
-    secondaryUVMarginMethod: 1
-    secondaryUVMinLightmapResolution: 40
-    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -408,7 +404,8 @@ ModelImporter:
     - name: Axes
       parentName: Root
       position: {x: -0, y: 0.019076344, z: 0}
-      rotation: {x: -0.000000029802319, y: -0.0000000037252899, z: 0.0000000037252899, w: 1}
+      rotation: {x: -0.000000029802319, y: -0.0000000037252899, z: 0.0000000037252899,
+        w: 1}
       scale: {x: 0.9999999, y: 1, z: 0.99999994}
     - name: Hip
       parentName: Axes
@@ -473,7 +470,8 @@ ModelImporter:
     - name: Finger02.L_end
       parentName: Finger02.L
       position: {x: 7.4593115e-10, y: 0.004541851, z: 3.7718564e-10}
-      rotation: {x: -0.000000059604616, y: 0.000000022351731, z: -0.000000028405324, w: 1}
+      rotation: {x: -0.000000059604616, y: 0.000000022351731, z: -0.000000028405324,
+        w: 1}
       scale: {x: 1.0000001, y: 1, z: 1.0000001}
     - name: Finger02.L_end_end
       parentName: Finger02.L_end
@@ -493,7 +491,8 @@ ModelImporter:
     - name: Thumb02.L_end
       parentName: Thumb02.L
       position: {x: -4.5634804e-10, y: 0.002587834, z: -9.313226e-10}
-      rotation: {x: -0.0000007450579, y: 0.000000030733638, z: -0.000000030733638, w: 1}
+      rotation: {x: -0.0000007450579, y: 0.000000030733638, z: -0.000000030733638,
+        w: 1}
       scale: {x: 0.9999997, y: 1.0000002, z: 0.9999996}
     - name: Thumb02.L_end_end
       parentName: Thumb02.L_end
@@ -548,7 +547,8 @@ ModelImporter:
     - name: Thumb02.R_end
       parentName: Thumb02.R
       position: {x: 9.592622e-10, y: 0.0025878295, z: -0.0000000013038516}
-      rotation: {x: 0.000000029802312, y: 0.00000006239859, z: -0.000000023515886, w: 1}
+      rotation: {x: 0.000000029802312, y: 0.00000006239859, z: -0.000000023515886,
+        w: 1}
       scale: {x: 1.0000002, y: 1.0000005, z: 1.0000001}
     - name: Thumb02.R_end_end
       parentName: Thumb02.R_end
@@ -578,7 +578,8 @@ ModelImporter:
     - name: Toes.L_end
       parentName: Toes.L
       position: {x: 4.2103332e-10, y: 0.0057516983, z: 8.986305e-11}
-      rotation: {x: 0.00000017881392, y: 0.000000001323542, z: -0.000000005428802, w: 1}
+      rotation: {x: 0.00000017881392, y: 0.000000001323542, z: -0.000000005428802,
+        w: 1}
       scale: {x: 0.9999999, y: 1.0000004, z: 1.0000002}
     - name: Toes.L_end_end
       parentName: Toes.L_end
@@ -608,7 +609,8 @@ ModelImporter:
     - name: Toes.R_end
       parentName: Toes.R
       position: {x: -4.2151738e-10, y: 0.0057516983, z: 8.8691596e-11}
-      rotation: {x: -0.000000014901159, y: 0.00000000355385, z: 0.000000009014513, w: 1}
+      rotation: {x: -0.000000014901159, y: 0.00000000355385, z: 0.000000009014513,
+        w: 1}
       scale: {x: 1.0000001, y: 0.9999996, z: 0.99999994}
     - name: Toes.R_end_end
       parentName: Toes.R_end
@@ -623,7 +625,8 @@ ModelImporter:
     - name: IKFoot.L_end
       parentName: IKFoot.L
       position: {x: -5.9604643e-10, y: 0.009676225, z: 4.6378063e-10}
-      rotation: {x: 0.000000119209275, y: -0.000000007079352, z: 0.000000012347709, w: 1}
+      rotation: {x: 0.000000119209275, y: -0.000000007079352, z: 0.000000012347709,
+        w: 1}
       scale: {x: 0.99999976, y: 1.0000005, z: 1.0000002}
     - name: IKFoot.L_end_end
       parentName: IKFoot.L_end
@@ -638,7 +641,8 @@ ModelImporter:
     - name: KneePole.L_end
       parentName: KneePole.L
       position: {x: 5.321215e-10, y: 0.01079997, z: 0.0000000029714302}
-      rotation: {x: -0.000000059604645, y: -0.000000027741184, z: -0.0000000013994104, w: 1}
+      rotation: {x: -0.000000059604645, y: -0.000000027741184, z: -0.0000000013994104,
+        w: 1}
       scale: {x: 1.0000005, y: 1.0000004, z: 1.0000002}
     - name: KneePole.L_end_end
       parentName: KneePole.L_end
@@ -653,7 +657,8 @@ ModelImporter:
     - name: ToeController.L_end
       parentName: ToeController.L
       position: {x: 4.2288664e-10, y: 0.018023524, z: 1.2434498e-16}
-      rotation: {x: -0.000000119209275, y: -0.00000000403358, z: 0.000000003868951, w: 1}
+      rotation: {x: -0.000000119209275, y: -0.00000000403358, z: 0.000000003868951,
+        w: 1}
       scale: {x: 1.0000004, y: 1.0000004, z: 1.0000002}
     - name: ToeController.L_end_end
       parentName: ToeController.L_end
@@ -668,7 +673,8 @@ ModelImporter:
     - name: IKFoot.R_end
       parentName: IKFoot.R
       position: {x: 5.9604643e-10, y: 0.009676225, z: 4.6378063e-10}
-      rotation: {x: 0.000000119209275, y: -0.000000007079352, z: 0.000000012347709, w: 1}
+      rotation: {x: 0.000000119209275, y: -0.000000007079352, z: 0.000000012347709,
+        w: 1}
       scale: {x: 0.99999976, y: 1.0000005, z: 1.0000002}
     - name: IKFoot.R_end_end
       parentName: IKFoot.R_end
@@ -683,7 +689,8 @@ ModelImporter:
     - name: KneePole.R_end
       parentName: KneePole.R
       position: {x: -6.5997136e-10, y: 0.01079997, z: 0.0000000010365216}
-      rotation: {x: -0.000000059604645, y: -0.000000027741184, z: -0.0000000013994104, w: 1}
+      rotation: {x: -0.000000059604645, y: -0.000000027741184, z: -0.0000000013994104,
+        w: 1}
       scale: {x: 1.0000005, y: 1.0000004, z: 1.0000002}
     - name: KneePole.R_end_end
       parentName: KneePole.R_end
@@ -727,7 +734,6 @@ ModelImporter:
   animationType: 3
   humanoidOversampling: 1
   avatarSetup: 1
-  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

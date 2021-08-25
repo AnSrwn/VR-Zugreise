@@ -10,6 +10,8 @@ public class TapWater : MonoBehaviour
 
     private MeshRenderer meshRenderer;
 
+    enum Hand { Left, Right, None }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,17 +34,33 @@ public class TapWater : MonoBehaviour
     {
         if(meshRenderer.enabled)
         {
-            name = other.gameObject.name;
-            Match matchRight = Regex.Match(name, "^finger.*r$");
-            Match matchLeft = Regex.Match(name, "^finger.*l$");
-            if (matchRight.Success)
+            Hand hand = GetHand(other.gameObject);
+            if (hand == Hand.Right)
             {
-                handManager.SetRenderModel(handManager.rightRenderModel, true);
+                handManager.SetRenderModel(handManager.rightWhite, true);
             }
-            else if(matchLeft.Success)
+            else if(hand == Hand.Left)
             {
-                handManager.SetRenderModel(handManager.leftRenderModel, false);
+                handManager.SetRenderModel(handManager.leftWhite, false);
             }
         }
+    }
+
+    private Hand GetHand(GameObject child)
+    {
+        Transform t = child.transform;
+        while (t.parent != null)
+        {
+            if (t.parent.name.Contains("HandColliderLeft"))
+            {
+                return Hand.Left;
+            }
+            else if (t.parent.name.Contains("HandColliderRight"))
+            {
+                return Hand.Right;
+            }
+            t = t.parent.transform;
+        }
+        return Hand.None;
     }
 }
