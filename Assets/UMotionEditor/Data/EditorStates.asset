@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GeneralStates:
     LoadedProjectGUID:
-      valueInternal: 606eb8200d268c44288bfdc9aa3bd284
+      valueInternal: fa4090e0dd1a7ca4aa3aea2065447a2f
     RecentlyOpenedProjectPath:
       valueInternal: Assets\Scenes\3DModell\Woman\Animations\Standing
     RecentlyOpenedProjectGUIDsList:
+    - valueInternal: fa4090e0dd1a7ca4aa3aea2065447a2f
     - valueInternal: 606eb8200d268c44288bfdc9aa3bd284
     - valueInternal: d45cb372b0b547242a3e72f39db0a9d3
-    - valueInternal: fa4090e0dd1a7ca4aa3aea2065447a2f

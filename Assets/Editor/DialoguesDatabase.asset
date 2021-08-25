@@ -2998,7 +2998,7 @@ MonoBehaviour:
       PreviousMessage: 5
       NextMessage: 7
       MessageText: '[isGiving]Thank you! It''s actually freshly made, so it''s still
-        quite hot! Be careful while...[isDropping]'
+        quite hot! Be careful while...'
       Clip: {fileID: 8300000, guid: 48f3d49838e01ac4083c1dacd0e595cc, type: 3}
   - ID: 7
     Type: 3

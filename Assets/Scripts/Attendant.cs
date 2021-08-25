@@ -8,6 +8,7 @@ public class Attendant : MonoBehaviour
     public DialogueManager dialogueManager;
     public GameObject destinationServeCoffee;
     public GameObject destinationBackOfTrain;
+    public GameObject coffeCup;
     private NavMeshAgent navMeshAgent;
     private GameObject currentDestination = null;
     private Animator animator;
@@ -29,12 +30,18 @@ public class Attendant : MonoBehaviour
         {
             transform.rotation = currentDestination.transform.rotation;
 
+            if (currentDestination == destinationServeCoffee)
+            {
+                animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, true);
+                animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, false);
+            } else if (currentDestination == destinationBackOfTrain)
+            {
+                animator.SetBool(AttendantAnimationCondition.IS_IDLE, true);
+                animator.SetBool(AttendantAnimationCondition.IS_WALKING, false);
+            }
+
             navMeshAgent.ResetPath();
             currentDestination = null;
-
-            animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, true);
-            animator.SetBool(AttendantAnimationCondition.IS_WALKING, false);
-            animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, false);
         }
     }
 
@@ -190,6 +197,26 @@ public class Attendant : MonoBehaviour
         animator.SetBool(AttendantAnimationCondition.IS_TALKING_1, false);
         animator.SetBool(AttendantAnimationCondition.IS_TALKING_2, false);
         animator.SetBool(AttendantAnimationCondition.IS_GIVING, true);
+        animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, false);
+        animator.SetBool(AttendantAnimationCondition.IS_DROPPING, false);
+        animator.SetBool(AttendantAnimationCondition.IS_WALKING, false);
+    }
+
+    public void DropCoffee()
+    {
+        print("drop coffee");
+        coffeCup.GetComponent<CoffeeCup>().DropCoffee();
+    }
+
+    public void FinishDropping()
+    {
+        print("Attendant " + AttendantAnimationCondition.IS_IDLE);
+        animator.SetBool(AttendantAnimationCondition.IS_IDLE, true);
+        animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, false);
+        animator.SetBool(AttendantAnimationCondition.IS_TALKING_WITH_COFFEE, false);
+        animator.SetBool(AttendantAnimationCondition.IS_TALKING_1, false);
+        animator.SetBool(AttendantAnimationCondition.IS_TALKING_2, false);
+        animator.SetBool(AttendantAnimationCondition.IS_GIVING, false);
         animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, false);
         animator.SetBool(AttendantAnimationCondition.IS_DROPPING, false);
         animator.SetBool(AttendantAnimationCondition.IS_WALKING, false);
