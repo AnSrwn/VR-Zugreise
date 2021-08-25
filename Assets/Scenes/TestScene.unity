@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.005020175, g: 0.007870933, b: 0.0116850315, a: 1}
+  m_IndirectSpecularColor: {r: 0.005020175, g: 0.007870993, b: 0.01168527, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1773,6 +1773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c826392abbeafd4db0d9ff044f94ee9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handManager: {fileID: 159326804}
   rightHand: {fileID: 1187448643}
   train: {fileID: 919132148005465519}
   CoffeeCubePrefab: {fileID: 423914378333362658, guid: df79e8a0b652ccf4b90e7980ea8446b5,

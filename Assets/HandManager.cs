@@ -13,8 +13,8 @@ public class HandManager : MonoBehaviour
 
     public void Start()
     {
-        SetRenderModel(leftStained, false);
-        SetRenderModel(rightStained, true);
+        // SetRenderModel(leftStained, false);
+        // SetRenderModel(rightStained, true);
     }
 
     public void SetRenderModel(GameObject model, bool right)

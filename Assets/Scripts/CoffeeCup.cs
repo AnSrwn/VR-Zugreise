@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CoffeeCup : MonoBehaviour
 {
+    public GameObject handManager;
     public GameObject rightHand;
     public GameObject train;
     public GameObject CoffeeCubePrefab;
@@ -22,6 +23,7 @@ public class CoffeeCup : MonoBehaviour
 
     void Update()
     {
+        // Manages the drop of the coffee cup
         if (currentDropPosition != 2 && isDroppingCoffee)
         {
             if (currentDropPosition == 0)
@@ -48,6 +50,11 @@ public class CoffeeCup : MonoBehaviour
                 {
                     currentDropPosition = 2;
 
+                    //change hand texture
+                    HandManager manager = handManager.GetComponent<HandManager>();
+                    manager.SetRenderModel(manager.rightStained, true);
+                    manager.SetRenderModel(manager.leftStained, false);
+
                     Destroy(transform.GetChild(2).gameObject);                    
 
                     transform.GetChild(0).gameObject.GetComponent<Rigidbody>().isKinematic = false;
@@ -64,6 +71,7 @@ public class CoffeeCup : MonoBehaviour
                 }
             }
             
+        // Manages coffee cup position while carried
         } else if (currentDropPosition != 2 && !isDroppingCoffee) {
             Vector3 rightHandPosition = rightHand.transform.position;
             rightHandPosition.y = rightHandPosition.y + 0.05f;
