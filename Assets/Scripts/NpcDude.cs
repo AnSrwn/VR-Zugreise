@@ -27,7 +27,7 @@ public class NpcDude : MonoBehaviour
         npcSpeakers.Add(new Speaker("Attendant", attendant, attendantAudioSource));
 
         dialogueManager.initiateConversation("IntroConversation", npcSpeakers);
-        animator.SetBool("isTalking", true);
+        animator.SetBool(DudeAnimationCondition.IS_TALKING, true);
     }
 
     private void onMessageAction()
@@ -36,47 +36,51 @@ public class NpcDude : MonoBehaviour
             && dialogueManager.messageAction != null 
             && dialogueManager.actionSpeaker == "Dude")
         {
-            if (dialogueManager.messageAction == "isIdle")
+            switch (dialogueManager.messageAction)
             {
-                print("Dude isIdle");
-                animator.SetBool("isIdle", true);
-                animator.SetBool("isTalking", false);
-                animator.SetBool("isAngry", false);
-                animator.SetBool("isDisapproval", false);
-            }
+                case DudeAnimationCondition.IS_IDLE:
+                    print("Dude " + DudeAnimationCondition.IS_IDLE);
+                    animator.SetBool(DudeAnimationCondition.IS_IDLE, true);
+                    animator.SetBool(DudeAnimationCondition.IS_TALKING, false);
+                    animator.SetBool(DudeAnimationCondition.IS_ANGRY, false);
+                    animator.SetBool(DudeAnimationCondition.IS_DISAPPROVAL, false);
+                    break;
 
-            if (dialogueManager.messageAction == "isTalking")
-            {
-                print("Dude isTalking");
-                animator.SetBool("isIdle", false);
-                animator.SetBool("isTalking", true);
-                animator.SetBool("isAngry", false);
-                animator.SetBool("isDisapproval", false);
-            }
-
-            if (dialogueManager.messageAction == "isAngry")
-            {
-                print("Dude isAngry");
-                animator.SetBool("isIdle", false);
-                animator.SetBool("isTalking", false);
-                animator.SetBool("isAngry", true);
-                animator.SetBool("isDisapproval", false);
-            }
-
-            if (dialogueManager.messageAction == "isDisapproval")
-            {
-                print("Dude isDisapproval");
-                animator.SetBool("isIdle", false);
-                animator.SetBool("isTalking", false);
-                animator.SetBool("isAngry", false);
-                animator.SetBool("isDisapproval", true);
-            }
-
-            if (dialogueManager.messageAction == "attendantStartWalkingToServeCoffee")
-            {
-                print("attendantStartWalkingToServeCoffee");
-                attendant.GetComponent<Attendant>().startWalkingToServeCoffee();
+                case DudeAnimationCondition.IS_TALKING:
+                    print("Dude " + DudeAnimationCondition.IS_TALKING);
+                    animator.SetBool(DudeAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(DudeAnimationCondition.IS_TALKING, true);
+                    animator.SetBool(DudeAnimationCondition.IS_ANGRY, false);
+                    animator.SetBool(DudeAnimationCondition.IS_DISAPPROVAL, false);
+                    break;
+                case DudeAnimationCondition.IS_ANGRY:
+                    print("Dude " + DudeAnimationCondition.IS_ANGRY);
+                    animator.SetBool(DudeAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(DudeAnimationCondition.IS_TALKING, false);
+                    animator.SetBool(DudeAnimationCondition.IS_ANGRY, true);
+                    animator.SetBool(DudeAnimationCondition.IS_DISAPPROVAL, false);
+                    break;
+                case DudeAnimationCondition.IS_DISAPPROVAL:
+                    print("Dude " + DudeAnimationCondition.IS_DISAPPROVAL);
+                    animator.SetBool(DudeAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(DudeAnimationCondition.IS_TALKING, false);
+                    animator.SetBool(DudeAnimationCondition.IS_ANGRY, false);
+                    animator.SetBool(DudeAnimationCondition.IS_DISAPPROVAL, true);
+                    break;
+                case "attendantStartWalkingToServeCoffee":
+                    print("attendantStartWalkingToServeCoffee");
+                    attendant.GetComponent<Attendant>().startWalkingToServeCoffee();
+                    break;
             }
         }
     }
+}
+
+public static class DudeAnimationCondition
+{
+    public const string
+        IS_IDLE = "isIdle",
+        IS_TALKING = "isTalking",
+        IS_ANGRY = "isAngry",
+        IS_DISAPPROVAL = "isDisapproval";
 }

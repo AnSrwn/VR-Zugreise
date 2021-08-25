@@ -14,7 +14,7 @@ public class Attendant : MonoBehaviour
 
     private void Start() {
         animator = GetComponent<Animator>();
-        animator.SetBool("isIdle", true);
+        animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, true);
 
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
@@ -32,9 +32,9 @@ public class Attendant : MonoBehaviour
             navMeshAgent.ResetPath();
             currentDestination = null;
 
-            animator.SetBool("isIdle", true);
-            animator.SetBool("isWalking", false);
-            animator.SetBool("isWalkingWithCoffee", false);
+            animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, true);
+            animator.SetBool(AttendantAnimationCondition.IS_WALKING, false);
+            animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, false);
         }
     }
 
@@ -42,8 +42,9 @@ public class Attendant : MonoBehaviour
     {
         currentDestination = destinationServeCoffee;
         navMeshAgent.SetDestination(currentDestination.transform.position);
-        animator.SetBool("isWalkingWithCoffee", true);
-        animator.SetBool("isIdle", false);
+        animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, true);
+        animator.SetBool(AttendantAnimationCondition.IS_IDLE, false);
+        animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, false);
     }
 
     private void onMessageAction()
@@ -52,83 +53,112 @@ public class Attendant : MonoBehaviour
             && dialogueManager.messageAction != null
             && dialogueManager.actionSpeaker == "Attendant")
         {
-            if (dialogueManager.messageAction == "isIdle")
+            switch(dialogueManager.messageAction)
             {
-                print("Attendant isIdle");
-                animator.SetBool("isIdle", true);
-                animator.SetBool("isTalking1", false);
-                animator.SetBool("isTalking2", false);
-                animator.SetBool("isGiving", false);
-                animator.SetBool("isWalkingWithCoffee", false);
-                animator.SetBool("isDropping", false);
-            }
+                case AttendantAnimationCondition.IS_IDLE:
+                    print("Attendant " + AttendantAnimationCondition.IS_IDLE);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE, true);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_1, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_2, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_GIVING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_DROPPING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING, false);
+                    break;
 
-            if (dialogueManager.messageAction == "isTalking1")
-            {
-                print("Attendant isTalking1");
-                animator.SetBool("isIdle", false);
-                animator.SetBool("isTalking1", true);
-                animator.SetBool("isTalking2", false);
-                animator.SetBool("isGiving", false);
-                animator.SetBool("isWalkingWithCoffee", false);
-                animator.SetBool("isDropping", false);
-            }
+                case AttendantAnimationCondition.IS_IDLE_WITH_COFFEE:
+                    print("Attendant " + AttendantAnimationCondition.IS_IDLE_WITH_COFFEE);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, true);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_1, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_2, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_GIVING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_DROPPING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING, false);
+                    break;
+                case AttendantAnimationCondition.IS_TALKING_1:
+                    print("Attendant " + AttendantAnimationCondition.IS_TALKING_1);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_1, true);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_2, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_GIVING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_DROPPING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING, false);
+                    break;
+                case AttendantAnimationCondition.IS_TALKING_2:
+                    print("Attendant " + AttendantAnimationCondition.IS_TALKING_2);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_1, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_2, true);
+                    animator.SetBool(AttendantAnimationCondition.IS_GIVING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_DROPPING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING, false);
+                    break;
+                case AttendantAnimationCondition.IS_TALKING_WITH_COFFEE:
+                    print("Attendant " + AttendantAnimationCondition.IS_TALKING_WITH_COFFEE);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_WITH_COFFEE, true);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_1, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_2, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_GIVING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_DROPPING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING, false);
+                    break;
+                case AttendantAnimationCondition.IS_GIVING:
+                    print("Attendant " + AttendantAnimationCondition.IS_GIVING);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_WITH_COFFEE, true);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_1, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_2, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_GIVING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_DROPPING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING, false);
 
-            if (dialogueManager.messageAction == "isTalking2")
-            {
-                print("Attendant isTalking2");
-                animator.SetBool("isIdle", false);
-                animator.SetBool("isTalking1", false);
-                animator.SetBool("isTalking2", true);
-                animator.SetBool("isGiving", false);
-                animator.SetBool("isWalkingWithCoffee", false);
-                animator.SetBool("isDropping", false);
-            }
+                    StartCoroutine(GiveAnimation(3.0f));
+                    break;
+                case AttendantAnimationCondition.IS_DROPPING:
+                    print("Attendant " + AttendantAnimationCondition.IS_DROPPING);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_1, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_2, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_GIVING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_DROPPING, true);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING, false);
 
-            if (dialogueManager.messageAction == "isGiving")
-            {
-                print("Attendant isGiving");
-                animator.SetBool("isIdle", false);
-                animator.SetBool("isTalking1", false);
-                animator.SetBool("isTalking2", false);
-                animator.SetBool("isGiving", true);
-                animator.SetBool("isWalkingWithCoffee", false);
-                animator.SetBool("isDropping", false);
-            }
+                    StartCoroutine(IdleAnimation(2.0f));
+                    break;
+                case "goToBackOfTrain":
+                    print("Attendant goToBackOfTrain");
+                    currentDestination = destinationBackOfTrain;
+                    navMeshAgent.SetDestination(currentDestination.transform.position);
 
-            if (dialogueManager.messageAction == "isWalkingWithFood")
-            {
-                print("Attendant isWalkingWithFood");
-                animator.SetBool("isIdle", false);
-                animator.SetBool("isTalking1", false);
-                animator.SetBool("isTalking2", false);
-                animator.SetBool("isGiving", false);
-                animator.SetBool("isWalkingWithCoffee", true);
-                animator.SetBool("isDropping", false);
-            }
-
-            if (dialogueManager.messageAction == "isDropping")
-            {
-                print("Attendant isDropping");
-                animator.SetBool("isTalking1", false);
-                animator.SetBool("isTalking2", false);
-                animator.SetBool("isGiving", false);
-                animator.SetBool("isWalkingWithCoffee", false);
-                animator.SetBool("isIdle", false);
-                animator.SetBool("isDropping", true);
-
-                StartCoroutine(IdleAnimation(2.0f));
-            }
-
-            if (dialogueManager.messageAction == "goToBackOfTrain")
-            {
-                print("Attendant goToBackOfTrain");
-
-                currentDestination = destinationBackOfTrain;
-                navMeshAgent.SetDestination(currentDestination.transform.position);
-
-                animator.SetBool("isTalking1", false);
-                animator.SetBool("isWalking", true);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_1, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_2, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_GIVING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_DROPPING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING, true);
+                    break;
             }
         }
     }
@@ -137,11 +167,45 @@ public class Attendant : MonoBehaviour
     {
         yield return new WaitForSeconds(delayTime);
 
-        animator.SetBool("isIdle", true);
-        animator.SetBool("isTalking1", false);
-        animator.SetBool("isTalking2", false);
-        animator.SetBool("isGiving", false);
-        animator.SetBool("isWalkingWithCoffee", false);
-        animator.SetBool("isDropping", false);
+        print("Attendant " + AttendantAnimationCondition.IS_IDLE);
+        animator.SetBool(AttendantAnimationCondition.IS_IDLE, true);
+        animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, false);
+        animator.SetBool(AttendantAnimationCondition.IS_TALKING_WITH_COFFEE, false);
+        animator.SetBool(AttendantAnimationCondition.IS_TALKING_1, false);
+        animator.SetBool(AttendantAnimationCondition.IS_TALKING_2, false);
+        animator.SetBool(AttendantAnimationCondition.IS_GIVING, false);
+        animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, false);
+        animator.SetBool(AttendantAnimationCondition.IS_DROPPING, false);
+        animator.SetBool(AttendantAnimationCondition.IS_WALKING, false);
     }
+
+    private IEnumerator GiveAnimation(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+
+        print("Attendant " + AttendantAnimationCondition.IS_GIVING);
+        animator.SetBool(AttendantAnimationCondition.IS_IDLE, false);
+        animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, false);
+        animator.SetBool(AttendantAnimationCondition.IS_TALKING_WITH_COFFEE, false);
+        animator.SetBool(AttendantAnimationCondition.IS_TALKING_1, false);
+        animator.SetBool(AttendantAnimationCondition.IS_TALKING_2, false);
+        animator.SetBool(AttendantAnimationCondition.IS_GIVING, true);
+        animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, false);
+        animator.SetBool(AttendantAnimationCondition.IS_DROPPING, false);
+        animator.SetBool(AttendantAnimationCondition.IS_WALKING, false);
+    }
+}
+
+public static class AttendantAnimationCondition
+{
+    public const string
+        IS_IDLE_WITH_COFFEE = "isIdleWithCoffee",
+        IS_TALKING_WITH_COFFEE = "isTalkingWithCoffee",
+        IS_WALKING_WITH_COFFEE = "isWalkingWithCoffee",
+        IS_GIVING = "isGiving",
+        IS_DROPPING = "isDropping",
+        IS_IDLE = "isIdle",
+        IS_TALKING_1 = "isTalking1",
+        IS_TALKING_2 = "isTalking2",
+        IS_WALKING = "isWalking";   
 }

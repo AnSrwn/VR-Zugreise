@@ -2796,7 +2796,7 @@ MonoBehaviour:
       SpeakerName: Attendant
       PreviousMessage: 29
       NextMessage: 5
-      MessageText: '[isTalking2]Would you like some coffee?[isIdle]'
+      MessageText: '[isTalkingWithCoffee]Would you like some coffee?[isIdleWithCoffee]'
       Clip: {fileID: 8300000, guid: 9e9a2518799b1f34287f544f54f3b192, type: 3}
   - ID: 5
     Type: 3
@@ -2997,8 +2997,8 @@ MonoBehaviour:
       SpeakerName: Attendant
       PreviousMessage: 5
       NextMessage: 7
-      MessageText: '[isTalking2]Thank you! It''s actually freshly made, so it''s
-        still quite hot! Be careful while...[isDropping]'
+      MessageText: '[isGiving]Thank you! It''s actually freshly made, so it''s still
+        quite hot! Be careful while...[isDropping]'
       Clip: {fileID: 8300000, guid: 48f3d49838e01ac4083c1dacd0e595cc, type: 3}
   - ID: 7
     Type: 3
