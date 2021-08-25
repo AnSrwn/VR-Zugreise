@@ -16,6 +16,9 @@ MonoBehaviour:
   - ID: 1
     Name: IntroConversation
     FirstMessage: 2
+  - ID: 30
+    Name: AttendantIdleConversation
+    FirstMessage: 31
   Speakers:
   - ID: 0
     Name: Dude
@@ -213,6 +216,13 @@ MonoBehaviour:
     NextMessage: 4
     MessageText: And everyone will be in awe of the man with the name off....[isIdle]
     Clip: {fileID: 8300000, guid: 1b44f0a0c4c3f8e40a75dbfaa0fd747c, type: 3}
+  - ID: 31
+    Speaker: 3
+    SpeakerName: Attendant
+    PreviousMessage: -1
+    NextMessage: -1
+    MessageText: There's a washroom in the back!
+    Clip: {fileID: 8300000, guid: e5a19e3fe3c3b8342a38939b02bff613, type: 3}
   Choices:
   - ID: 9
     isAction: 0

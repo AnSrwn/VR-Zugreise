@@ -43,7 +43,11 @@ public class DialogueManager : MonoBehaviour
     private void endConversation()
     {
         activeConversation = "";
+        activeActionNodeId = -1;
+        messageAction = null;
+        actionSpeaker = null;
         npcSpeakers = null;
+        ended = false;
 
         floatingCanvas.SetActive(false);
     }

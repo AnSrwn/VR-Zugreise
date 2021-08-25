@@ -6,12 +6,17 @@ using UnityEngine.AI;
 public class Attendant : MonoBehaviour
 {
     public DialogueManager dialogueManager;
+    public GameObject player;
+    public AudioSource audioSource;
+
     public GameObject destinationServeCoffee;
     public GameObject destinationBackOfTrain;
     public GameObject coffeCup;
     private NavMeshAgent navMeshAgent;
     private GameObject currentDestination = null;
     private Animator animator;
+
+    private bool isIdleDialog = false;
 
     private void Start() {
         animator = GetComponent<Animator>();
@@ -38,10 +43,22 @@ public class Attendant : MonoBehaviour
             {
                 animator.SetBool(AttendantAnimationCondition.IS_IDLE, true);
                 animator.SetBool(AttendantAnimationCondition.IS_WALKING, false);
+
+                isIdleDialog = true;
             }
 
             navMeshAgent.ResetPath();
             currentDestination = null;
+        }
+
+ 
+        if (isIdleDialog && Vector3.Distance(transform.position, player.transform.position) < 1.5f)
+        {
+            List<Speaker> npcSpeakers = new List<Speaker>();
+            npcSpeakers.Add(new Speaker("Attendant", gameObject, audioSource));
+
+            dialogueManager.initiateConversation("AttendantIdleConversation", npcSpeakers);
+            isIdleDialog = false;
         }
     }
 
