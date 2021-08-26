@@ -12,6 +12,7 @@ public class Attendant : MonoBehaviour
     public GameObject destinationServeCoffee;
     public GameObject destinationBackOfTrain;
     public GameObject coffeCup;
+    public SkyManager skyManager;
     private NavMeshAgent navMeshAgent;
     private GameObject currentDestination = null;
     private Animator animator;
@@ -183,6 +184,32 @@ public class Attendant : MonoBehaviour
                     animator.SetBool(AttendantAnimationCondition.IS_DROPPING, false);
                     animator.SetBool(AttendantAnimationCondition.IS_WALKING, true);
                     break;
+                case AttendantAnimationCondition.POSITIVE_REACTION:
+                    skyManager.SetSky(SkyManager.Type.Purple, 5);
+                    print("Attendant " + AttendantAnimationCondition.IS_TALKING_1);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_1, true);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_2, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_GIVING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_DROPPING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING, false);
+                    break;
+                case AttendantAnimationCondition.NEGATIVE_REACTION:
+                    skyManager.SetSky(SkyManager.Type.Red, 5);
+                    print("Attendant " + AttendantAnimationCondition.IS_TALKING_1);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_1, true);
+                    animator.SetBool(AttendantAnimationCondition.IS_TALKING_2, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_GIVING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING_WITH_COFFEE, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_DROPPING, false);
+                    animator.SetBool(AttendantAnimationCondition.IS_WALKING, false);
+                    break;
             }
         }
     }
@@ -251,5 +278,7 @@ public static class AttendantAnimationCondition
         IS_IDLE = "isIdle",
         IS_TALKING_1 = "isTalking1",
         IS_TALKING_2 = "isTalking2",
-        IS_WALKING = "isWalking";   
+        IS_WALKING = "isWalking",
+        POSITIVE_REACTION = "positiveReaction",
+        NEGATIVE_REACTION = "negativeReaction";
 }

@@ -77,15 +77,15 @@ MonoBehaviour:
     SpeakerName: Attendant
     PreviousMessage: -1
     NextMessage: 12
-    MessageText: '[isTalking1]I''m really sorry! I hope you''re alright![isIdle]'
+    MessageText: '[positiveReaction]I''m really sorry! I hope you''re alright![isIdle]'
     Clip: {fileID: 8300000, guid: 7f800c38f4428e74bb1ce6efdf346a8a, type: 3}
   - ID: 11
     Speaker: 3
     SpeakerName: Attendant
     PreviousMessage: 9
     NextMessage: 12
-    MessageText: '[isTalking1]Fuck you! I''m sorry, but it''s not like it was on
-      purpose! The train just rocked.[isIdle]'
+    MessageText: '[negativeReaction]Fuck you! I''m sorry, but it''s not like it was
+      on purpose! The train just rocked.[isIdle]'
     Clip: {fileID: 8300000, guid: e2b5a5f49116de9498b79799ec6b94ab, type: 3}
   - ID: 12
     Speaker: 0
