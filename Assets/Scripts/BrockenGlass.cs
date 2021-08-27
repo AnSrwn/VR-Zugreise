@@ -40,7 +40,7 @@ public class BrockenGlass : MonoBehaviour
             }
         }
         
-        if (bird.transform.position != finalPosition.transform.position) {
+        if (bird.transform.position != finalPosition.transform.position && !ticketInstantiated) {
             bird.transform.position = Vector3.MoveTowards(bird.transform.position, finalPosition.transform.position, Time.deltaTime * speed);
         } else {
             if (!ticketInstantiated)
