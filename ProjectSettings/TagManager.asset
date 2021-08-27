@@ -9,6 +9,7 @@ TagManager:
   - FxTemporaire
   - sphere
   - Bird
+  - BrokenWindow
   layers:
   - Default
   - TransparentFX

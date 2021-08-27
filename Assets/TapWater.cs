@@ -5,10 +5,14 @@ using UnityEngine;
 
 public class TapWater : MonoBehaviour
 {
+    public SceneManager sceneManager;
     public GameObject rotatingSphere;
     public HandManager handManager;
 
     private MeshRenderer meshRenderer;
+    private bool rightClean = false;
+    private bool leftClean = false;
+    private bool nextSceneTriggered = false;
 
     enum Hand { Left, Right, None }
 
@@ -28,6 +32,11 @@ public class TapWater : MonoBehaviour
         {
             meshRenderer.enabled = false;
         }
+
+        if (rightClean && leftClean && !nextSceneTriggered)
+        {
+            sceneManager.sceneNumber = sceneManager.sceneNumber + 1;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -38,10 +47,12 @@ public class TapWater : MonoBehaviour
             if (hand == Hand.Right)
             {
                 handManager.SetRenderModel(handManager.rightWhite, true);
+                rightClean = true;
             }
             else if(hand == Hand.Left)
             {
                 handManager.SetRenderModel(handManager.leftWhite, false);
+                leftClean = true;
             }
         }
     }

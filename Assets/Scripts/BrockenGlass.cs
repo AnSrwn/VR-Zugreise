@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BrockenGlass : MonoBehaviour
 {
-    public bool isWhite = true;
+    public SceneManager sceneManager;
     public GameObject birdPrefab;
     public Material whiteBird;
     public Material blackBird;
@@ -21,7 +21,7 @@ public class BrockenGlass : MonoBehaviour
     private void Start() {
         bird = (GameObject) Instantiate(birdPrefab, startPosition.transform.position, Quaternion.identity);
 
-        if (isWhite)
+        if (sceneManager.friendlyToAttendant)
         {
             bird.transform.GetChild(0).GetComponent<SkinnedMeshRenderer>().material = whiteBird;
         } else

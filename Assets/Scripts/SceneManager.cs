@@ -8,6 +8,9 @@ public class SceneManager : MonoBehaviour
     public CharacterManager characterManager;
     public DialogueManager dialogueManager;
 
+    // Decisions
+    public bool friendlyToAttendant = true;
+
     void Update()
     {
         switch (sceneNumber)

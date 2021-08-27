@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class PlayerDialogue : MonoBehaviour
 {
-    public GameObject npc;
-
     private float hitTime = 0.0f;
     private float selectTime = 3.0f;
     private bool isSelecting = false;
     private ChoiceButton currentChoice;
 
-    private void Start()
-    {
-        StartConversation();
-    }
     void Update()
     {
         Transform cameraTransform = Camera.main.transform;
@@ -63,11 +57,5 @@ public class PlayerDialogue : MonoBehaviour
         isSelecting = false;
         hitTime = 0.0f;
         currentChoice = null;
-    }
-
-    void StartConversation()
-    {
-        NpcDude npcScript = (NpcDude) npc.GetComponent(typeof(NpcDude));
-        npcScript.initiateConversation();
     }
 }

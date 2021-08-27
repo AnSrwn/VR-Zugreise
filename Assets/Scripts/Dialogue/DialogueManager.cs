@@ -22,6 +22,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI messageText;
     public List<Button> choices;
 
+    private int currentSceneNumber = 0;
     private List<Speaker> npcSpeakers;
 
     private bool ended = false;
@@ -59,6 +60,13 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
+        if (currentSceneNumber != sceneNumber)
+        {
+            currentSceneNumber = sceneNumber;
+            endConversation();
+            return;
+        }
+
         if (ended)
         {
             endConversation();
@@ -85,6 +93,7 @@ public class DialogueManager : MonoBehaviour
 
     private void GenerateChoices()
     {
+        floatingCanvas.SetActive(true);
         // Exit if not a choice
         if (qdHandler.currentMessageInfo.Type != QuantumTek.QuantumDialogue.QD_NodeType.Choice)
             return;

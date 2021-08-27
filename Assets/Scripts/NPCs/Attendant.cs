@@ -13,6 +13,7 @@ public class Attendant : MonoBehaviour
     public GameObject destinationBackOfTrain;
     public GameObject coffeCup;
     public SkyManager skyManager;
+    public SceneManager sceneManager;
     private NavMeshAgent navMeshAgent;
     private GameObject currentDestination = null;
     private Animator animator;
@@ -186,6 +187,7 @@ public class Attendant : MonoBehaviour
                     break;
                 case AttendantAnimationCondition.POSITIVE_REACTION:
                     skyManager.SetSky(SkyManager.Type.Purple, 5);
+                    sceneManager.friendlyToAttendant = true;
                     print("Attendant " + AttendantAnimationCondition.IS_TALKING_1);
                     animator.SetBool(AttendantAnimationCondition.IS_IDLE, false);
                     animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, false);
@@ -199,6 +201,7 @@ public class Attendant : MonoBehaviour
                     break;
                 case AttendantAnimationCondition.NEGATIVE_REACTION:
                     skyManager.SetSky(SkyManager.Type.Red, 5);
+                    sceneManager.friendlyToAttendant = false;
                     print("Attendant " + AttendantAnimationCondition.IS_TALKING_1);
                     animator.SetBool(AttendantAnimationCondition.IS_IDLE, false);
                     animator.SetBool(AttendantAnimationCondition.IS_IDLE_WITH_COFFEE, false);

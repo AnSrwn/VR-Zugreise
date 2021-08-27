@@ -14,6 +14,7 @@ public class NpcDude : MonoBehaviour
 
     private void Start() {
         animator = GetComponent<Animator>();
+        initiateConversation();
     }
 
     private void OnEnable()
