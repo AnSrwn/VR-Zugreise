@@ -7,6 +7,8 @@ using System.Collections;
 
 public class DialogueManager : MonoBehaviour
 {
+    public int sceneNumber = 0;
+    public List<QuantumTek.QuantumDialogue.QD_Dialogue> dialogues = new List<QuantumTek.QuantumDialogue.QD_Dialogue>();
     public string activeConversation = "";
     public int activeActionNodeId = -1;
     public Dictionary<int, string> activeActionChoices = new Dictionary<int, string>();
@@ -27,10 +29,13 @@ public class DialogueManager : MonoBehaviour
     private void Start()
     {
         floatingCanvas.SetActive(false);
+        qdHandler.dialogue = dialogues[sceneNumber];
     }
 
     public void initiateConversation(string conversation, List<Speaker> npcSpeakers)
     {
+        qdHandler.dialogue = dialogues[sceneNumber];
+
         this.activeConversation = conversation;
         this.npcSpeakers = npcSpeakers;
 
