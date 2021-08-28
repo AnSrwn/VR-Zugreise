@@ -53,6 +53,8 @@ public class BrockenGlass : MonoBehaviour
 
                 Instantiate(ticketPrefab, ticketPosition.transform.position, Quaternion.identity);
 
+                StartCoroutine(DisableGravityOfGlass(5.0f));
+
                 ticketInstantiated = true;
             }        
         }
@@ -63,6 +65,19 @@ public class BrockenGlass : MonoBehaviour
         if (other.gameObject.tag == "Bird")
         {
             useGravity = true;
+        }
+    }
+
+    private IEnumerator DisableGravityOfGlass(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+
+        useGravity = false;
+
+        foreach (Transform child in transform)
+        {
+            child.GetComponent<Rigidbody>().isKinematic = true;
+            child.GetComponent<Rigidbody>().useGravity = false;
         }
     }
 }

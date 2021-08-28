@@ -145,6 +145,8 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        floatingCanvas.SetActive(true);
+
         // Generate choices if a choice, otherwise display the message
         if (qdHandler.currentMessageInfo.Type == QuantumTek.QuantumDialogue.QD_NodeType.Message)
         {
