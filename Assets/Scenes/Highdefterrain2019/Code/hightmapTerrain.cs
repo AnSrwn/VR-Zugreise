@@ -14,17 +14,15 @@ public class hightmapTerrain : MonoBehaviour
     public GameObject parent;
     public int animeSpeed = 5;
     int treecount = 0;
-    float offsetX = 0;
-    float offsetY = 0;
+    public float offsetX = 0;
+    public float offsetY = 0;
     public Texture2D[] test;
     private Terrain terrain;
     private SplatPrototype[] splatPrototype;
-    public bool movingHeightMap = true;
-    public bool ocean = false;
-    public bool showtrees = true;
+    public bool heyaa = true;
     public Texture2D[] ExtraTexture;
-    float xCoord;
-    float yCoord;
+    public float xCoord;
+    public float yCoord;
 
     void Start()
     {
@@ -38,22 +36,10 @@ public class hightmapTerrain : MonoBehaviour
 
         terrain = GetComponent<Terrain>();
         terrain.terrainData = GenerateTerrain(terrain.terrainData);
-        if (movingHeightMap && !
-            ocean)
+        if (heyaa)
         {
             SetTerrainSplatMap(terrain, test);
         }
-        if (ocean)
-        {
-            if (movingHeightMap)
-            {
-                SetTerrainSplatMap(terrain, ExtraTexture);
-            }
-        }
-        //else
-        //{
-        //    ocean = false;
-        //}
         //SetTerrainSplatMap
 
         if (treecount <= 35)
@@ -68,13 +54,6 @@ public class hightmapTerrain : MonoBehaviour
             parent.transform.Translate(0 + -Time.deltaTime * animeSpeed, 0, 0);
 
         }
-
-        if (!showtrees)
-        {
-            parent.SetActive(false);
-        }
-        else
-            parent.SetActive(true);
 
 
 
@@ -163,18 +142,10 @@ public class hightmapTerrain : MonoBehaviour
         GameObject BabyTree2 = Instantiate(TreeList[Random.Range(0, TreeList.Length)], treePos2, Quaternion.identity, parent.transform);
         BabyTree.transform.localScale = new Vector3(threeSize, threeSize, threeSize);
         BabyTree2.transform.localScale = new Vector3(threeSize, threeSize, threeSize);
-        Destroy(BabyTree, 28f);
-        Destroy(BabyTree2, 28f);
         treecount++;
 
         yield return new WaitForSecondsRealtime(waitTime);
     }
-
-    void changeTexture()
-    {
-
-    }
-
 
 
 
