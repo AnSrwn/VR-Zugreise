@@ -9,18 +9,11 @@ public class Conductor : MonoBehaviour
     public GameObject player;
     public GameObject window;
     private Animator animator;
+    private bool askedForTicket = false;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-    }
-
-    private void Update() {
-        if (Vector3.Distance(transform.position, player.transform.position) < 2.0f)
-        {
-            initiateConversation("AskForTicket");
-            window.SetActive(true);
-        }
     }
 
     private void OnEnable()
@@ -28,6 +21,26 @@ public class Conductor : MonoBehaviour
         DialogueManager.messageActionAvailable += onMessageAction;
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        switch (other.gameObject.tag)
+        {
+            case "Player":
+                if (!askedForTicket)
+                {
+                    initiateConversation("AskForTicket");
+                    window.SetActive(true);
+                }
+                break;
+
+            case "Bird":
+                break;
+
+            case "Ticket":
+                break;
+        }
+    }
+    
     public void initiateConversation(string conversation)
     {
         List<Speaker> npcSpeakers = new List<Speaker>();
