@@ -33,7 +33,7 @@ public class Attendant : MonoBehaviour
     }
 
     private void Update() {
-        if (currentDestination != null && Vector3.Distance(transform.position, currentDestination.transform.position) < 1.0f)
+        if (currentDestination != null && Vector3.Distance(transform.position, currentDestination.transform.position) < 0.5f)
         {
             transform.rotation = currentDestination.transform.rotation;
 
@@ -52,15 +52,16 @@ public class Attendant : MonoBehaviour
             navMeshAgent.ResetPath();
             currentDestination = null;
         }
+    }
 
- 
-        if (isIdleDialog && Vector3.Distance(transform.position, player.transform.position) < 1.5f)
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player" && isIdleDialog)
         {
             List<Speaker> npcSpeakers = new List<Speaker>();
             npcSpeakers.Add(new Speaker("Attendant", gameObject, audioSource));
 
             dialogueManager.initiateConversation("AttendantIdleConversation", npcSpeakers);
-            isIdleDialog = false;
         }
     }
 
