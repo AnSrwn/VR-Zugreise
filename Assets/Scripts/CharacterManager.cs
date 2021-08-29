@@ -13,6 +13,8 @@ public class CharacterManager : MonoBehaviour
     public GameObject npcMan;
     public GameObject npcWoman;
 
+    public GameObject conductorPositionSecondScene;
+
     void Update()
     {
         switch(sceneNumber)
@@ -29,7 +31,11 @@ public class CharacterManager : MonoBehaviour
             case 1:
             dude.SetActive(false);
             attendant.SetActive(false);
+
             conductor.SetActive(true);
+            conductor.transform.position = conductorPositionSecondScene.transform.position;
+            conductor.transform.rotation = conductorPositionSecondScene.transform.rotation;
+
             child.SetActive(false);
             npcMan.SetActive(false);
             npcWoman.SetActive(false);
