@@ -40,7 +40,6 @@ public class Conductor : MonoBehaviour
                 if (sceneManager.sceneNumber == 1 && !askedForTicket)
                 {
                     initiateConversation("AskForTicket");
-                    window.SetActive(true);
                     askedForTicket = true;
                 }
                 break;
@@ -75,5 +74,86 @@ public class Conductor : MonoBehaviour
 
     private void onMessageAction()
     {
+        if ((dialogueManager.activeConversation == "AskForTicket")
+           && dialogueManager.messageAction != null
+           && dialogueManager.actionSpeaker == "Conductor")
+        {
+            switch (dialogueManager.messageAction)
+            {
+                case ConductorAnimationCondition.IS_IDLE:
+                    print("Conductor " + ConductorAnimationCondition.IS_IDLE);
+                    animator.SetBool(ConductorAnimationCondition.IS_IDLE, true);
+                    animator.SetBool(ConductorAnimationCondition.IS_TALKING1, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_TALKING2, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_ANGRY, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_YELLING, false);
+                    break;
+
+                case ConductorAnimationCondition.IS_TALKING1:
+                    print("Conductor " + ConductorAnimationCondition.IS_TALKING1);
+                    animator.SetBool(ConductorAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_TALKING1, true);
+                    animator.SetBool(ConductorAnimationCondition.IS_TALKING2, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_ANGRY, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_YELLING, false);
+                    break;
+                case ConductorAnimationCondition.IS_TALKING2:
+                    print("Conductor " + ConductorAnimationCondition.IS_TALKING2);
+                    animator.SetBool(ConductorAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_TALKING1, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_TALKING2, true);
+                    animator.SetBool(ConductorAnimationCondition.IS_ANGRY, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_YELLING, false);
+                    break;
+                case ConductorAnimationCondition.IS_ANGRY:
+                    print("Conductor " + ConductorAnimationCondition.IS_ANGRY);
+                    animator.SetBool(ConductorAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_TALKING1, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_TALKING2, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_ANGRY, true);
+                    animator.SetBool(ConductorAnimationCondition.IS_YELLING, false);
+                    break;
+                case ConductorAnimationCondition.IS_YELLING:
+                    print("Conductor " + ConductorAnimationCondition.IS_YELLING);
+                    animator.SetBool(ConductorAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_TALKING1, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_TALKING2, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_ANGRY, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_YELLING, true);
+                    break;
+                case "sendWhiteRaven":
+                    print("send white Raven");
+                    sceneManager.honestAboutTicket = true;
+                    window.SetActive(true);
+
+                    animator.SetBool(ConductorAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_TALKING1, true);
+                    animator.SetBool(ConductorAnimationCondition.IS_TALKING2, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_ANGRY, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_YELLING, false);
+                    break;
+                case "sendBlackRaven":
+                    print("send black Raven");
+                    sceneManager.honestAboutTicket = false;
+                    window.SetActive(true);
+
+                    animator.SetBool(ConductorAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_TALKING1, true);
+                    animator.SetBool(ConductorAnimationCondition.IS_TALKING2, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_ANGRY, false);
+                    animator.SetBool(ConductorAnimationCondition.IS_YELLING, false);
+                    break;
+            }
+        }
     }
+}
+
+public static class ConductorAnimationCondition
+{
+    public const string
+        IS_IDLE = "isIdle",
+        IS_TALKING1 = "isTalking1",
+        IS_TALKING2 = "isTalking2",
+        IS_ANGRY = "isAngry",
+        IS_YELLING = "isYelling";
 }

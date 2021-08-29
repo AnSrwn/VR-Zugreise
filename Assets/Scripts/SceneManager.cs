@@ -10,6 +10,7 @@ public class SceneManager : MonoBehaviour
 
     // Decisions
     public bool friendlyToAttendant = true;
+    public bool honestAboutTicket = true;
 
     void Update()
     {

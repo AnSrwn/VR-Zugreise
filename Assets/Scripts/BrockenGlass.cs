@@ -21,7 +21,7 @@ public class BrockenGlass : MonoBehaviour
     private void Start() {
         bird = (GameObject) Instantiate(birdPrefab, startPosition.transform.position, Quaternion.identity);
 
-        if (sceneManager.friendlyToAttendant)
+        if (sceneManager.honestAboutTicket)
         {
             bird.transform.GetChild(0).GetComponent<SkinnedMeshRenderer>().material = whiteBird;
         } else

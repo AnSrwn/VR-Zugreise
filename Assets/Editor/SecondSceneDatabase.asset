@@ -4401,7 +4401,7 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: -1
       NextMessage: 7
-      MessageText: Ah, there you are! I was wondering where you went.
+      MessageText: '[isTalking1]Ah, there you are! I was wondering where you went.'
       Clip: {fileID: 8300000, guid: 1523bfc85c1dfde498b1b1eea63f73f8, type: 3}
   - ID: 5
     Type: 3
@@ -4601,8 +4601,8 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 1
       NextMessage: 8
-      MessageText: Hiding in the washroom, are we?
-      Clip: {fileID: 0}
+      MessageText: Hiding in the washroom, are we?[isIdle]
+      Clip: {fileID: 8300000, guid: 149f1e645d6c95f40b265ebaa5193e12, type: 3}
   - ID: 9
     Type: 3
     Window:
@@ -4701,7 +4701,7 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: -1
       NextMessage: 11
-      MessageText: Ah, washing your hands of something again?
+      MessageText: '[isTalking2]Ah, washing your hands of something again?'
       Clip: {fileID: 8300000, guid: 5bb3ac3b4c08d8c4fa0579160f6b2020, type: 3}
   - ID: 10
     Type: 3
@@ -4801,7 +4801,7 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 8
       NextMessage: 50
-      MessageText: Why would you expect there to be anybody here?
+      MessageText: '[isTalking2]Why would you expect there to be anybody here?'
       Clip: {fileID: 8300000, guid: c3524e3f67a32044fb1109e5004ec7f2, type: 3}
   - ID: 11
     Type: 3
@@ -5001,7 +5001,7 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 51
       NextMessage: 15
-      MessageText: You can't hide yourself from me any longer!
+      MessageText: '[isAngry]You can''t hide yourself from me any longer![isTalking1]'
       Clip: {fileID: 8300000, guid: 2ce96e00869a88f4f8905e033b498943, type: 3}
   - ID: 15
     Type: 3
@@ -5202,7 +5202,7 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 15
       NextMessage: 17
-      MessageText: No one can escape the watchful eyes of the... authorities.
+      MessageText: '[isYelling]No one can escape the watchful eyes of the... authorities.'
       Clip: {fileID: 8300000, guid: eb26a50fd57be5d4591b1a53e2fbc157, type: 3}
   - ID: 17
     Type: 3
@@ -5303,7 +5303,7 @@ MonoBehaviour:
       PreviousMessage: 16
       NextMessage: 18
       MessageText: Don't think that you can go on with your act just because no one
-        has caught onto you yet.
+        has caught onto you yet.[isIdle]
       Clip: {fileID: 8300000, guid: 5a7825398b065f24b8d4dbf0ebadfc3e, type: 3}
   - ID: 19
     Type: 3
@@ -5403,8 +5403,8 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: -1
       NextMessage: 20
-      MessageText: "I'm talking about your ticket, obviously.\r You've yet to show
-        it to me."
+      MessageText: '[isTalking1]I''m talking about your ticket, obviously.  You''ve
+        yet to show it to me.'
       Clip: {fileID: 8300000, guid: 55fe5f17630a8eb4a80cad18b8ff4795, type: 3}
   - ID: 20
     Type: 3
@@ -5605,7 +5605,7 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 18
       NextMessage: 22
-      MessageText: Perhaps not.
+      MessageText: '[isTalking1]Perhaps not.'
       Clip: {fileID: 8300000, guid: 094169fc372a5a9419313068df20e50a, type: 3}
   - ID: 22
     Type: 3
@@ -5906,7 +5906,7 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: -1
       NextMessage: 27
-      MessageText: Why are you on this train then?
+      MessageText: '[sendWhiteRaven]Why are you on this train then?'
       Clip: {fileID: 8300000, guid: 5f93230450deb4a40adf34efc0f03668, type: 3}
   - ID: 27
     Type: 3
@@ -6709,7 +6709,7 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 33
       NextMessage: 35
-      MessageText: Hmm, perhaps this sounds familiar to you?
+      MessageText: '[isAngry]Hmm, perhaps this sounds familiar to you?'
       Clip: {fileID: 8300000, guid: b4fa805ad88b9f842b4e24d6c65f73cf, type: 3}
   - ID: 35
     Type: 3
@@ -6809,7 +6809,7 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 34
       NextMessage: 36
-      MessageText: But you did just admit a fault of yours to me.
+      MessageText: '[isTalking1]But you did just admit a fault of yours to me.'
       Clip: {fileID: 8300000, guid: f9d0a96218eff2d49b584f0c7a7b5d86, type: 3}
   - ID: 36
     Type: 3
@@ -7110,7 +7110,8 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 37
       NextMessage: 39
-      MessageText: You are, in a way, taking on the consequences of your actions.
+      MessageText: '[isTalking2]You are, in a way, taking on the consequences of
+        your actions.'
       Clip: {fileID: 8300000, guid: e7801f95afc68b1488d113c9493491b4, type: 3}
   - ID: 39
     Type: 3
@@ -7210,7 +7211,7 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 38
       NextMessage: -1
-      MessageText: How... commendable.
+      MessageText: How... commendable.[isIdle]
       Clip: {fileID: 8300000, guid: af193aca94c1d5f4490f7818ffe3881d, type: 3}
   - ID: 40
     Type: 3
@@ -7310,8 +7311,8 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 53
       NextMessage: 41
-      MessageText: "Oh really?\r Are you sure that you don't just want to run away
-        again?"
+      MessageText: '[sendBlackRaven]Oh really?  Are you sure that you don''t just
+        want to run away again?'
       Clip: {fileID: 8300000, guid: 93dde3fb66719914fabe8d6634ae3a1e, type: 3}
   - ID: 41
     Type: 3
@@ -7411,7 +7412,7 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 40
       NextMessage: 42
-      MessageText: Do you want to know what I think?
+      MessageText: '[isAngry]Do you want to know what I think?'
       Clip: {fileID: 8300000, guid: 2533622a5d94bb340aa82ba6291437f9, type: 3}
   - ID: 42
     Type: 3
@@ -7511,7 +7512,8 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 41
       NextMessage: 43
-      MessageText: I think that you have no idea what I'm even talking about.
+      MessageText: '[isTalking2]I think that you have no idea what I''m even talking
+        about.'
       Clip: {fileID: 8300000, guid: 4d08680fa360db34a84eb906a4fe2f7a, type: 3}
   - ID: 43
     Type: 3
@@ -7712,7 +7714,8 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 43
       NextMessage: 45
-      MessageText: I bet you don't even know why you are here in the first place.
+      MessageText: '[isAngry]I bet you don''t even know why you are here in the first
+        place.'
       Clip: {fileID: 8300000, guid: f25dd6b6cd9df204c944092dc4fe6bc2, type: 3}
   - ID: 45
     Type: 3
@@ -7812,8 +7815,8 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 44
       NextMessage: 46
-      MessageText: Lying to others is just the first step to lying to yourself after
-        all.
+      MessageText: '[isYelling]Lying to others is just the first step to lying to
+        yourself after all.'
       Clip: {fileID: 8300000, guid: 059e400739085854387d102b7e0a7410, type: 3}
   - ID: 46
     Type: 3
@@ -7913,8 +7916,8 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 45
       NextMessage: 47
-      MessageText: But trying to escape the consequences of your own actions is a
-        habit that you might come to... regret.
+      MessageText: '[isTalking1]But trying to escape the consequences of your own
+        actions is a habit that you might come to... regret.'
       Clip: {fileID: 8300000, guid: 5c3ef0280182c2b4eaf2683a850336b4, type: 3}
   - ID: 47
     Type: 3
@@ -8014,7 +8017,7 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 46
       NextMessage: 48
-      MessageText: "But go on!\r I can't keep you here."
+      MessageText: "But go on! I can't keep you here."
       Clip: {fileID: 8300000, guid: df7d2e5e8070ffc4ebba919f3575a2b4, type: 3}
   - ID: 48
     Type: 3
@@ -8114,7 +8117,7 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 47
       NextMessage: 49
-      MessageText: It's your decision, after all.
+      MessageText: '[isAngry]It''s your decision, after all.'
       Clip: {fileID: 8300000, guid: 153627ce3dec77d45830de688ceaa7cb, type: 3}
   - ID: 49
     Type: 3
@@ -8214,8 +8217,8 @@ MonoBehaviour:
       SpeakerName: Conductor
       PreviousMessage: 48
       NextMessage: -1
-      MessageText: And who knows, perhaps you'll find your... ticket... despite your
-        actions.
+      MessageText: '[isTalking1]And who knows, perhaps you''ll find your... ticket...
+        despite your actions.[isIdle]'
       Clip: {fileID: 8300000, guid: c39589ac849ace94c83f58d64fad9198, type: 3}
   - ID: 50
     Type: 3
@@ -8516,7 +8519,7 @@ MonoBehaviour:
       PreviousMessage: 23
       NextMessage: 53
       MessageText: And I do think that this measure is a little drastic, considering
-        you just haven't shown me your ticket yet.
+        you just haven't shown me your ticket yet.[isIdle]
       Clip: {fileID: 8300000, guid: 6c9a235d2d2026d49bf88c45d5221eec, type: 3}
   ConversationNodes:
   - ID: 2
