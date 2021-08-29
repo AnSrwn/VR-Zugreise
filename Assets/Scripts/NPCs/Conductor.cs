@@ -14,6 +14,7 @@ public class Conductor : MonoBehaviour
     private Animator animator;
     private bool conductorChildConversationPlayed = false;
     private bool askedForTicket = false;
+    private bool gaveTicket = false;
 
     private void Start()
     {
@@ -48,6 +49,12 @@ public class Conductor : MonoBehaviour
                 break;
 
             case "Ticket":
+                if (sceneManager.sceneNumber == 1 && askedForTicket && !gaveTicket)
+                {
+                    initiateConversation("GiveTicket");
+                    gaveTicket = true;
+                    Destroy(other.gameObject);
+                }
                 break;
         }
     }

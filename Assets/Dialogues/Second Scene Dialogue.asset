@@ -16,6 +16,9 @@ MonoBehaviour:
   - ID: 2
     Name: AskForTicket
     FirstMessage: 1
+  - ID: 4
+    Name: GiveTicket
+    FirstMessage: 5
   Speakers:
   - ID: 0
     Name: Conductor
@@ -25,13 +28,14 @@ MonoBehaviour:
     Speaker: 0
     SpeakerName: Conductor
     PreviousMessage: -1
-    NextMessage: 3
-    MessageText: Please show me your ticket
-    Clip: {fileID: 0}
-  Choices:
-  - ID: 3
-    isAction: 0
-    Choices:
-    - Fuck you
-    - Okay
-    NextMessages: ffffffffffffffff
+    NextMessage: -1
+    MessageText: Please show me your ticket.
+    Clip: {fileID: 8300000, guid: 50e35d9c8c67e8441aecae180ce44f25, type: 3}
+  - ID: 5
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: -1
+    NextMessage: -1
+    MessageText: Thank you.
+    Clip: {fileID: 8300000, guid: 888bf91373377734db712601a249fce7, type: 3}
+  Choices: []
