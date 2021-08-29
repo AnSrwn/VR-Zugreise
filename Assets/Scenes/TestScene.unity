@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0042015025, g: 0.0047744405, b: 0.0035192214, a: 1}
+  m_IndirectSpecularColor: {r: 0.0042016217, g: 0.0047745234, b: 0.0035192051, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3636,6 +3636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dirLight: {fileID: 51995828}
+  fadeIn: 1
 --- !u!1 &171732617
 GameObject:
   m_ObjectHideFlags: 0
@@ -43129,7 +43130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d3339005be0414f845597672ca5270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emissiveIntensity: 0
+  emissiveIntensity: 0.001
   emissiveColor: {r: 65, g: 65, b: 65, a: 1}
   flicker: 0
 --- !u!1 &1933831602
