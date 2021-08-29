@@ -6,7 +6,6 @@ public class Conductor : MonoBehaviour
 {
     public DialogueManager dialogueManager;
     public AudioSource audioSource;
-    public GameObject player;
     public GameObject window;
     private Animator animator;
     private bool askedForTicket = false;
@@ -30,6 +29,7 @@ public class Conductor : MonoBehaviour
                 {
                     initiateConversation("AskForTicket");
                     window.SetActive(true);
+                    askedForTicket = true;
                 }
                 break;
 

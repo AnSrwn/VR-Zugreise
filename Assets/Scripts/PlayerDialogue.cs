@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerDialogue : MonoBehaviour
 {
+    public LayerMask ignoreLayer;
     private float hitTime = 0.0f;
     private float selectTime = 3.0f;
     private bool isSelecting = false;
@@ -14,7 +15,7 @@ public class PlayerDialogue : MonoBehaviour
         Transform cameraTransform = Camera.main.transform;
         RaycastHit hit;
 
-        if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, 100.0f))
+        if (Physics.Raycast(cameraTransform.position, cameraTransform.forward, out hit, 100.0f, ~ignoreLayer))
         {
             if (hit.collider.gameObject.name == "Choice")
             {

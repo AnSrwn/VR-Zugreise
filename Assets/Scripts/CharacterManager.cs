@@ -10,6 +10,8 @@ public class CharacterManager : MonoBehaviour
 
     public GameObject conductor;
     public GameObject child;
+    public GameObject npcMan;
+    public GameObject npcWoman;
 
     void Update()
     {
@@ -18,8 +20,10 @@ public class CharacterManager : MonoBehaviour
             case 0:
             dude.SetActive(true);
             attendant.SetActive(true);
-            conductor.SetActive(false);
-            child.SetActive(false);
+            conductor.SetActive(true);
+            child.SetActive(true);
+            npcMan.SetActive(true);
+            npcWoman.SetActive(true);
             break;
 
             case 1:
@@ -27,7 +31,9 @@ public class CharacterManager : MonoBehaviour
             attendant.SetActive(false);
             conductor.SetActive(true);
             child.SetActive(false);
-            break;
+            npcMan.SetActive(false);
+            npcWoman.SetActive(false);
+             break;
         }
     }
 }

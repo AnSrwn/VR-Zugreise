@@ -19,12 +19,24 @@ MonoBehaviour:
   - ID: 30
     Name: AttendantIdleConversation
     FirstMessage: 31
+  - ID: 34
+    Name: NpcConversation01
+    FirstMessage: 35
+  - ID: 42
+    Name: NpcConversation02
+    FirstMessage: 43
   Speakers:
   - ID: 0
     Name: Dude
     Icon: {fileID: 0}
   - ID: 3
     Name: Attendant
+    Icon: {fileID: 0}
+  - ID: 32
+    Name: NpcMan
+    Icon: {fileID: 0}
+  - ID: 33
+    Name: NpcWoman
     Icon: {fileID: 0}
   Messages:
   - ID: 2
@@ -223,6 +235,81 @@ MonoBehaviour:
     NextMessage: -1
     MessageText: There's a washroom in the back!
     Clip: {fileID: 8300000, guid: e5a19e3fe3c3b8342a38939b02bff613, type: 3}
+  - ID: 35
+    Speaker: 32
+    SpeakerName: NpcMan
+    PreviousMessage: -1
+    NextMessage: 36
+    MessageText: '[isTalking]Did you hear about aunt Maria?[isIdle]'
+    Clip: {fileID: 8300000, guid: d17821701c83833489b9ef7dc9039e89, type: 3}
+  - ID: 36
+    Speaker: 33
+    SpeakerName: NpcWoman
+    PreviousMessage: 35
+    NextMessage: 37
+    MessageText: '[isTalking]No. Are there news? Is she well?[isIdle]'
+    Clip: {fileID: 8300000, guid: 585f162fe20905542b8b9ebe1eb6e003, type: 3}
+  - ID: 37
+    Speaker: 32
+    SpeakerName: NpcMan
+    PreviousMessage: 36
+    NextMessage: 38
+    MessageText: '[isTalking]She is well. She just moved to a new apartment. You
+      remember? Her husband died, and her old apartment is way too large for her.[isIdle]'
+    Clip: {fileID: 8300000, guid: 3f1c1b09e6082724bb8402a00b1df5ca, type: 3}
+  - ID: 38
+    Speaker: 33
+    SpeakerName: NpcWoman
+    PreviousMessage: 37
+    NextMessage: 40
+    MessageText: "[isTalking]That\u2019s probably a good decision. What happened
+      to her husband again?[isIdle]"
+    Clip: {fileID: 8300000, guid: 4cc84cd3e29e34b429b1756dc17c934e, type: 3}
+  - ID: 40
+    Speaker: 32
+    SpeakerName: NpcMan
+    PreviousMessage: 38
+    NextMessage: 41
+    MessageText: "[isTalking]He took an arrow in the knee\u2026[isIdle]"
+    Clip: {fileID: 8300000, guid: 53f75fc8ffee6b9419c45c241b57417b, type: 3}
+  - ID: 41
+    Speaker: 33
+    SpeakerName: NpcWoman
+    PreviousMessage: 40
+    NextMessage: -1
+    MessageText: "[isAngry]Stop it. That\u2019s not funny![isIdle]"
+    Clip: {fileID: 8300000, guid: e9cfbe9393e507c42a0e29267128fe48, type: 3}
+  - ID: 43
+    Speaker: 33
+    SpeakerName: NpcWoman
+    PreviousMessage: -1
+    NextMessage: 44
+    MessageText: '[isTalking]Will you go swimming with him later?[isIdle]'
+    Clip: {fileID: 8300000, guid: 210bdb9e4f0a3c447af3572249dcb01d, type: 3}
+  - ID: 44
+    Speaker: 32
+    SpeakerName: NpcMan
+    PreviousMessage: 43
+    NextMessage: 45
+    MessageText: "[isDisapproval] don\u2019t have time! I still have too much work
+      for tomorrow.[isIdle]"
+    Clip: {fileID: 8300000, guid: 450a3e4afd93a0248a1bd815bf5322a2, type: 3}
+  - ID: 45
+    Speaker: 33
+    SpeakerName: NpcWoman
+    PreviousMessage: 44
+    NextMessage: 46
+    MessageText: '[isSad]Please. I need some time to relax. I just want to watch
+      a movie in peace and drink a glass of wine. And you should spend more time
+      with him![isIdle]'
+    Clip: {fileID: 8300000, guid: 68a297647b609d94b93cb6bc2b362147, type: 3}
+  - ID: 46
+    Speaker: 32
+    SpeakerName: NpcMan
+    PreviousMessage: 45
+    NextMessage: -1
+    MessageText: '[isTalking]Okay, okay. I try to squeeze it in.[isIdle]'
+    Clip: {fileID: 8300000, guid: 1487148aeead3424fa1cfb22a2561e31, type: 3}
   Choices:
   - ID: 9
     isAction: 0
