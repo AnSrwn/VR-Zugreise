@@ -14,6 +14,7 @@ public class PropReturn : MonoBehaviour
     private void OnDisable()
     {
         if(objectPool!= null)
+            this.gameObject.transform.position = new Vector3();
             objectPool.ReturnGameObject(this.gameObject);
     }
 }

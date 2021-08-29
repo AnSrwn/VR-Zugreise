@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MoveProp : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public float speed = 20.0f;
     void Update()
     {
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        transform.Translate(Vector3.forward * Time.deltaTime * speed, Space.World);
     }
 }

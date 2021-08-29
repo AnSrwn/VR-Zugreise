@@ -12,7 +12,7 @@ public class Spawner : MonoBehaviour
     private float timeSinceSpawn;
     private PropPool objectPool;
     [SerializeField]
-    private GameObject prefab;
+    private GameObject[] prefab;
 
     // Start is called before the first frame update
     void Start()
@@ -27,8 +27,9 @@ public class Spawner : MonoBehaviour
         if (timeSinceSpawn >= timeToSpawn)
         {
             timeToSpawn = Random.Range(minTimeToSpawn, maxTimeToSpawn);
-            GameObject newProp = objectPool.GetObject(prefab);
-            newProp.transform.position = this.transform.position + new Vector3(Random.Range(-50.0f, 50.0f), 0, 0);
+            int prefabIndex = Random.Range(0, prefab.Length);
+            GameObject newProp = objectPool.GetObject(prefab[prefabIndex]);
+            newProp.transform.position += this.transform.position + new Vector3(Random.Range(-50.0f, 50.0f), 0, 0);
             timeSinceSpawn = 0f;
         }
     }
