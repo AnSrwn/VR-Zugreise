@@ -286,7 +286,7 @@ MonoBehaviour:
     SpeakerName: NpcWoman
     PreviousMessage: 40
     NextMessage: -1
-    MessageText: "[isAngry]Stop it. That\u2019s not funny![isIdle]"
+    MessageText: "[isAngry]Stop it. That\u2019s not funny![isTalking]"
     Clip: {fileID: 8300000, guid: e9cfbe9393e507c42a0e29267128fe48, type: 3}
   - ID: 43
     Speaker: 33
@@ -310,7 +310,7 @@ MonoBehaviour:
     NextMessage: 46
     MessageText: '[isSad]Please. I need some time to relax. I just want to watch
       a movie in peace and drink a glass of wine. And you should spend more time
-      with him![isIdle]'
+      with him![isTalking]'
     Clip: {fileID: 8300000, guid: 68a297647b609d94b93cb6bc2b362147, type: 3}
   - ID: 46
     Speaker: 32

@@ -6956,7 +6956,7 @@ MonoBehaviour:
       SpeakerName: NpcMan
       PreviousMessage: -1
       NextMessage: 36
-      MessageText: Did you hear about aunt Maria?
+      MessageText: '[isTalking]Did you hear about aunt Maria?[isIdle]'
       Clip: {fileID: 8300000, guid: d17821701c83833489b9ef7dc9039e89, type: 3}
   - ID: 36
     Type: 3
@@ -7156,8 +7156,8 @@ MonoBehaviour:
       SpeakerName: NpcMan
       PreviousMessage: 36
       NextMessage: 38
-      MessageText: She is well. She just moved to a new apartment. You remember?
-        Her husband died, and her old apartment is way too large for her.
+      MessageText: '[isTalking]She is well. She just moved to a new apartment. You
+        remember? Her husband died, and her old apartment is way too large for her.[isIdle]'
       Clip: {fileID: 8300000, guid: 3f1c1b09e6082724bb8402a00b1df5ca, type: 3}
   - ID: 38
     Type: 3
@@ -7358,7 +7358,7 @@ MonoBehaviour:
       SpeakerName: NpcMan
       PreviousMessage: 38
       NextMessage: 41
-      MessageText: "He took an arrow in the knee\u2026"
+      MessageText: "[isTalking]He took an arrow in the knee\u2026[isIdle]"
       Clip: {fileID: 8300000, guid: 53f75fc8ffee6b9419c45c241b57417b, type: 3}
   - ID: 41
     Type: 3
@@ -7458,7 +7458,7 @@ MonoBehaviour:
       SpeakerName: NpcWoman
       PreviousMessage: 40
       NextMessage: -1
-      MessageText: "[isAngry]Stop it. That\u2019s not funny![isIdle]"
+      MessageText: "[isAngry]Stop it. That\u2019s not funny![isTalking]"
       Clip: {fileID: 8300000, guid: e9cfbe9393e507c42a0e29267128fe48, type: 3}
   - ID: 43
     Type: 3
@@ -7658,7 +7658,8 @@ MonoBehaviour:
       SpeakerName: NpcMan
       PreviousMessage: 43
       NextMessage: 45
-      MessageText: "I don\u2019t have time! I still have too much work for tomorrow."
+      MessageText: "[isDisapproval]I don\u2019t have time! I still have too much work
+        for tomorrow.[isIdle]"
       Clip: {fileID: 8300000, guid: 450a3e4afd93a0248a1bd815bf5322a2, type: 3}
   - ID: 45
     Type: 3
@@ -7760,7 +7761,7 @@ MonoBehaviour:
       NextMessage: 46
       MessageText: '[isSad]Please. I need some time to relax. I just want to watch
         a movie in peace and drink a glass of wine. And you should spend more time
-        with him![isIdle]'
+        with him![isTalking]'
       Clip: {fileID: 8300000, guid: 68a297647b609d94b93cb6bc2b362147, type: 3}
   - ID: 46
     Type: 3
@@ -7860,7 +7861,7 @@ MonoBehaviour:
       SpeakerName: NpcMan
       PreviousMessage: 45
       NextMessage: -1
-      MessageText: Okay, okay. I try to squeeze it in.
+      MessageText: '[isTalking]Okay, okay. I try to squeeze it in.[isIdle]'
       Clip: {fileID: 8300000, guid: 1487148aeead3424fa1cfb22a2561e31, type: 3}
   - ID: 50
     Type: 3
