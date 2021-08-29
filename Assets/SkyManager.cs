@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -7,7 +8,10 @@ using UnityEngine.Rendering.HighDefinition;
 public class SkyManager : MonoBehaviour
 {
     public GameObject dirLight;
+    public bool fadeIn;
+
     private PhysicallyBasedSky sky;
+    private Light lightComp;
 
     public enum Type { Red, Purple }
 
@@ -16,6 +20,8 @@ public class SkyManager : MonoBehaviour
     {
         Volume vol = this.gameObject.GetComponent<Volume>();
         vol.profile.TryGet<PhysicallyBasedSky>(out sky);
+        lightComp = dirLight.GetComponent<Light>();
+        if(fadeIn) StartCoroutine(FadeIn(20));
     }
 
     public void SetSky(Type type, float duration)
@@ -57,6 +63,18 @@ public class SkyManager : MonoBehaviour
         {
             t += Time.deltaTime;
             sky.horizonTint.Override(Color.Lerp(startColor, endColor, t / duration));
+            yield return null;
+        }
+    }
+
+    IEnumerator FadeIn(float duration)
+    {
+        float t = 0;
+        while (t < duration)
+        {
+            t += Time.deltaTime;
+            Double x = t / duration;
+            lightComp.intensity = (float)Math.Pow((float)x, 4f);
             yield return null;
         }
     }

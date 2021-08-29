@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0042015025, g: 0.0047744405, b: 0.0035192214, a: 1}
+  m_IndirectSpecularColor: {r: 0.004201621, g: 0.004774558, b: 0.0035192207, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3636,6 +3636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dirLight: {fileID: 51995828}
+  fadeIn: 1
 --- !u!1 &171732617
 GameObject:
   m_ObjectHideFlags: 0
@@ -7144,6 +7145,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348400717}
   m_Mesh: {fileID: -6229926763641553745, guid: c04951d2c0104ba489dca0c76429350c, type: 3}
+--- !u!1 &351650346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 351650348}
+  - component: {fileID: 351650347}
+  m_Layer: 0
+  m_Name: EnvironmentManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &351650347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351650346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bd9ea60ab066984bbdc220d80f7ba8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrain: {fileID: 9073964577869504991}
+  skyObject: {fileID: 170188122}
+--- !u!4 &351650348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351650346}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.5708752, y: -6.4509478, z: -15.852029}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &354355122
 GameObject:
   m_ObjectHideFlags: 0
@@ -43129,7 +43175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d3339005be0414f845597672ca5270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emissiveIntensity: 0
+  emissiveIntensity: 0.001
   emissiveColor: {r: 65, g: 65, b: 65, a: 1}
   flicker: 0
 --- !u!1 &1933831602
@@ -49771,16 +49817,14 @@ MonoBehaviour:
   threeSize: 10
   parent: {fileID: 9073964579197282085}
   animeSpeed: 20
-  offsetX: 0
-  offsetY: 0
   test:
   - {fileID: 2800000, guid: e1f256a6d3ef36b43b58b696da327ef9, type: 3}
   - {fileID: 2800000, guid: d8f2e1a3ca29d164a8c0286af796836c, type: 3}
-  heyaa: 1
+  movingHeightMap: 1
+  ocean: 0
+  showtrees: 1
   ExtraTexture:
   - {fileID: 2800000, guid: 322e611893721cb4faac23f7135988b1, type: 3}
-  xCoord: 0
-  yCoord: 0
 --- !u!4 &9073964579197282082
 Transform:
   m_ObjectHideFlags: 0
