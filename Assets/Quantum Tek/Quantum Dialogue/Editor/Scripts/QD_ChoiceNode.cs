@@ -16,7 +16,7 @@ namespace QuantumTek.QuantumDialogue.Editor
             Window = new Rect(0, 0, 300, 100);
             Inputs = new List<QD_Knob>
             {
-                new QD_Knob(0, "Previous Messages", QD_KnobType.Input, 7.5f, false)
+                new QD_Knob(0, "Previous Messages", QD_KnobType.Input, 7.5f, true)
             };
             Outputs = new List<QD_Knob>
             { };

@@ -7658,8 +7658,8 @@ MonoBehaviour:
       SpeakerName: NpcMan
       PreviousMessage: 43
       NextMessage: 45
-      MessageText: "[isDisapproval]I don\u2019t have time! I still have too much work
-        for tomorrow.[isIdle]"
+      MessageText: "[isDisapproval]I don\u2019t have time! I still have too much
+        work for tomorrow.[isIdle]"
       Clip: {fileID: 8300000, guid: 450a3e4afd93a0248a1bd815bf5322a2, type: 3}
   - ID: 45
     Type: 3
@@ -7962,7 +7962,7 @@ MonoBehaviour:
       PreviousMessage: -1
       NextMessage: 51
       MessageText: Stop running around the train! You are disturbing the other passengers!
-      Clip: {fileID: 0}
+      Clip: {fileID: 8300000, guid: 982d99ad27e5e9b4c918edd6be17496f, type: 3}
   - ID: 51
     Type: 3
     Window:
@@ -8162,7 +8162,7 @@ MonoBehaviour:
       PreviousMessage: 51
       NextMessage: -1
       MessageText: Where are you parents anyways?
-      Clip: {fileID: 0}
+      Clip: {fileID: 8300000, guid: caf5717c3a8bf4244b2667d010474381, type: 3}
   ConversationNodes:
   - ID: 1
     Type: 1

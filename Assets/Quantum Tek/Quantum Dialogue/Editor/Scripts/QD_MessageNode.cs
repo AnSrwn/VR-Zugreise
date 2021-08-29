@@ -17,12 +17,12 @@ namespace QuantumTek.QuantumDialogue.Editor
             Inputs = new List<QD_Knob>
             {
                 new QD_Knob(0, "Speaker", QD_KnobType.Input, 7.5f, false),
-                new QD_Knob(1, "Previous", QD_KnobType.Input, 35, false)
+                new QD_Knob(1, "Previous", QD_KnobType.Input, 35, true)
             };
             Outputs = new List<QD_Knob>
             {
                 new QD_Knob(0, "Speaker", QD_KnobType.Output, 7.5f),
-                new QD_Knob(1, "Next", QD_KnobType.Output, 35, false)
+                new QD_Knob(1, "Next", QD_KnobType.Output, 35, true)
             };
             AllowedInputs = new List<QD_ConnectionRule>
             {

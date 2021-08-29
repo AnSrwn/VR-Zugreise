@@ -28,9 +28,9 @@ MonoBehaviour:
     Speaker: 0
     SpeakerName: Conductor
     PreviousMessage: -1
-    NextMessage: -1
-    MessageText: Please show me your ticket.
-    Clip: {fileID: 8300000, guid: 50e35d9c8c67e8441aecae180ce44f25, type: 3}
+    NextMessage: 7
+    MessageText: Ah, there you are! I was wondering where you went.
+    Clip: {fileID: 8300000, guid: 1523bfc85c1dfde498b1b1eea63f73f8, type: 3}
   - ID: 5
     Speaker: 0
     SpeakerName: Conductor
@@ -38,4 +38,315 @@ MonoBehaviour:
     NextMessage: -1
     MessageText: Thank you.
     Clip: {fileID: 8300000, guid: 888bf91373377734db712601a249fce7, type: 3}
-  Choices: []
+  - ID: 7
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 1
+    NextMessage: 8
+    MessageText: Hiding in the washroom, are we?
+    Clip: {fileID: 8300000, guid: 149f1e645d6c95f40b265ebaa5193e12, type: 3}
+  - ID: 9
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: -1
+    NextMessage: 11
+    MessageText: Ah, washing your hands of something again?
+    Clip: {fileID: 8300000, guid: 5bb3ac3b4c08d8c4fa0579160f6b2020, type: 3}
+  - ID: 10
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 8
+    NextMessage: 50
+    MessageText: Why would you expect there to be anybody here?
+    Clip: {fileID: 8300000, guid: c3524e3f67a32044fb1109e5004ec7f2, type: 3}
+  - ID: 11
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 9
+    NextMessage: 51
+    MessageText: Well, you would know something about that, wouldn't you?
+    Clip: {fileID: 8300000, guid: 13352f5e80edf7f47936db48ae35142c, type: 3}
+  - ID: 14
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 51
+    NextMessage: 15
+    MessageText: You can't hide yourself from me any longer!
+    Clip: {fileID: 8300000, guid: 2ce96e00869a88f4f8905e033b498943, type: 3}
+  - ID: 15
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 14
+    NextMessage: 16
+    MessageText: Sooner or later everyone has to face the consequences for their
+      own actions.
+    Clip: {fileID: 8300000, guid: f959fd9a7a4a6a242b0345c00a25a7fb, type: 3}
+  - ID: 16
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 15
+    NextMessage: 17
+    MessageText: No one can escape the watchful eyes of the... authorities.
+    Clip: {fileID: 8300000, guid: eb26a50fd57be5d4591b1a53e2fbc157, type: 3}
+  - ID: 17
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 16
+    NextMessage: 18
+    MessageText: Don't think that you can go on with your act just because no one
+      has caught onto you yet.
+    Clip: {fileID: 8300000, guid: 5a7825398b065f24b8d4dbf0ebadfc3e, type: 3}
+  - ID: 19
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: -1
+    NextMessage: 20
+    MessageText: "I'm talking about your ticket, obviously.\r You've yet to show
+      it to me."
+    Clip: {fileID: 8300000, guid: 55fe5f17630a8eb4a80cad18b8ff4795, type: 3}
+  - ID: 20
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 19
+    NextMessage: 53
+    MessageText: I mean, you don't have anything else to feel guilty about, do you?
+    Clip: {fileID: 8300000, guid: ef31fe2f6cb4d5d41989acfbe3750ae0, type: 3}
+  - ID: 21
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 18
+    NextMessage: 22
+    MessageText: Perhaps not.
+    Clip: {fileID: 8300000, guid: 094169fc372a5a9419313068df20e50a, type: 3}
+  - ID: 22
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 21
+    NextMessage: 23
+    MessageText: But if you do that you'll hurt yourself more than anyone else.
+    Clip: {fileID: 8300000, guid: 163b7e1d6652b344393036cf4dc86f37, type: 3}
+  - ID: 23
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 22
+    NextMessage: 52
+    MessageText: All in all, I think you would regret it if you kept on running away.
+    Clip: {fileID: 8300000, guid: b0246fe438440954696ab8c24303e86c, type: 3}
+  - ID: 26
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: -1
+    NextMessage: 27
+    MessageText: Why are you on this train then?
+    Clip: {fileID: 8300000, guid: 5f93230450deb4a40adf34efc0f03668, type: 3}
+  - ID: 27
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 26
+    NextMessage: 28
+    MessageText: You wouldn't have gone on this journey if you didn't have a reason
+      to.
+    Clip: {fileID: 8300000, guid: 22c1015f77506a44e98ed1016689d19e, type: 3}
+  - ID: 28
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 27
+    NextMessage: 29
+    MessageText: After all, going on a journey means you want to arrive at a certain
+      goal.
+    Clip: {fileID: 8300000, guid: 9a408084de241a84c8f4ee394c7956c7, type: 3}
+  - ID: 29
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 28
+    NextMessage: 30
+    MessageText: Or maybe you just want to leave something behind?
+    Clip: {fileID: 8300000, guid: 0456e9e2b02306c4fa791f48182d44df, type: 3}
+  - ID: 30
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 29
+    NextMessage: 31
+    MessageText: Either way, you wanted things to change, that much is obvious.
+    Clip: {fileID: 8300000, guid: a6ebceaa4a95035488febac035ccec69, type: 3}
+  - ID: 31
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 30
+    NextMessage: 32
+    MessageText: What would you think if someone went on a journey and expected that
+      nothing would be different when they arrived?
+    Clip: {fileID: 8300000, guid: ba9d8d65190c59a4dadd6d7c129afec7, type: 3}
+  - ID: 32
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 31
+    NextMessage: 33
+    MessageText: You'd perhaps wonder why they even went on a journey then.
+    Clip: {fileID: 8300000, guid: 236659857a0447b44b463cb1025d48d6, type: 3}
+  - ID: 33
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 32
+    NextMessage: 34
+    MessageText: Did they think their action wouldn't have a consequence?
+    Clip: {fileID: 8300000, guid: 46e971303c5a30c4293da8588b28bd51, type: 3}
+  - ID: 34
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 33
+    NextMessage: 35
+    MessageText: Hmm, perhaps this sounds familiar to you?
+    Clip: {fileID: 8300000, guid: b4fa805ad88b9f842b4e24d6c65f73cf, type: 3}
+  - ID: 35
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 34
+    NextMessage: 36
+    MessageText: But you did just admit a fault of yours to me.
+    Clip: {fileID: 8300000, guid: f9d0a96218eff2d49b584f0c7a7b5d86, type: 3}
+  - ID: 36
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 35
+    NextMessage: 37
+    MessageText: Which is why I think that you will find a ticket around here somewhere.
+    Clip: {fileID: 8300000, guid: 5050865febc5d5342870d7412bf43256, type: 3}
+  - ID: 37
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 36
+    NextMessage: 38
+    MessageText: Admitting that you don't have a ticket could be your first step
+      to finding one.
+    Clip: {fileID: 8300000, guid: 1b81f213046a8454f953c52697c5eca8, type: 3}
+  - ID: 38
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 37
+    NextMessage: 39
+    MessageText: You are, in a way, taking on the consequences of your actions.
+    Clip: {fileID: 8300000, guid: e7801f95afc68b1488d113c9493491b4, type: 3}
+  - ID: 39
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 38
+    NextMessage: -1
+    MessageText: How... commendable.
+    Clip: {fileID: 8300000, guid: af193aca94c1d5f4490f7818ffe3881d, type: 3}
+  - ID: 40
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 53
+    NextMessage: 41
+    MessageText: "Oh really?\r Are you sure that you don't just want to run away
+      again?"
+    Clip: {fileID: 8300000, guid: 93dde3fb66719914fabe8d6634ae3a1e, type: 3}
+  - ID: 41
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 40
+    NextMessage: 42
+    MessageText: Do you want to know what I think?
+    Clip: {fileID: 8300000, guid: 2533622a5d94bb340aa82ba6291437f9, type: 3}
+  - ID: 42
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 41
+    NextMessage: 43
+    MessageText: I think that you have no idea what I'm even talking about.
+    Clip: {fileID: 8300000, guid: 4d08680fa360db34a84eb906a4fe2f7a, type: 3}
+  - ID: 43
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 42
+    NextMessage: 44
+    MessageText: You have no idea where your ticket even is, but you thought that
+      I would just let you go anyway.
+    Clip: {fileID: 8300000, guid: a1b68a914e6ced7418b304e9d1ef5d73, type: 3}
+  - ID: 44
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 43
+    NextMessage: 45
+    MessageText: I bet you don't even know why you are here in the first place.
+    Clip: {fileID: 8300000, guid: f25dd6b6cd9df204c944092dc4fe6bc2, type: 3}
+  - ID: 45
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 44
+    NextMessage: 46
+    MessageText: Lying to others is just the first step to lying to yourself after
+      all.
+    Clip: {fileID: 8300000, guid: 059e400739085854387d102b7e0a7410, type: 3}
+  - ID: 46
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 45
+    NextMessage: 47
+    MessageText: But trying to escape the consequences of your own actions is a habit
+      that you might come to... regret.
+    Clip: {fileID: 8300000, guid: 5c3ef0280182c2b4eaf2683a850336b4, type: 3}
+  - ID: 47
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 46
+    NextMessage: 48
+    MessageText: "But go on!\r I can't keep you here."
+    Clip: {fileID: 8300000, guid: df7d2e5e8070ffc4ebba919f3575a2b4, type: 3}
+  - ID: 48
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 47
+    NextMessage: 49
+    MessageText: It's your decision, after all.
+    Clip: {fileID: 8300000, guid: 153627ce3dec77d45830de688ceaa7cb, type: 3}
+  - ID: 49
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 48
+    NextMessage: -1
+    MessageText: And who knows, perhaps you'll find your... ticket... despite your
+      actions.
+    Clip: {fileID: 8300000, guid: c39589ac849ace94c83f58d64fad9198, type: 3}
+  - ID: 50
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 10
+    NextMessage: 51
+    MessageText: You couldn't have expected things to go any different, could you?
+    Clip: {fileID: 8300000, guid: daeebfcfdf766054c9fc6f49f98b7096, type: 3}
+  - ID: 51
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 50
+    NextMessage: 14
+    MessageText: But don't think that you can distract me with your idle chatter.
+    Clip: {fileID: 8300000, guid: 131e39d3ce6f2e04e9c0ae17eca78894, type: 3}
+  - ID: 52
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 23
+    NextMessage: 53
+    MessageText: And I do think that this measure is a little drastic, considering
+      you just haven't shown me your ticket yet.
+    Clip: {fileID: 8300000, guid: 6c9a235d2d2026d49bf88c45d5221eec, type: 3}
+  Choices:
+  - ID: 8
+    isAction: 0
+    Choices:
+    - No, I was just washing my hands
+    - Where is everyone?
+    NextMessages: 090000000a000000
+  - ID: 18
+    isAction: 0
+    Choices:
+    - What are you talking about?
+    - You'll never catch me alive!
+    NextMessages: 1300000015000000
+  - ID: 53
+    isAction: 0
+    Choices:
+    - I don't have a ticket
+    - One second, I'll get my ticker right now.
+    NextMessages: 1a00000028000000
