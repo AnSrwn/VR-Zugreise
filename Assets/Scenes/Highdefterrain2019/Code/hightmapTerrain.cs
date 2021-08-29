@@ -29,7 +29,6 @@ public class hightmapTerrain : MonoBehaviour
     void Start()
     {
         SetTerrainSplatMap(terrain, test);
-
     }
 
     // Start is called before the first frame update
@@ -45,6 +44,7 @@ public class hightmapTerrain : MonoBehaviour
         }
         if (ocean)
         {
+            test[1] = ExtraTexture[0]; // hack?
             if (movingHeightMap)
             {
                 SetTerrainSplatMap(terrain, ExtraTexture);
