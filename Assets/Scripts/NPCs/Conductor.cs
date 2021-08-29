@@ -19,6 +19,11 @@ public class Conductor : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        animator.SetBool(ConductorAnimationCondition.IS_IDLE, false);
+        animator.SetBool(ConductorAnimationCondition.IS_TALKING1, false);
+        animator.SetBool(ConductorAnimationCondition.IS_TALKING2, false);
+        animator.SetBool(ConductorAnimationCondition.IS_ANGRY, false);
+        animator.SetBool(ConductorAnimationCondition.IS_YELLING, true);
     }
 
     private void OnEnable()
@@ -70,6 +75,15 @@ public class Conductor : MonoBehaviour
 
         dialogueManager.initiateConversation(conversation, npcSpeakers);
         // animator.SetBool(DudeAnimationCondition.IS_TALKING, true);
+    }
+
+    public void playIdleAnimation()
+    {
+        animator.SetBool(ConductorAnimationCondition.IS_IDLE, true);
+        animator.SetBool(ConductorAnimationCondition.IS_TALKING1, false);
+        animator.SetBool(ConductorAnimationCondition.IS_TALKING2, false);
+        animator.SetBool(ConductorAnimationCondition.IS_ANGRY, false);
+        animator.SetBool(ConductorAnimationCondition.IS_YELLING, false);
     }
 
     private void onMessageAction()

@@ -47,8 +47,9 @@ public class BrockenGlass : MonoBehaviour
             {
                 windowAudioSource.Play();
 
-                //bird.GetComponent<Rigidbody>().useGravity = true;
                 bird.transform.rotation = finalPosition.transform.rotation;
+                bird.GetComponent<Rigidbody>().useGravity = true;
+                bird.GetComponent<Rigidbody>().isKinematic = false;
                 useGravity = true;
 
                 Instantiate(ticketPrefab, ticketPosition.transform.position, Quaternion.identity);

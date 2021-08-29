@@ -14,7 +14,7 @@ public class Dude : MonoBehaviour
 
     private void Start() {
         animator = GetComponent<Animator>();
-        initiateConversation();
+        StartCoroutine(StartIntroDialogue(3.0f));
     }
 
     private void OnEnable()
@@ -74,6 +74,12 @@ public class Dude : MonoBehaviour
                     break;
             }
         }
+    }
+
+    private IEnumerator StartIntroDialogue(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        initiateConversation();
     }
 }
 

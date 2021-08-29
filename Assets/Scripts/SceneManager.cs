@@ -7,6 +7,7 @@ public class SceneManager : MonoBehaviour
     public int sceneNumber = 0;
     public CharacterManager characterManager;
     public DialogueManager dialogueManager;
+    public EnvironmentManager environmentManager;
 
     // Decisions
     public bool friendlyToAttendant = true;
@@ -24,6 +25,7 @@ public class SceneManager : MonoBehaviour
             case 1:
                 characterManager.sceneNumber = 1;
                 dialogueManager.sceneNumber = 1;
+                environmentManager.LoadOcean();
                 break;
         }
     }

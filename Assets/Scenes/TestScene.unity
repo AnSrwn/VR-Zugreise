@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.004201442, g: 0.0047744527, b: 0.003519244, a: 1}
+  m_IndirectSpecularColor: {r: 0.0042058816, g: 0.0047757262, b: 0.0035187076, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -34985,6 +34985,7 @@ MonoBehaviour:
   sceneNumber: 0
   characterManager: {fileID: 1184340202}
   dialogueManager: {fileID: 873851350}
+  environmentManager: {fileID: 351650347}
   friendlyToAttendant: 1
   honestAboutTicket: 1
 --- !u!4 &1514499558
@@ -43852,7 +43853,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989116301}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.024, y: 9.2, z: -4}
+  m_LocalPosition: {x: 7.024, y: 9.39, z: -4}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children: []
   m_Father: {fileID: 543450651660760853}

@@ -35,6 +35,7 @@ public class CharacterManager : MonoBehaviour
             conductor.SetActive(true);
             conductor.transform.position = conductorPositionSecondScene.transform.position;
             conductor.transform.rotation = conductorPositionSecondScene.transform.rotation;
+            conductor.GetComponent<Conductor>().playIdleAnimation();
 
             child.SetActive(false);
             npcMan.SetActive(false);
