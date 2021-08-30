@@ -226,7 +226,7 @@ MonoBehaviour:
     SpeakerName: Conductor
     PreviousMessage: 38
     NextMessage: -1
-    MessageText: How... commendable.[isIdle]
+    MessageText: How... commendable.[endTicketDialogue]
     Clip: {fileID: 8300000, guid: af193aca94c1d5f4490f7818ffe3881d, type: 3}
   - ID: 40
     Speaker: 0
@@ -303,7 +303,7 @@ MonoBehaviour:
     PreviousMessage: 48
     NextMessage: -1
     MessageText: '[isTalking1]And who knows, perhaps you''ll find your... ticket...
-      despite your actions.[isIdle]'
+      despite your actions.[endTicketDialogue]'
     Clip: {fileID: 8300000, guid: c39589ac849ace94c83f58d64fad9198, type: 3}
   - ID: 50
     Speaker: 0
@@ -369,7 +369,7 @@ MonoBehaviour:
     PreviousMessage: 59
     NextMessage: -1
     MessageText: But just standing by and looking on would suit you just fine as
-      well, I suppose.[isIdle]
+      well, I suppose.[endTicketDialogue]
     Clip: {fileID: 8300000, guid: fc763a39bd2cae14587e4d8f03f12ca1, type: 3}
   Choices:
   - ID: 8

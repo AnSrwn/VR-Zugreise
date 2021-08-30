@@ -10,10 +10,16 @@ public class SceneManager : MonoBehaviour
     public CharacterManager characterManager;
     public DialogueManager dialogueManager;
     public EnvironmentManager environmentManager;
+    public AudioManager audioManager;
 
     // Decisions
     public bool friendlyToAttendant = true;
     public bool honestAboutTicket = true;
+
+    private void Start()
+    {
+        startFirstScene();
+    }
 
     private void Update()
     {
@@ -45,6 +51,8 @@ public class SceneManager : MonoBehaviour
     {
         characterManager.startFirstScene();
         dialogueManager.sceneNumber = 0;
+        audioManager.PlaySet(AudioManager.MusicSet.Woods);
+
         sceneNumber = 0;
     }
 
@@ -53,6 +61,7 @@ public class SceneManager : MonoBehaviour
         characterManager.startSecondScene();
         dialogueManager.sceneNumber = 1;
         environmentManager.LoadOcean();
+
         sceneNumber = 1;
     }
 }

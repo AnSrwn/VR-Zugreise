@@ -6,6 +6,7 @@ public class Conductor : MonoBehaviour
 {
     public DialogueManager dialogueManager;
     public SceneManager sceneManager;
+    private AudioManager audioManager;
     public AudioSource audioSource;
 
     public GameObject child;
@@ -18,6 +19,8 @@ public class Conductor : MonoBehaviour
 
     private void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
+
         animator = GetComponent<Animator>();
         animator.SetBool(ConductorAnimationCondition.IS_IDLE, false);
         animator.SetBool(ConductorAnimationCondition.IS_TALKING1, false);
@@ -45,6 +48,7 @@ public class Conductor : MonoBehaviour
                 if (sceneManager.sceneNumber == 1 && !askedForTicket)
                 {
                     initiateConversation("AskForTicket");
+                    audioManager.PlaySet(AudioManager.MusicSet.Conductor);
                     askedForTicket = true;
                 }
                 break;
@@ -56,6 +60,7 @@ public class Conductor : MonoBehaviour
                 if (sceneManager.sceneNumber == 1 && askedForTicket && !gaveTicket)
                 {
                     initiateConversation("GiveTicket");
+                    audioManager.PlaySet(AudioManager.MusicSet.Conductor);
                     gaveTicket = true;
                     Destroy(other.gameObject);
                 }
@@ -74,7 +79,6 @@ public class Conductor : MonoBehaviour
         }
 
         dialogueManager.initiateConversation(conversation, npcSpeakers);
-        // animator.SetBool(DudeAnimationCondition.IS_TALKING, true);
     }
 
     public void playIdleAnimation()
@@ -97,11 +101,7 @@ public class Conductor : MonoBehaviour
             {
                 case ConductorAnimationCondition.IS_IDLE:
                     print("Conductor " + ConductorAnimationCondition.IS_IDLE);
-                    animator.SetBool(ConductorAnimationCondition.IS_IDLE, true);
-                    animator.SetBool(ConductorAnimationCondition.IS_TALKING1, false);
-                    animator.SetBool(ConductorAnimationCondition.IS_TALKING2, false);
-                    animator.SetBool(ConductorAnimationCondition.IS_ANGRY, false);
-                    animator.SetBool(ConductorAnimationCondition.IS_YELLING, false);
+                    playIdleAnimation();
                     break;
 
                 case ConductorAnimationCondition.IS_TALKING1:
@@ -157,6 +157,11 @@ public class Conductor : MonoBehaviour
                     animator.SetBool(ConductorAnimationCondition.IS_TALKING2, false);
                     animator.SetBool(ConductorAnimationCondition.IS_ANGRY, false);
                     animator.SetBool(ConductorAnimationCondition.IS_YELLING, false);
+                    break;
+                case "endTicketDialogue":
+                    print("endTicketDialogue");
+                    playIdleAnimation();
+                    audioManager.PlaySet(AudioManager.MusicSet.Ocean);
                     break;
             }
         }
