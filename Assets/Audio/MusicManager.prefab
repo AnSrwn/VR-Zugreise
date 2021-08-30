@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3082356014759858765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3082356014759858803}
+  - component: {fileID: 3082356014759858764}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3082356014759858803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3082356014759858765}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3082356014759858764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3082356014759858765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14c6fe91c9a46f42b3d903c7f0f96f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: 6c873db24b2595843bf2f8fb1ea9acbb, type: 2}
+  sounds:
+  - name: Train
+    clip: {fileID: 8300000, guid: 56eaffaebc4f7d44d938fae5359fe950, type: 3}
+    volume: 1
+    loop: 1
+    mixerGroup: {fileID: 6035608313692621120, guid: 6c873db24b2595843bf2f8fb1ea9acbb,
+      type: 2}
+    source: {fileID: 0}
+  - name: Crowd
+    clip: {fileID: 8300000, guid: ca422f6b83167974b8856cfbd7d59269, type: 3}
+    volume: 1
+    loop: 1
+    mixerGroup: {fileID: 5093760532980596475, guid: 6c873db24b2595843bf2f8fb1ea9acbb,
+      type: 2}
+    source: {fileID: 0}
+  - name: Ocean
+    clip: {fileID: 8300000, guid: 1eafda2aaa5979c4894c33c0b8301ed2, type: 3}
+    volume: 1
+    loop: 1
+    mixerGroup: {fileID: -7735418701469010299, guid: 6c873db24b2595843bf2f8fb1ea9acbb,
+      type: 2}
+    source: {fileID: 0}
+  - name: Space
+    clip: {fileID: 8300000, guid: d328aa8d2e895bf40ab086ff82efc7e3, type: 3}
+    volume: 1
+    loop: 1
+    mixerGroup: {fileID: 8894725066588628143, guid: 6c873db24b2595843bf2f8fb1ea9acbb,
+      type: 2}
+    source: {fileID: 0}
+  - name: Conductor
+    clip: {fileID: 8300000, guid: 8fc3409539436614788e47d0188e1d01, type: 3}
+    volume: 1
+    loop: 0
+    mixerGroup: {fileID: -2797536494111493159, guid: 6c873db24b2595843bf2f8fb1ea9acbb,
+      type: 2}
+    source: {fileID: 0}
