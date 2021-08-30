@@ -18,6 +18,7 @@ public class SceneManager : MonoBehaviour
     // Decisions
     public bool friendlyToAttendant = true;
     public bool honestAboutTicket = true;
+    public bool toyMissing = false;
 
     private void Start()
     {
