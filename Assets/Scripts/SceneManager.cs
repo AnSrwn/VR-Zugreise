@@ -11,6 +11,7 @@ public class SceneManager : MonoBehaviour
     public DialogueManager dialogueManager;
     public EnvironmentManager environmentManager;
     public AudioManager audioManager;
+    public SkyManager skyManager;
 
     public GameObject interactableObjects;
 
@@ -21,6 +22,8 @@ public class SceneManager : MonoBehaviour
     private void Start()
     {
         startFirstScene();
+        //startSecondScene();
+        //StartCoroutine(StartThirdScene(1));
     }
 
     private void Update()
@@ -73,6 +76,7 @@ public class SceneManager : MonoBehaviour
         characterManager.startThirdScene();
         dialogueManager.sceneNumber = 2;
         audioManager.PlaySet(AudioManager.MusicSet.Space);
+        skyManager.StartFadeIn(20);
 
         interactableObjects.SetActive(false);
 
@@ -82,6 +86,11 @@ public class SceneManager : MonoBehaviour
     public IEnumerator StartThirdScene(float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
+        environmentManager.RiseOcean();
+        while (environmentManager.waterRising)
+        {
+            yield return null;
+        }
         sceneNumber = 2;
     }
 }

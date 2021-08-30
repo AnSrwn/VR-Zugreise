@@ -47,14 +47,14 @@ MonoBehaviour:
   sounds:
   - name: Train
     clip: {fileID: 8300000, guid: 56eaffaebc4f7d44d938fae5359fe950, type: 3}
-    volume: 1
+    volume: 0.25
     loop: 1
     mixerGroup: {fileID: 6035608313692621120, guid: 6c873db24b2595843bf2f8fb1ea9acbb,
       type: 2}
     source: {fileID: 0}
   - name: Crowd
     clip: {fileID: 8300000, guid: ca422f6b83167974b8856cfbd7d59269, type: 3}
-    volume: 1
+    volume: 0.25
     loop: 1
     mixerGroup: {fileID: 5093760532980596475, guid: 6c873db24b2595843bf2f8fb1ea9acbb,
       type: 2}
@@ -68,7 +68,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Space
     clip: {fileID: 8300000, guid: d328aa8d2e895bf40ab086ff82efc7e3, type: 3}
-    volume: 1
+    volume: 0.25
     loop: 1
     mixerGroup: {fileID: 8894725066588628143, guid: 6c873db24b2595843bf2f8fb1ea9acbb,
       type: 2}
