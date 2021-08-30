@@ -16,9 +16,9 @@ MonoBehaviour:
   - ID: 2
     Name: AskForTicket
     FirstMessage: 1
-  - ID: 4
+  - ID: 54
     Name: GiveTicket
-    FirstMessage: 5
+    FirstMessage: 55
   Speakers:
   - ID: 0
     Name: Conductor
@@ -31,13 +31,6 @@ MonoBehaviour:
     NextMessage: 7
     MessageText: '[isTalking1]Ah, there you are! I was wondering where you went.'
     Clip: {fileID: 8300000, guid: 1523bfc85c1dfde498b1b1eea63f73f8, type: 3}
-  - ID: 5
-    Speaker: 0
-    SpeakerName: Conductor
-    PreviousMessage: -1
-    NextMessage: -1
-    MessageText: Thank you.
-    Clip: {fileID: 8300000, guid: 888bf91373377734db712601a249fce7, type: 3}
   - ID: 7
     Speaker: 0
     SpeakerName: Conductor
@@ -101,8 +94,8 @@ MonoBehaviour:
     SpeakerName: Conductor
     PreviousMessage: -1
     NextMessage: 20
-    MessageText: "[isTalking1]I'm talking about your ticket, obviously. You've
-      yet to show it to me."
+    MessageText: '[isTalking1]I''m talking about your ticket, obviously. You''ve
+      yet to show it to me.'
     Clip: {fileID: 8300000, guid: 55fe5f17630a8eb4a80cad18b8ff4795, type: 3}
   - ID: 20
     Speaker: 0
@@ -240,8 +233,8 @@ MonoBehaviour:
     SpeakerName: Conductor
     PreviousMessage: 53
     NextMessage: 41
-    MessageText: "[sendBlackRaven]Oh really? Are you sure that you don't just want
-      to run away again?"
+    MessageText: '[sendBlackRaven]Oh really? Are you sure that you don''t just want
+      to run away again?'
     Clip: {fileID: 8300000, guid: 93dde3fb66719914fabe8d6634ae3a1e, type: 3}
   - ID: 41
     Speaker: 0
@@ -295,7 +288,7 @@ MonoBehaviour:
     SpeakerName: Conductor
     PreviousMessage: 46
     NextMessage: 48
-    MessageText: "But go on! I can't keep you here."
+    MessageText: But go on! I can't keep you here.
     Clip: {fileID: 8300000, guid: df7d2e5e8070ffc4ebba919f3575a2b4, type: 3}
   - ID: 48
     Speaker: 0
@@ -334,6 +327,50 @@ MonoBehaviour:
     MessageText: And I do think that this measure is a little drastic, considering
       you just haven't shown me your ticket yet.[isIdle]
     Clip: {fileID: 8300000, guid: 6c9a235d2d2026d49bf88c45d5221eec, type: 3}
+  - ID: 55
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: -1
+    NextMessage: 56
+    MessageText: '[isTalking1]Ah, there it is! So you found your ticket after all...'
+    Clip: {fileID: 8300000, guid: 5eee5729ed4fb564b8fcd3b237b18919, type: 3}
+  - ID: 56
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 55
+    NextMessage: 57
+    MessageText: Did you get some sort of revelation while looking for it?
+    Clip: {fileID: 8300000, guid: e371d56f8c853ce4b8e04a9f501d1957, type: 3}
+  - ID: 57
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 56
+    NextMessage: 58
+    MessageText: '[isTalking2]Well, no matter, the train will continue on either
+      way.'
+    Clip: {fileID: 8300000, guid: 10af67c3bf745564e825830de73eec37, type: 3}
+  - ID: 58
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 57
+    NextMessage: 59
+    MessageText: It will still take a bit of time until we have crossed this ocean.
+    Clip: {fileID: 8300000, guid: 62ff5123f97fe3c4ca38cdf6c30e5e29, type: 3}
+  - ID: 59
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 58
+    NextMessage: 60
+    MessageText: '[isAngry]You can go looking around the train for a bit if you want.[isTalking1]'
+    Clip: {fileID: 8300000, guid: d7646b6f104951d49bad0e974d642455, type: 3}
+  - ID: 60
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 59
+    NextMessage: -1
+    MessageText: But just standing by and looking on would suit you just fine as
+      well, I suppose.[isIdle]
+    Clip: {fileID: 8300000, guid: fc763a39bd2cae14587e4d8f03f12ca1, type: 3}
   Choices:
   - ID: 8
     isAction: 0

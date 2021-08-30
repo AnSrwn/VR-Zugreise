@@ -88,7 +88,8 @@ public class Conductor : MonoBehaviour
 
     private void onMessageAction()
     {
-        if ((dialogueManager.activeConversation == "AskForTicket")
+        if ((dialogueManager.activeConversation == "AskForTicket"
+            || dialogueManager.activeConversation == "GiveTicket")
            && dialogueManager.messageAction != null
            && dialogueManager.actionSpeaker == "Conductor")
         {
