@@ -37,10 +37,13 @@ public class Child : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Player":
+                GameObject player = other.gameObject;
                 if (sceneManager.sceneNumber == 2)
                 {
                     if (!introSpaceDialoguePlayed)
                     {
+                        Vector3 delta = new Vector3(player.transform.position.x - transform.position.x, 0.0f, player.transform.position.z - transform.position.z);
+                        transform.rotation = Quaternion.LookRotation(delta);
                         initiateConversation("IntroSpace");
                         introSpaceDialoguePlayed = true;
                     }
@@ -52,7 +55,7 @@ public class Child : MonoBehaviour
     public void initiateConversation(string conversation)
     {
         List<Speaker> npcSpeakers = new List<Speaker>();
-        npcSpeakers.Add(new Speaker("NpcMan", gameObject, audioSource));
+        npcSpeakers.Add(new Speaker("Child", gameObject, audioSource));
 
         dialogueManager.initiateConversation(conversation, npcSpeakers);
     }

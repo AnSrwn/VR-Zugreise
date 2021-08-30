@@ -48,7 +48,7 @@ MonoBehaviour:
     SpeakerName: Child
     PreviousMessage: 4
     NextMessage: 6
-    MessageText: Aren't you excited?[isIdle]
+    MessageText: '[isIdle]Aren''t you excited?'
     Clip: {fileID: 8300000, guid: 0706b04aad19bff40b3320fd389898bd, type: 3}
   - ID: 7
     Speaker: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
     SpeakerName: Child
     PreviousMessage: 7
     NextMessage: -1
-    MessageText: That's what a rocket is for, right.[isIdle]
+    MessageText: '[isIdle]That''s what a rocket is for, right.'
     Clip: {fileID: 8300000, guid: f78e7d0e800c44a4a9fd7b724522c727, type: 3}
   - ID: 9
     Speaker: 0
@@ -83,7 +83,7 @@ MonoBehaviour:
     SpeakerName: Child
     PreviousMessage: 10
     NextMessage: -1
-    MessageText: Nevermind...[isIdle]
+    MessageText: '[isIdle]Nevermind...'
     Clip: {fileID: 8300000, guid: 13ba2c90b1ad9f34e8c049d0bbe55aef, type: 3}
   Choices:
   - ID: 6
