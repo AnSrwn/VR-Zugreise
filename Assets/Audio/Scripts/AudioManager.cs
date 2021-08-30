@@ -101,6 +101,7 @@ public class AudioManager : MonoBehaviour
 	{
 		conductor.source.Play();
 		yield return new WaitForSeconds(48);
+		//yield return new WaitForSeconds(10);
 
 		ocean.source.Play();
 		StartCoroutine(FadeMixerGroup.StartFade(mixer, ocean.name + "Volume", 3f, 1f));

@@ -8,8 +8,17 @@ public class AudioTest : MonoBehaviour
     void Start()
     {
         AudioManager manager = FindObjectOfType<AudioManager>();
-        //manager.Play("Train");
+        //PlayAll(manager);
         StartCoroutine(setTest(manager));
+    }
+
+    void PlayAll(AudioManager manager)
+    {
+        manager.Play("Train");
+        manager.Play("Crowd");
+        manager.Play("Conductor");
+        manager.Play("Ocean");
+        manager.Play("Space");
     }
 
     IEnumerator setTest(AudioManager manager)
