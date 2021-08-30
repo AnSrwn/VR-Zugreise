@@ -8,6 +8,7 @@ public class BreakDoor : MonoBehaviour
     public GameObject puddle;
     public GameObject staticHandle;
     public GameObject throwableHandle;
+    public GameObject paper;
 
     private bool isActive = false;
 
@@ -15,6 +16,7 @@ public class BreakDoor : MonoBehaviour
     void Start()
     {
         puddle.SetActive(true);
+        paper.SetActive(true);
         this.gameObject.transform.localEulerAngles = new Vector3(0, 0, 0);
         this.gameObject.GetComponent<CircularDrive>().minAngle = 0;
         isActive = true;
