@@ -8,6 +8,8 @@ public class EnvironmentManager : MonoBehaviour
 {
     public hightmapTerrain terrain;
     public GameObject skyObject;
+    public GameObject houseSpawner;
+    public GameObject secondSceneInteractables;
 
     private PhysicallyBasedSky sky;
 
@@ -24,6 +26,8 @@ public class EnvironmentManager : MonoBehaviour
 
     IEnumerator OceanCoroutine()
     {
+        houseSpawner.SetActive(true);
+        secondSceneInteractables.SetActive(true);
         sky.groundTint.Override(new Color(0.25f, 0.375f, 0.5f));
         terrain.showtrees = false;
         terrain.ocean = true;
