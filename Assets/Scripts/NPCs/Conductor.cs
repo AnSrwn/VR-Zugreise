@@ -66,7 +66,7 @@ public class Conductor : MonoBehaviour
                     Destroy(other.gameObject);
 
                     // start third scene after 2 min.
-                    sceneManager.StartThirdScene(120);
+                    StartCoroutine(sceneManager.StartThirdScene(120));
                 }
                 break;
         }
