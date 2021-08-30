@@ -8,10 +8,10 @@ public class Conductor : MonoBehaviour
     public SceneManager sceneManager;
     private AudioManager audioManager;
     public AudioSource audioSource;
-
     public GameObject child;
     public AudioSource childAudioSource;
     public GameObject window;
+    public GameObject interactableObjects;
     private Animator animator;
     private bool conductorChildConversationPlayed = false;
     private bool askedForTicket = false;
@@ -60,9 +60,13 @@ public class Conductor : MonoBehaviour
                 if (sceneManager.sceneNumber == 1 && askedForTicket && !gaveTicket)
                 {
                     initiateConversation("GiveTicket");
+                    interactableObjects.SetActive(true);
                     audioManager.PlaySet(AudioManager.MusicSet.Conductor);
                     gaveTicket = true;
                     Destroy(other.gameObject);
+
+                    // start third scene after 2 min.
+                    sceneManager.StartThirdScene(120);
                 }
                 break;
         }

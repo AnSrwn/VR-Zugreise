@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0041985717, g: 0.0047734403, b: 0.0035197488, a: 1}
+  m_IndirectSpecularColor: {r: 0.004200487, g: 0.004773924, b: 0.003519448, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -35711,6 +35711,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 873851350}
   environmentManager: {fileID: 351650347}
   audioManager: {fileID: 1000577731}
+  interactableObjects: {fileID: 459733096}
   friendlyToAttendant: 1
   honestAboutTicket: 1
 --- !u!4 &1514499558
@@ -50747,6 +50748,11 @@ PrefabInstance:
       propertyPath: childAudioSource
       value: 
       objectReference: {fileID: 851923307074322315}
+    - target: {fileID: 8404720641186271358, guid: bf20f1ce757815b46aa6590bf4294c17,
+        type: 3}
+      propertyPath: interactableObjects
+      value: 
+      objectReference: {fileID: 459733096}
     - target: {fileID: 8674769839046411895, guid: bf20f1ce757815b46aa6590bf4294c17,
         type: 3}
       propertyPath: m_Name

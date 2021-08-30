@@ -38,4 +38,14 @@ public class CharacterManager : MonoBehaviour
         npcMan.SetActive(false);
         npcWoman.SetActive(false);
     }
+
+    public void startThirdScene()
+    {
+        dude.SetActive(false);
+        attendant.SetActive(false);
+        conductor.SetActive(false);
+        child.SetActive(true);
+        npcMan.SetActive(false);
+        npcWoman.SetActive(false);
+    }
 }

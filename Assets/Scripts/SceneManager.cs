@@ -12,6 +12,8 @@ public class SceneManager : MonoBehaviour
     public EnvironmentManager environmentManager;
     public AudioManager audioManager;
 
+    public GameObject interactableObjects;
+
     // Decisions
     public bool friendlyToAttendant = true;
     public bool honestAboutTicket = true;
@@ -43,6 +45,7 @@ public class SceneManager : MonoBehaviour
                 break;
 
             case 2:
+                startThirdScene();
                 break;
         }
     }
@@ -63,5 +66,22 @@ public class SceneManager : MonoBehaviour
         environmentManager.LoadOcean();
 
         sceneNumber = 1;
+    }
+
+    private void startThirdScene()
+    {
+        characterManager.startThirdScene();
+        dialogueManager.sceneNumber = 2;
+        audioManager.PlaySet(AudioManager.MusicSet.Space);
+
+        interactableObjects.SetActive(false);
+
+        sceneNumber = 2;
+    }
+
+    public IEnumerator StartThirdScene(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        sceneNumber = 2;
     }
 }
