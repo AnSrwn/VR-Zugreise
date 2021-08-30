@@ -35,7 +35,7 @@ public class TapWater : MonoBehaviour
 
         if (rightClean && leftClean && !nextSceneTriggered)
         {
-            sceneManager.sceneNumber = sceneManager.sceneNumber + 1;
+            sceneManager.sceneNumber = 1;
             nextSceneTriggered = true;
         }
     }

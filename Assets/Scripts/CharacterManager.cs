@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CharacterManager : MonoBehaviour
 {
-    public int sceneNumber = 0;
     public GameObject dude;
     public GameObject attendant;
 
@@ -15,32 +14,28 @@ public class CharacterManager : MonoBehaviour
 
     public GameObject conductorPositionSecondScene;
 
-    void Update()
+    public void startFirstScene()
     {
-        switch(sceneNumber)
-        {
-            case 0:
-            dude.SetActive(true);
-            attendant.SetActive(true);
-            conductor.SetActive(true);
-            child.SetActive(true);
-            npcMan.SetActive(true);
-            npcWoman.SetActive(true);
-            break;
+        dude.SetActive(true);
+        attendant.SetActive(true);
+        conductor.SetActive(true);
+        child.SetActive(true);
+        npcMan.SetActive(true);
+        npcWoman.SetActive(true);
+    }
 
-            case 1:
-            dude.SetActive(false);
-            attendant.SetActive(false);
+    public void startSecondScene()
+    {
+        dude.SetActive(false);
+        attendant.SetActive(false);
 
-            conductor.SetActive(true);
-            conductor.transform.position = conductorPositionSecondScene.transform.position;
-            conductor.transform.rotation = conductorPositionSecondScene.transform.rotation;
-            conductor.GetComponent<Conductor>().playIdleAnimation();
+        conductor.SetActive(true);
+        conductor.transform.position = conductorPositionSecondScene.transform.position;
+        conductor.transform.rotation = conductorPositionSecondScene.transform.rotation;
+        conductor.GetComponent<Conductor>().playIdleAnimation();
 
-            child.SetActive(false);
-            npcMan.SetActive(false);
-            npcWoman.SetActive(false);
-             break;
-        }
+        child.SetActive(false);
+        npcMan.SetActive(false);
+        npcWoman.SetActive(false);
     }
 }
