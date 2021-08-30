@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fc788fe28a1947c5906bf24c0472406, type: 3}
+  m_Name: Third Scene Dialogue
+  m_EditorClassIdentifier: 
+  Conversations:
+  - ID: 1
+    Name: IntroSpace
+    FirstMessage: 2
+  Speakers:
+  - ID: 0
+    Name: Child
+    Icon: {fileID: 0}
+  Messages:
+  - ID: 2
+    Speaker: 0
+    SpeakerName: Child
+    PreviousMessage: -1
+    NextMessage: 3
+    MessageText: '[isVictoryJump]Takeoff was successful!'
+    Clip: {fileID: 8300000, guid: 0eb709f3c342edd40b8ba2839228b422, type: 3}
+  - ID: 3
+    Speaker: 0
+    SpeakerName: Child
+    PreviousMessage: 2
+    NextMessage: 4
+    MessageText: '[isTalking1]Wow, would you look at that commander!'
+    Clip: {fileID: 8300000, guid: 0489a4f7a1da7fe49930452f52207abf, type: 3}
+  - ID: 4
+    Speaker: 0
+    SpeakerName: Child
+    PreviousMessage: 3
+    NextMessage: 5
+    MessageText: '[isPointingForward]The final frontier! Boldly going where no man
+      has gone before!'
+    Clip: {fileID: 8300000, guid: 0a981f9c28901164aac0e799e7f76326, type: 3}
+  - ID: 5
+    Speaker: 0
+    SpeakerName: Child
+    PreviousMessage: 4
+    NextMessage: 6
+    MessageText: Aren't you excited?[isIdle]
+    Clip: {fileID: 8300000, guid: 0706b04aad19bff40b3320fd389898bd, type: 3}
+  - ID: 7
+    Speaker: 0
+    SpeakerName: Child
+    PreviousMessage: -1
+    NextMessage: 8
+    MessageText: '[isTalking1]We''re in space, obviously!'
+    Clip: {fileID: 8300000, guid: 43dcca6595e1d6744ac587ead10d2b28, type: 3}
+  - ID: 8
+    Speaker: 0
+    SpeakerName: Child
+    PreviousMessage: 7
+    NextMessage: -1
+    MessageText: That's what a rocket is for, right.[isIdle]
+    Clip: {fileID: 8300000, guid: f78e7d0e800c44a4a9fd7b724522c727, type: 3}
+  - ID: 9
+    Speaker: 0
+    SpeakerName: Child
+    PreviousMessage: 6
+    NextMessage: 10
+    MessageText: '[isTalking1]I mean... weren''t we just?'
+    Clip: {fileID: 8300000, guid: f433b9c37d34f2b44b1b4233415945b0, type: 3}
+  - ID: 10
+    Speaker: 0
+    SpeakerName: Child
+    PreviousMessage: 9
+    NextMessage: 11
+    MessageText: '[isAngry]Uhm... okay...'
+    Clip: {fileID: 8300000, guid: 9023853303858824095f42aa5f6a7523, type: 3}
+  - ID: 11
+    Speaker: 0
+    SpeakerName: Child
+    PreviousMessage: 10
+    NextMessage: -1
+    MessageText: Nevermind...[isIdle]
+    Clip: {fileID: 8300000, guid: 13ba2c90b1ad9f34e8c049d0bbe55aef, type: 3}
+  Choices:
+  - ID: 6
+    isAction: 0
+    Choices:
+    - Where are we?
+    - What the hell are you talking about?
+    NextMessages: 0700000009000000
