@@ -59,9 +59,9 @@ public class EnvironmentManager : MonoBehaviour
         }
         waterRising = false;
     }
-
-    public void LoadSpace()
+    public IEnumerator LoadSpace(float delayTime)
     {
+        yield return new WaitForSeconds(delayTime);
         houseSpawner.SetActive(false);
         terrain.SetActive(false);
         space.SetActive(true);

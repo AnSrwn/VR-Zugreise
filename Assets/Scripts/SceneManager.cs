@@ -78,7 +78,7 @@ public class SceneManager : MonoBehaviour
         dialogueManager.sceneNumber = 2;
         audioManager.PlaySet(AudioManager.MusicSet.Space);
         skyManager.StartFadeIn(20);
-        environmentManager.LoadSpace();
+        StartCoroutine(environmentManager.LoadSpace(2.0f));
 
         interactableObjects.SetActive(false);
 
