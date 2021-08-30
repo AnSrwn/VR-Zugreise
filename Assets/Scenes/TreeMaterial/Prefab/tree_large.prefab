@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3629868591668882611}
   - component: {fileID: 427905555177825046}
   - component: {fileID: 2455814867305273308}
+  - component: {fileID: -1194020134996404368}
   m_Layer: 0
   m_Name: tree_large
   m_TagString: Untagged
@@ -55,7 +56,6 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -80,4 +80,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-1194020134996404368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4112968349048452617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99a38d6a1cf2de8489857ecf95815b5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomizeXRotation: 0
+  randomizeYRotation: 1
+  randomizeZRotation: 0
+  randomizeHeight: 0
+  minHeight: 0
+  maxHeight: 5
+  randomizeScale: 1
+  minScale: 9
+  maxScale: 11

@@ -64,7 +64,7 @@ public class hightmapTerrain : MonoBehaviour
         if (treecount >= 35)
         {
             StartCoroutine(PlaceObject(50));
-            offsetX += Time.deltaTime * animeSpeed;
+            offsetX -= Time.deltaTime * animeSpeed;
             parent.transform.Translate(0 + -Time.deltaTime * animeSpeed, 0, 0);
 
         }
@@ -149,20 +149,20 @@ public class hightmapTerrain : MonoBehaviour
         one = Random.Range(15, terrain.terrainData.size.x * scale);
         one2 = Random.Range(-15, terrain.terrainData.size.x * -1 * scale);
 
-        three = (int)terrain.terrainData.size.z * 2;
+        three = -(int)terrain.terrainData.size.z * 2;
 
         Vector3 randomPos = new Vector3(one, 1, three);
         Vector3 randomPos2 = new Vector3(one2, 1, three);
         two = terrain.SampleHeight(randomPos);
         two2 = terrain.SampleHeight(randomPos);
-        Vector3 treePos = new Vector3(one, two, three);
-        Vector3 treePos2 = new Vector3(one2, two2, three);
+        Vector3 treePos = new Vector3(one, 0, three);
+        Vector3 treePos2 = new Vector3(one2, 0, three);
 
         //Debug.Log(treePos);
         GameObject BabyTree = Instantiate(TreeList[Random.Range(0, TreeList.Length)], treePos, Quaternion.identity, parent.transform);
         GameObject BabyTree2 = Instantiate(TreeList[Random.Range(0, TreeList.Length)], treePos2, Quaternion.identity, parent.transform);
-        BabyTree.transform.localScale = new Vector3(threeSize, threeSize, threeSize);
-        BabyTree2.transform.localScale = new Vector3(threeSize, threeSize, threeSize);
+        //BabyTree.transform.localScale = new Vector3(threeSize, threeSize, threeSize);
+        //BabyTree2.transform.localScale = new Vector3(threeSize, threeSize, threeSize);
         Destroy(BabyTree, 28f);
         Destroy(BabyTree2, 28f);
         treecount++;
