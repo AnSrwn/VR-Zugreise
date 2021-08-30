@@ -6,11 +6,13 @@ using UnityEngine.Rendering.HighDefinition;
 
 public class EnvironmentManager : MonoBehaviour
 {
-    public hightmapTerrain terrain;
+    public GameObject terrain;
+    public hightmapTerrain terrainHightmap;
     public GameObject skyObject;
     public GameObject houseSpawner;
     public GameObject secondSceneInteractables;
     public bool waterRising = false;
+    public GameObject space;
 
     private PhysicallyBasedSky sky;
 
@@ -35,26 +37,33 @@ public class EnvironmentManager : MonoBehaviour
         houseSpawner.SetActive(true);
         secondSceneInteractables.SetActive(true);
         sky.groundTint.Override(new Color(0.25f, 0.375f, 0.5f));
-        terrain.showtrees = false;
-        terrain.ocean = true;
+        terrainHightmap.showtrees = false;
+        terrainHightmap.ocean = true;
         yield return 0;
-        terrain.ocean = false;
+        terrainHightmap.ocean = false;
         yield return 0;
-        terrain.ocean = true;
+        terrainHightmap.ocean = true;
         yield return 0;
-        terrain.movingHeightMap = false;
+        terrainHightmap.movingHeightMap = false;
     }
 
     IEnumerator RiseCoroutine()
     {
         waterRising = true;
-        while(terrain.gameObject.transform.position.y < Camera.main.transform.position.y - 1.6f)
+        while(terrainHightmap.gameObject.transform.position.y < Camera.main.transform.position.y - 1.6f)
         {
-            Vector3 terrainPosition = terrain.gameObject.transform.position;
+            Vector3 terrainPosition = terrainHightmap.gameObject.transform.position;
             float newY = terrainPosition.y + 0.0005f / Time.deltaTime;
-            terrain.gameObject.transform.position = new Vector3(terrainPosition.x, newY, terrainPosition.z);
+            terrainHightmap.gameObject.transform.position = new Vector3(terrainPosition.x, newY, terrainPosition.z);
             yield return null;
         }
         waterRising = false;
+    }
+
+    public void LoadSpace()
+    {
+        houseSpawner.SetActive(false);
+        terrain.SetActive(false);
+        space.SetActive(true);
     }
 }

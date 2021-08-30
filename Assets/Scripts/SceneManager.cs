@@ -23,8 +23,8 @@ public class SceneManager : MonoBehaviour
     private void Start()
     {
         startFirstScene();
-        //startSecondScene();
-        //StartCoroutine(StartThirdScene(1));
+        startSecondScene();
+        StartCoroutine(StartThirdScene(1));
     }
 
     private void Update()
@@ -78,6 +78,7 @@ public class SceneManager : MonoBehaviour
         dialogueManager.sceneNumber = 2;
         audioManager.PlaySet(AudioManager.MusicSet.Space);
         skyManager.StartFadeIn(20);
+        environmentManager.LoadSpace();
 
         interactableObjects.SetActive(false);
 
