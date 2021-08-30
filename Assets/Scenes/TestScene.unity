@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0042016217, g: 0.0047744787, b: 0.0035191812, a: 1}
+  m_IndirectSpecularColor: {r: 0.0042016217, g: 0.004774598, b: 0.00351922, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7379,6 +7379,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   terrain: {fileID: 9073964577869504991}
   skyObject: {fileID: 170188122}
+  houseSpawner: {fileID: 1588957576}
+  secondSceneInteractables: {fileID: 459733096}
 --- !u!4 &351650348
 Transform:
   m_ObjectHideFlags: 0
@@ -36392,6 +36394,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1580431567}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1588957576 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7938851930203922015, guid: e93b66ebbc7aaff42a38aca059243253,
+    type: 3}
+  m_PrefabInstance: {fileID: 746645019}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1589329187
 GameObject:
   m_ObjectHideFlags: 0
