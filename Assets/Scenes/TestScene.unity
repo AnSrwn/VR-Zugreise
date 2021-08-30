@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.004200487, g: 0.004773924, b: 0.003519448, a: 1}
+  m_IndirectSpecularColor: {r: 0.0042003533, g: 0.004773913, b: 0.0035192785, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7543,6 +7543,7 @@ MonoBehaviour:
   skyObject: {fileID: 170188122}
   houseSpawner: {fileID: 1588957576}
   secondSceneInteractables: {fileID: 459733096}
+  waterRising: 0
 --- !u!4 &351650348
 Transform:
   m_ObjectHideFlags: 0
@@ -35711,6 +35712,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 873851350}
   environmentManager: {fileID: 351650347}
   audioManager: {fileID: 1000577731}
+  skyManager: {fileID: 170188125}
   interactableObjects: {fileID: 459733096}
   friendlyToAttendant: 1
   honestAboutTicket: 1

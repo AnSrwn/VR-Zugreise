@@ -10,6 +10,7 @@ public class EnvironmentManager : MonoBehaviour
     public GameObject skyObject;
     public GameObject houseSpawner;
     public GameObject secondSceneInteractables;
+    public bool waterRising = false;
 
     private PhysicallyBasedSky sky;
 
@@ -22,6 +23,11 @@ public class EnvironmentManager : MonoBehaviour
     public void LoadOcean()
     {
         StartCoroutine(OceanCoroutine());
+    }
+
+    public void RiseOcean()
+    {
+        StartCoroutine(RiseCoroutine());
     }
 
     IEnumerator OceanCoroutine()
@@ -37,5 +43,18 @@ public class EnvironmentManager : MonoBehaviour
         terrain.ocean = true;
         yield return 0;
         terrain.movingHeightMap = false;
+    }
+
+    IEnumerator RiseCoroutine()
+    {
+        waterRising = true;
+        while(terrain.gameObject.transform.position.y < Camera.main.transform.position.y - 1.6f)
+        {
+            Vector3 terrainPosition = terrain.gameObject.transform.position;
+            float newY = terrainPosition.y + 0.0005f / Time.deltaTime;
+            terrain.gameObject.transform.position = new Vector3(terrainPosition.x, newY, terrainPosition.z);
+            yield return null;
+        }
+        waterRising = false;
     }
 }

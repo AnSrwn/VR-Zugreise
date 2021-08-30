@@ -21,7 +21,7 @@ public class SkyManager : MonoBehaviour
         Volume vol = this.gameObject.GetComponent<Volume>();
         vol.profile.TryGet<PhysicallyBasedSky>(out sky);
         lightComp = dirLight.GetComponent<Light>();
-        if(fadeIn) StartCoroutine(FadeIn(20));
+        if (fadeIn) StartFadeIn(20);
     }
 
     public void SetSky(Type type, float duration)
@@ -40,6 +40,11 @@ public class SkyManager : MonoBehaviour
                 Debug.Log("Sky type " + type + " is not implemented!");
                 break;
         }
+    }
+
+    public void StartFadeIn(float duration)
+    {
+        StartCoroutine(FadeIn(duration));
     }
 
     IEnumerator RotateLight(float duration, float endRotation)
