@@ -148,6 +148,14 @@ public class Child : MonoBehaviour
                     print("Child " + ChildAnimationCondition.IS_DANCING);
                     DancingAnimation();
                     break;
+                case "positiveSpaceAnswer":
+                    Talking1Animation();
+                    sceneManager.spaceFriendly = true;
+                    break;
+                case "negativeSpaceAnswer":
+                    Talking1Animation();
+                    sceneManager.spaceFriendly = false;
+                    break;
                 case "endIntroSpace":
                     if (!toysPlayed)
                     {
@@ -176,10 +184,12 @@ public class Child : MonoBehaviour
                 case "positiveRocketAnswer":
                     VictoryJumpAnimation();
                     spaceManager.LightRocket();
+                    sceneManager.rocketFriendly = true;
                     break;
                 case "negativeRocketAnswer":
                     AngryAnimation();
                     spaceManager.DestroyRocket();
+                    sceneManager.rocketFriendly = false;
                     break;
                 case "endRocketDialogue":
                     if (!cowPlayed)
@@ -193,10 +203,12 @@ public class Child : MonoBehaviour
                 case "positiveCowAnswer":
                     Talking1Animation();
                     spaceManager.LightCow();
+                    sceneManager.cowFriendly = true;
                     break;
                 case "negativeCowAnswer":
                     AngryAnimation();
                     spaceManager.DestroyCow();
+                    sceneManager.cowFriendly = false;
                     break;
                 case "endCowDialogue":
                     if (!aliensPlayed)
@@ -210,10 +222,12 @@ public class Child : MonoBehaviour
                 case "positiveAliensAnswer":
                     DancingAnimation();
                     spaceManager.LightAliens();
+                    sceneManager.aliensFriendly = true;
                     break;
                 case "negativeAliensAnswer":
                     AngryAnimation();
                     spaceManager.DestroyAliens();
+                    sceneManager.aliensFriendly = false;
                     break;
                 case "endAliensDialogue":
                     if (!astronautPlayed)
@@ -227,10 +241,12 @@ public class Child : MonoBehaviour
                 case "positiveAstronautAnswer":
                     Talking1Animation();
                     spaceManager.LightAstronaut();
+                    sceneManager.astronautFriendly = true;
                     break;
                 case "negativeAstronautAnswer":
                     AngryAnimation();
                     spaceManager.DestroyAstronaut();
+                    sceneManager.astronautFriendly = false;
                     break;
                 case "endAstronautDialogue":
                     if (!endDialoguePlayed)
