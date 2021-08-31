@@ -8,6 +8,7 @@ public class SpaceManager : MonoBehaviour
     public GameObject rocket;
     public GameObject aliens;
     public GameObject astronaut;
+    public Material glowingCow;
 
     private void Start() {
         cow.SetActive(false);
@@ -24,6 +25,13 @@ public class SpaceManager : MonoBehaviour
     public void DestroyCow()
     {
         cow.SetActive(false);
+    }
+
+    public void LightCow()
+    {
+        Material[] mats = cow.GetComponentInChildren<MeshRenderer>().materials;
+        mats[0] = mats[1] = mats[2] = glowingCow;
+        cow.GetComponentInChildren<MeshRenderer>().materials = mats;
     }
 
     public void StartRocket()
