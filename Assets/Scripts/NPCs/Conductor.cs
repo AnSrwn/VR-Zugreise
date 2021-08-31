@@ -18,6 +18,7 @@ public class Conductor : MonoBehaviour
     private bool gaveTicket = false;
     private bool showedPaper = false;
     private bool showedHandle = false;
+    private bool showedBird = false;
 
     private void Start()
     {
@@ -38,7 +39,11 @@ public class Conductor : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        //askedForTicket = true; // for testing reactions
+        // for testing reactions
+        askedForTicket = true;
+        sceneManager.honestAboutTicket = false;
+        window.SetActive(true);
+
         switch (other.gameObject.tag)
         {
             case "Player":
@@ -69,6 +74,22 @@ public class Conductor : MonoBehaviour
                 {
                     showedHandle = true;
                     initiateConversation("ShowHandle");
+                }
+                break;
+
+            case "Pigeon":
+                if (sceneManager.sceneNumber == 1 && askedForTicket && !showedBird)
+                {
+                    showedBird = true;
+                    initiateConversation("ShowPigeon");
+                }
+                break;
+
+            case "Raven":
+                if (sceneManager.sceneNumber == 1 && askedForTicket && !showedBird)
+                {
+                    showedBird = true;
+                    initiateConversation("ShowRaven");
                 }
                 break;
 
