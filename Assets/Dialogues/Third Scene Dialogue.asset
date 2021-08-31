@@ -245,18 +245,9 @@ MonoBehaviour:
     Speaker: 29
     SpeakerName: Child
     PreviousMessage: 37
-    NextMessage: 39
+    NextMessage: 65
     MessageText: They're just dancing.
     Clip: {fileID: 8300000, guid: 41d0116e417834145a25d249991c3bab, type: 3}
-  - ID: 39
-    Speaker: 29
-    SpeakerName: Child
-    PreviousMessage: 38
-    NextMessage: -1
-    MessageText: 'It''s... it''s just for fun...[endAliensDialogue]
-
-'
-    Clip: {fileID: 8300000, guid: 56a671f396897184aa64a57476af2d95, type: 3}
   - ID: 43
     Speaker: 41
     SpeakerName: Child
@@ -377,6 +368,13 @@ MonoBehaviour:
     NextMessage: -1
     MessageText: I'm so glad I didn't lose them![endToys]
     Clip: {fileID: 8300000, guid: 32ef6cac111d229418292dfcabfb94ac, type: 3}
+  - ID: 65
+    Speaker: 29
+    SpeakerName: Child
+    PreviousMessage: 38
+    NextMessage: -1
+    MessageText: It's... it's just for fun...[endAliensDialogue]
+    Clip: {fileID: 8300000, guid: 56a671f396897184aa64a57476af2d95, type: 3}
   Choices:
   - ID: 6
     isAction: 0
