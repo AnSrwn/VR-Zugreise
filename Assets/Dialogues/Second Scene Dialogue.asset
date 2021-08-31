@@ -34,6 +34,12 @@ MonoBehaviour:
   - ID: 76
     Name: ShowRadio
     FirstMessage: 75
+  - ID: 85
+    Name: ShowToy1
+    FirstMessage: 79
+  - ID: 86
+    Name: ShowToy2
+    FirstMessage: 80
   Speakers:
   - ID: 0
     Name: Conductor
@@ -472,6 +478,42 @@ MonoBehaviour:
     MessageText: There is no questioning taste, but I doubt that everyone here appreciates
       having to enjoy your choice of music.
     Clip: {fileID: 8300000, guid: dcff7fa6508729c4b9a40f645f76018a, type: 3}
+  - ID: 79
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: -1
+    NextMessage: 81
+    MessageText: Always just taking things away ...
+    Clip: {fileID: 8300000, guid: 718551d07eeccb845875478f1c45df66, type: 3}
+  - ID: 80
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: -1
+    NextMessage: 83
+    MessageText: Playing with toys again?
+    Clip: {fileID: 8300000, guid: c5d432f49501d2748b52bf6d46b9235f, type: 3}
+  - ID: 81
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 79
+    NextMessage: 82
+    MessageText: "Someone might miss this if you don\u2019t put it back where you
+      got it from."
+    Clip: {fileID: 8300000, guid: f0a8e7e75c3625e43ae0b93989159efb, type: 3}
+  - ID: 82
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 81
+    NextMessage: -1
+    MessageText: But then again, why should you care, right?
+    Clip: {fileID: 8300000, guid: 430447d1c3a971b42a2e8c08223ff9e6, type: 3}
+  - ID: 83
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 80
+    NextMessage: -1
+    MessageText: "Don\u2019t worry, I won\u2019t judge."
+    Clip: {fileID: 8300000, guid: 9c2b2ea276af12e4fba4ea938493c22e, type: 3}
   Choices:
   - ID: 8
     isAction: 0
