@@ -21,6 +21,7 @@ public class Conductor : MonoBehaviour
     private bool showedHandle = false;
     private bool showedBird = false;
     private bool showedRadio = false;
+    private List<string> shownToys = new List<string>();
 
     private void Start()
     {
@@ -65,9 +66,9 @@ public class Conductor : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // for testing reactions
-        askedForTicket = true;
+        /*askedForTicket = true;
         sceneManager.honestAboutTicket = false;
-        window.SetActive(true);
+        window.SetActive(true);*/
 
         switch (other.gameObject.tag)
         {
@@ -123,6 +124,23 @@ public class Conductor : MonoBehaviour
                 {
                     showedRadio = true;
                     initiateConversation("ShowRadio");
+                }
+                break;
+
+            case "Toy":
+                switch (shownToys.Count)
+                {
+                    case 0:
+                        shownToys.Add(other.gameObject.name);
+                        initiateConversation("ShowToy1");
+                        break;
+                    case 1:
+                        if (!shownToys.Contains(other.gameObject.name))
+                        {
+                            shownToys.Add(other.gameObject.name);
+                            initiateConversation("ShowToy2");
+                        }
+                        break;
                 }
                 break;
 
