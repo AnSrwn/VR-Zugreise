@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0042016217, g: 0.0047744936, b: 0.0035191886, a: 1}
+  m_IndirectSpecularColor: {r: 0.004197935, g: 0.004773269, b: 0.003519911, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1356,7 +1356,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 543450651660760853}
-  m_RootOrder: 25
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &60823566
 GameObject:
@@ -8621,7 +8621,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 543450651660760853}
-  m_RootOrder: 35
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &412570368
 GameObject:
@@ -17530,6 +17530,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d70a737dc1894274496982591e675cc9, type: 2}
   - {fileID: 11400000, guid: f5d4ccbf0b6435a45943e1564c925856, type: 2}
   - {fileID: 11400000, guid: ac83c16d914f21649ba9255c6b8dfc4f, type: 2}
+  - {fileID: 11400000, guid: 4bf030ac6e140d04cb464fa6c165f297, type: 2}
   activeConversation: 
   activeActionNodeId: -1
   messageAction: 
@@ -24846,7 +24847,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 543450651660760853}
-  m_RootOrder: 32
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1147670834
 GameObject:
@@ -35663,7 +35664,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 543450651660760853}
-  m_RootOrder: 37
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 237.47198, z: 0}
 --- !u!1 &1580431567
 GameObject:
@@ -39087,7 +39088,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 543450651660760853}
-  m_RootOrder: 24
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: -65.23801, z: 0}
 --- !u!1 &1754141410
 GameObject:
@@ -43616,7 +43617,7 @@ Transform:
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children: []
   m_Father: {fileID: 543450651660760853}
-  m_RootOrder: 31
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &1989116303
 MonoBehaviour:
@@ -46675,21 +46676,21 @@ Transform:
   - {fileID: 3732820751810478848}
   - {fileID: 2666100586638564474}
   - {fileID: 4005393330896410025}
-  - {fileID: 206149879}
   - {fileID: 1750224071}
   - {fileID: 56026458}
+  - {fileID: 206149879}
   - {fileID: 967155882}
   - {fileID: 1927334136}
   - {fileID: 245858536}
   - {fileID: 1311786135}
-  - {fileID: 358409613}
   - {fileID: 1989116302}
   - {fileID: 1142869160}
-  - {fileID: 331302711}
-  - {fileID: 1346722461}
+  - {fileID: 358409613}
   - {fileID: 411310372}
-  - {fileID: 687196551}
+  - {fileID: 331302711}
   - {fileID: 1569583764}
+  - {fileID: 1346722461}
+  - {fileID: 687196551}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
