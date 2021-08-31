@@ -10,6 +10,7 @@ public class EnvironmentManager : MonoBehaviour
     public hightmapTerrain terrainHightmap;
     public GameObject skyObject;
     public GameObject houseSpawner;
+    public GameObject astroSpawner;
     public GameObject secondSceneInteractables;
     public bool waterRising = false;
     public GameObject space;
@@ -65,5 +66,6 @@ public class EnvironmentManager : MonoBehaviour
         houseSpawner.SetActive(false);
         terrain.SetActive(false);
         space.SetActive(true);
+        astroSpawner.SetActive(true);
     }
 }
