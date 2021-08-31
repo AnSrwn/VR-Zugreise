@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0042004418, g: 0.0047739535, b: 0.0035193877, a: 1}
+  m_IndirectSpecularColor: {r: 0.0042015025, g: 0.004774366, b: 0.0035190918, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16894,6 +16894,7 @@ MonoBehaviour:
   spaceManager: {fileID: 175861868}
   audioSource: {fileID: 851923307074322315}
   childPositionThirdScene: {fileID: 1569583763}
+  conductor: {fileID: 763939605}
 --- !u!1 &826349455
 GameObject:
   m_ObjectHideFlags: 0
@@ -34704,6 +34705,12 @@ MonoBehaviour:
   friendlyToAttendant: 1
   honestAboutTicket: 1
   toyMissing: 0
+  spaceFriendly: 1
+  rocketFriendly: 1
+  cowFriendly: 1
+  aliensFriendly: 1
+  astronautFriendly: 1
+  ending: good
 --- !u!4 &1514499558
 Transform:
   m_ObjectHideFlags: 0

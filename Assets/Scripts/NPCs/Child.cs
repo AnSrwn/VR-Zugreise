@@ -9,7 +9,9 @@ public class Child : MonoBehaviour
     public SpaceManager spaceManager;
     public AudioSource audioSource;
     public GameObject childPositionThirdScene;
+    public GameObject conductor;
     private Animator animator;
+
 
     private bool introSpaceDialoguePlayed = false;
     private bool toysPlayed = false;
@@ -18,6 +20,7 @@ public class Child : MonoBehaviour
     private bool aliensPlayed = false;
     private bool astronautPlayed = false;
     private bool endDialoguePlayed = false;
+    private bool endConducterDialoguePlayed = false;
 
     private void Start()
     {
@@ -61,7 +64,7 @@ public class Child : MonoBehaviour
         }
     }
 
-    private void PlayEndDialgoue()
+    private void PlayChildEndDialgoue()
     {   
         if (sceneManager.ending == "good")
         {
@@ -235,9 +238,15 @@ public class Child : MonoBehaviour
                         endDialoguePlayed = true;
                         IdleAnimation();
                         sceneManager.sceneNumber = 3;
-                        PlayEndDialgoue();
+                        PlayChildEndDialgoue();
                     }
-                    
+                    break;
+                case "endChildEnd":
+                    if (!endConducterDialoguePlayed)
+                    {
+                        endConducterDialoguePlayed = true;
+                        conductor.GetComponent<Conductor>().PlayConductorEndDialgoue();
+                    }
                     break;
             }
         }

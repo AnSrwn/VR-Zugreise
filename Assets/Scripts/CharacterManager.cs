@@ -57,6 +57,7 @@ public class CharacterManager : MonoBehaviour
         conductor.SetActive(true);
         conductor.transform.GetChild(0).gameObject.SetActive(false);
         conductor.transform.GetChild(1).gameObject.SetActive(false);
+        conductor.transform.position = child.transform.position;
 
         child.SetActive(true);
         npcMan.SetActive(false);

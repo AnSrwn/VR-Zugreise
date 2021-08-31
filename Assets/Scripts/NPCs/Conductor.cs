@@ -37,6 +37,29 @@ public class Conductor : MonoBehaviour
         DialogueManager.messageActionAvailable += onMessageAction;
     }
 
+    public void PlayConductorEndDialgoue()
+    {
+        if (sceneManager.ending == "good")
+        {
+            StartCoroutine(initiateConversationWithDelay(2.0f, "EndGoodConductor"));
+        }
+        else if (sceneManager.ending == "bad")
+        {
+            StartCoroutine(initiateConversationWithDelay(2.0f, "EndBadConductor"));
+        }
+        else
+        {
+            StartCoroutine(initiateConversationWithDelay(2.0f, "EndNeutralConductor"));
+        }
+
+    }
+
+    private IEnumerator initiateConversationWithDelay(float delayTime, string conversation)
+    {
+        yield return new WaitForSeconds(delayTime);
+        initiateConversation(conversation);
+    }
+
     void OnTriggerEnter(Collider other)
     {
         // for testing reactions

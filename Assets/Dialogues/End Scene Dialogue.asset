@@ -124,7 +124,7 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: ee0120ed1fb74264499b23926a7323e0, type: 3}
   - ID: 12
     Speaker: 0
-    SpeakerName: ChildEnd
+    SpeakerName: Child
     PreviousMessage: 11
     NextMessage: -1
     MessageText: In the darkness.[endChildEnd]
