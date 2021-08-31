@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0042058816, g: 0.004775726, b: 0.0035186927, a: 1}
+  m_IndirectSpecularColor: {r: 0.0042004273, g: 0.0047738682, b: 0.0035193725, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -29089,7 +29089,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 2
+  m_Radius: 4
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 1.7530806, z: 0}
@@ -49905,6 +49905,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Child
       objectReference: {fileID: 0}
+    - target: {fileID: 670422098135847844, guid: a87d304a58eb7d240972ede8d8ee6171,
+        type: 3}
+      propertyPath: m_Radius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 889490366278767977, guid: a87d304a58eb7d240972ede8d8ee6171,
         type: 3}
       propertyPath: m_RootOrder
@@ -52631,6 +52636,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8404720641186271352, guid: bf20f1ce757815b46aa6590bf4294c17,
+        type: 3}
+      propertyPath: m_Radius
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8404720641186271358, guid: bf20f1ce757815b46aa6590bf4294c17,
         type: 3}
