@@ -12,10 +12,19 @@ public class Child : MonoBehaviour
     private Animator animator;
 
     private bool introSpaceDialoguePlayed = false;
+    private bool rocketPlayed = false;
+    private bool cowPlayed = false;
+    private bool aliensPlayed = false;
+    private bool astronautPlayed = false;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+
+        if (sceneManager.sceneNumber == 0)
+        {
+            SittingHappyAnimation();
+        }
     }
 
     private void OnEnable()
@@ -43,10 +52,10 @@ public class Child : MonoBehaviour
                 {
                     if (!introSpaceDialoguePlayed)
                     {
+                        introSpaceDialoguePlayed = true;
                         Vector3 delta = new Vector3(player.transform.position.x - transform.position.x, 0.0f, player.transform.position.z - transform.position.z);
                         transform.rotation = Quaternion.LookRotation(delta);
                         initiateConversation("IntroSpace");
-                        introSpaceDialoguePlayed = true;
                     }
                 }
                 break;
@@ -69,12 +78,14 @@ public class Child : MonoBehaviour
 
     private void onMessageAction()
     {
-        if ((dialogueManager.activeConversation == "IntroSpace"
-            || dialogueManager.activeConversation == "Rocket"
-            || dialogueManager.activeConversation == "Cow"
-            ||  dialogueManager.activeConversation == "Aliens"
-            || dialogueManager.activeConversation == "Astronaut")
-           && dialogueManager.messageAction != null
+        // if ((dialogueManager.activeConversation == "IntroSpace"
+        //     || dialogueManager.activeConversation == "Rocket"
+        //     || dialogueManager.activeConversation == "Cow"
+        //     ||  dialogueManager.activeConversation == "Aliens"
+        //     || dialogueManager.activeConversation == "Astronaut")
+        //    && dialogueManager.messageAction != null
+        //    && dialogueManager.actionSpeaker == "Child")
+        if (dialogueManager.messageAction != null
            && dialogueManager.actionSpeaker == "Child")
         {
             switch (dialogueManager.messageAction)
@@ -114,9 +125,13 @@ public class Child : MonoBehaviour
                     DancingAnimation();
                     break;
                 case "endIntroSpace":
-                    IdleAnimation();
-                    spaceManager.StartRocket();
-                    StartCoroutine(initiateConversationWithDelay(5.0f, "Rocket"));
+                    if (!rocketPlayed)
+                    {
+                        rocketPlayed = true;
+                        IdleAnimation();
+                        spaceManager.StartRocket();
+                        StartCoroutine(initiateConversationWithDelay(7.0f, "Rocket"));
+                    }
                     break;
                 case "positiveRocketAnswer":
                     VictoryJumpAnimation();
@@ -126,9 +141,13 @@ public class Child : MonoBehaviour
                     spaceManager.DestroyRocket();
                     break;
                 case "endRocketDialogue":
-                    IdleAnimation();
-                    spaceManager.StartCow();
-                    StartCoroutine(initiateConversationWithDelay(5.0f, "Cow"));
+                    if (!cowPlayed)
+                    {
+                        cowPlayed = true;
+                        IdleAnimation();
+                        spaceManager.StartCow();
+                        StartCoroutine(initiateConversationWithDelay(7.0f, "Cow"));
+                    }
                     break;
                 case "positiveCowAnswer":
                     Talking1Animation();
@@ -138,9 +157,13 @@ public class Child : MonoBehaviour
                     spaceManager.DestroyCow();
                     break;
                 case "endCowDialogue":
-                    IdleAnimation();
-                    spaceManager.StartAliens();
-                    StartCoroutine(initiateConversationWithDelay(5.0f, "Aliens"));
+                    if (!aliensPlayed)
+                    {
+                        aliensPlayed = true;
+                        IdleAnimation();
+                        spaceManager.StartAliens();
+                        StartCoroutine(initiateConversationWithDelay(7.0f, "Aliens"));
+                    }
                     break;
                 case "positiveAliensAnswer":
                     DancingAnimation();
@@ -150,9 +173,13 @@ public class Child : MonoBehaviour
                     spaceManager.DestroyAliens();
                     break;
                 case "endAliensDialogue":
-                    IdleAnimation();
-                    spaceManager.StartAstronaut();
-                    StartCoroutine(initiateConversationWithDelay(5.0f, "Astronaut"));
+                    if (!astronautPlayed)
+                    {
+                        astronautPlayed = true;
+                        IdleAnimation();
+                        spaceManager.StartAstronaut();
+                        StartCoroutine(initiateConversationWithDelay(7.0f, "Astronaut"));
+                    }
                     break;
                 case "positiveAstronautAnswer":
                     Talking1Animation();

@@ -8904,7 +8904,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ticketPrefab
       value: 
-      objectReference: {fileID: 1000010777624494, guid: 0148ab3788e3f8948a8c67e3fd48845d,
+      objectReference: {fileID: 8339967153242071018, guid: b12b90a59eda4aa41a45c801f99be503,
         type: 3}
     - target: {fileID: 6199634444473240980, guid: ddbcaab3a24ce614aa6afbd003006173,
         type: 3}
@@ -43716,13 +43716,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989116301}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 7.024, y: 9.39, z: -4}
   m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children: []
   m_Father: {fileID: 543450651660760853}
   m_RootOrder: 32
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &1989116303
 MonoBehaviour:
   m_ObjectHideFlags: 0
