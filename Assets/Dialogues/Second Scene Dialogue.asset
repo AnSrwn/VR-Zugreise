@@ -379,7 +379,8 @@ MonoBehaviour:
     SpeakerName: Conductor
     PreviousMessage: -1
     NextMessage: -1
-    MessageText: Test
+    MessageText: Thank you very much, but it really is not your job to clean up this
+      train.
     Clip: {fileID: 8300000, guid: d939d688182b0c840b97d2edfc8a754e, type: 3}
   Choices:
   - ID: 8
