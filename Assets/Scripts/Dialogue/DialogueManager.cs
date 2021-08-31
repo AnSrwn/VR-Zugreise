@@ -35,6 +35,7 @@ public class DialogueManager : MonoBehaviour
 
     public void initiateConversation(string conversation, List<Speaker> npcSpeakers)
     {
+        actionSpeaker = null;
         qdHandler.dialogue = dialogues[sceneNumber];
 
         this.activeConversation = conversation;
@@ -50,8 +51,8 @@ public class DialogueManager : MonoBehaviour
     {
         activeConversation = "";
         activeActionNodeId = -1;
-        messageAction = null;
-        actionSpeaker = null;
+        // messageAction = null;
+        // actionSpeaker = null;
         npcSpeakers = null;
         ended = false;
 
@@ -135,7 +136,6 @@ public class DialogueManager : MonoBehaviour
     {
         messageText.gameObject.SetActive(false);
         messageText.text = "";
-        messageAction = null;
         actionSpeaker = null;
         ClearChoices();
 
@@ -167,6 +167,7 @@ public class DialogueManager : MonoBehaviour
                 int fromIndex = text.IndexOf("[") + 1;
                 int toIndex = text.IndexOf("]");
 
+                messageAction = null;
                 messageAction = text.Substring(fromIndex, toIndex - fromIndex);
                 messageActionAvailable?.Invoke();
 
@@ -176,6 +177,7 @@ public class DialogueManager : MonoBehaviour
             string endMessageAction = null;
 
             if (text.Substring(text.Length - 1, 1) == "]") {
+                actionSpeaker = npcName;
                 int fromIndex = text.IndexOf("[") + 1;
                 int toIndex = text.IndexOf("]");
 
