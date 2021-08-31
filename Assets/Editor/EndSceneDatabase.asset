@@ -5700,7 +5700,7 @@ MonoBehaviour:
       SpeakerName: Child
       PreviousMessage: 11
       NextMessage: -1
-      MessageText: In the darkness.
+      MessageText: In the darkness.[endChildEnd]
       Clip: {fileID: 8300000, guid: 72e45b81ab70def4ea15f153509e3ec8, type: 3}
   - ID: 16
     Type: 3

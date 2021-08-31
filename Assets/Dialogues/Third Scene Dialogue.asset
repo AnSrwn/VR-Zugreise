@@ -91,7 +91,7 @@ MonoBehaviour:
     SpeakerName: Child
     PreviousMessage: -1
     NextMessage: 8
-    MessageText: '[isTalking1]We''re in space, obviously!'
+    MessageText: '[positiveSpaceAnswer]We''re in space, obviously!'
     Clip: {fileID: 8300000, guid: 43dcca6595e1d6744ac587ead10d2b28, type: 3}
   - ID: 8
     Speaker: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
     SpeakerName: Child
     PreviousMessage: 6
     NextMessage: 10
-    MessageText: '[isTalking1]I mean... weren''t we just?'
+    MessageText: '[negativeSpaceAnswer]I mean... weren''t we just?'
     Clip: {fileID: 8300000, guid: f433b9c37d34f2b44b1b4233415945b0, type: 3}
   - ID: 10
     Speaker: 0

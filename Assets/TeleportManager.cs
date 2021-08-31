@@ -32,6 +32,11 @@ public class TeleportManager : MonoBehaviour
                     backArea.GetComponent<MeshCollider>().enabled = false;
                     childArea.GetComponent<MeshCollider>().enabled = true;
                     break;
+                case 3:
+                    completeArea.GetComponent<MeshCollider>().enabled = false;
+                    backArea.GetComponent<MeshCollider>().enabled = false;
+                    childArea.GetComponent<MeshCollider>().enabled = true;
+                    break;
                 default:
                     Debug.Log("Scene number " + sceneNumber + " is not supported");
                     break;

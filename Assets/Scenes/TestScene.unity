@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0042004418, g: 0.0047739535, b: 0.0035193877, a: 1}
+  m_IndirectSpecularColor: {r: 0.0042004725, g: 0.004773898, b: 0.0035194475, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16894,6 +16894,7 @@ MonoBehaviour:
   spaceManager: {fileID: 175861868}
   audioSource: {fileID: 851923307074322315}
   childPositionThirdScene: {fileID: 1569583763}
+  conductor: {fileID: 763939605}
 --- !u!1 &826349455
 GameObject:
   m_ObjectHideFlags: 0
@@ -18680,6 +18681,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: radio
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3dd1ed861b3b662448ae6d307ffed6b7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3dd1ed861b3b662448ae6d307ffed6b7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Radio
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dd1ed861b3b662448ae6d307ffed6b7, type: 3}
@@ -34704,6 +34715,12 @@ MonoBehaviour:
   friendlyToAttendant: 1
   honestAboutTicket: 1
   toyMissing: 0
+  spaceFriendly: 1
+  rocketFriendly: 1
+  cowFriendly: 1
+  aliensFriendly: 1
+  astronautFriendly: 1
+  ending: good
 --- !u!4 &1514499558
 Transform:
   m_ObjectHideFlags: 0
@@ -49597,6 +49614,11 @@ PrefabInstance:
       propertyPath: child
       value: 
       objectReference: {fileID: 816992766}
+    - target: {fileID: 8404720641186271358, guid: bf20f1ce757815b46aa6590bf4294c17,
+        type: 3}
+      propertyPath: radio
+      value: 
+      objectReference: {fileID: 1842234706}
     - target: {fileID: 8404720641186271358, guid: bf20f1ce757815b46aa6590bf4294c17,
         type: 3}
       propertyPath: window

@@ -31,6 +31,9 @@ MonoBehaviour:
   - ID: 71
     Name: ShowRaven
     FirstMessage: 70
+  - ID: 76
+    Name: ShowRadio
+    FirstMessage: 75
   Speakers:
   - ID: 0
     Name: Conductor
@@ -447,6 +450,28 @@ MonoBehaviour:
     NextMessage: -1
     MessageText: Well, I am sure he deserved it, right?
     Clip: {fileID: 8300000, guid: 7b0f97657e1e2a74ead34a42ae359951, type: 3}
+  - ID: 75
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: -1
+    NextMessage: 77
+    MessageText: There is no ...
+    Clip: {fileID: 8300000, guid: f4e3b19b065d3874ab6f45e6fd1b4b40, type: 3}
+  - ID: 77
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 75
+    NextMessage: 78
+    MessageText: Wait, let me turn that of.[turnOffRadio]
+    Clip: {fileID: 8300000, guid: 92a5531f90a3d9843bea05b5cc33e8b2, type: 3}
+  - ID: 78
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 77
+    NextMessage: -1
+    MessageText: There is no questioning taste, but I doubt that everyone here appreciates
+      having to enjoy your choice of music.
+    Clip: {fileID: 8300000, guid: dcff7fa6508729c4b9a40f645f76018a, type: 3}
   Choices:
   - ID: 8
     isAction: 0
