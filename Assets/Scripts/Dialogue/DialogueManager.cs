@@ -49,6 +49,7 @@ public class DialogueManager : MonoBehaviour
         SetText();
 
         string[] excluded = {
+            "AttendantIdleConversation",
             "NpcConversation01",
             "NpcConversation02",
             "ConductorChildConversation",
