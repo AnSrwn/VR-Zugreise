@@ -9,7 +9,8 @@ public class AudioTest : MonoBehaviour
     {
         AudioManager manager = FindObjectOfType<AudioManager>();
         //PlayAll(manager);
-        StartCoroutine(setTest(manager));
+        //StartCoroutine(setTest(manager));
+        StartCoroutine(testNothing(manager));
     }
 
     void PlayAll(AudioManager manager)
@@ -41,5 +42,19 @@ public class AudioTest : MonoBehaviour
 
         Debug.Log("Now Playing Space Set");
         manager.PlaySet(AudioManager.MusicSet.Space);
+    }
+
+    IEnumerator testNothing(AudioManager manager)
+    {
+        Debug.Log("Now Playing Woods Set");
+        manager.PlaySet(AudioManager.MusicSet.Woods);
+        yield return new WaitForSeconds(5);
+        
+        Debug.Log("Now Playing Space Set");
+        manager.PlaySet(AudioManager.MusicSet.Space);
+        yield return new WaitForSeconds(5);
+
+        Debug.Log("Now Playing Nothing Set");
+        manager.PlaySet(AudioManager.MusicSet.Nothing);
     }
 }
