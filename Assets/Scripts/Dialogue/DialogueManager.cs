@@ -48,7 +48,18 @@ public class DialogueManager : MonoBehaviour
         qdHandler.SetConversation(conversation);
         SetText();
 
-        string[] excluded = { "NpcConversation01", "NpcConversation02", "ConductorChildConversation" };
+        string[] excluded = {
+            "NpcConversation01",
+            "NpcConversation02",
+            "ConductorChildConversation",
+            "ShowPaper",
+            "ShowHandle",
+            "ShowPigeon",
+            "ShowRaven",
+            "ShowRadio",
+            "ShowToy1",
+            "ShowToy2"
+        };
         if (!excluded.Contains(conversation))
         {
             teleportManager.Dialogue(sceneNumber, TeleportManager.Event.Start);
@@ -57,8 +68,14 @@ public class DialogueManager : MonoBehaviour
 
     private void endConversation()
     {
-        // TODO: add final dialogue
-        string[] included = { "IntroConversation", "AskForTicket", "GiveTicket" };
+        string[] included = {
+            "IntroConversation",
+            "AskForTicket",
+            "GiveTicket",
+            "EndGoodConductor",
+            "EndBadConductor",
+            "EndNeutralConductor"
+        };
         if (included.Contains(activeConversation))
         {
             teleportManager.Dialogue(sceneNumber, TeleportManager.Event.End);
