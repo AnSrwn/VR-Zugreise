@@ -13,6 +13,7 @@ TagManager:
   - Ticket
   - Toy
   - Paper
+  - Handle
   layers:
   - Default
   - TransparentFX

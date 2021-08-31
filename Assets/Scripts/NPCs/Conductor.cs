@@ -17,6 +17,7 @@ public class Conductor : MonoBehaviour
     private bool askedForTicket = false;
     private bool gaveTicket = false;
     private bool showedPaper = false;
+    private bool showedHandle = false;
 
     private void Start()
     {
@@ -37,6 +38,7 @@ public class Conductor : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        //askedForTicket = true; // for testing reactions
         switch (other.gameObject.tag)
         {
             case "Player":
@@ -59,6 +61,14 @@ public class Conductor : MonoBehaviour
                 {
                     showedPaper = true;
                     initiateConversation("ShowPaper");
+                }
+                break;
+
+            case "Handle":
+                if (sceneManager.sceneNumber == 1 && askedForTicket && !showedHandle)
+                {
+                    showedHandle = true;
+                    initiateConversation("ShowHandle");
                 }
                 break;
 

@@ -22,6 +22,9 @@ MonoBehaviour:
   - ID: 61
     Name: ShowPaper
     FirstMessage: 62
+  - ID: 63
+    Name: ShowHandle
+    FirstMessage: 64
   Speakers:
   - ID: 0
     Name: Conductor
@@ -382,6 +385,20 @@ MonoBehaviour:
     MessageText: Thank you very much, but it really is not your job to clean up this
       train.
     Clip: {fileID: 8300000, guid: d939d688182b0c840b97d2edfc8a754e, type: 3}
+  - ID: 64
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: -1
+    NextMessage: 65
+    MessageText: Was this really necessary?
+    Clip: {fileID: 8300000, guid: c3d471f955c5b8f499c99722cc920ec6, type: 3}
+  - ID: 65
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 64
+    NextMessage: -1
+    MessageText: Haven't you broken enough things already?
+    Clip: {fileID: 8300000, guid: 3cadf848e1b183841824837c2bc33055, type: 3}
   Choices:
   - ID: 8
     isAction: 0
