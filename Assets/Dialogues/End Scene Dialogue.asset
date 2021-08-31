@@ -53,56 +53,56 @@ MonoBehaviour:
   Messages:
   - ID: 2
     Speaker: 0
-    SpeakerName: ChildEnd
+    SpeakerName: Child
     PreviousMessage: -1
     NextMessage: 3
     MessageText: '[isTalking1]I know that you don''t care about me.'
     Clip: {fileID: 8300000, guid: 8cd2a44a47617934a97ad370d831e0e4, type: 3}
   - ID: 3
     Speaker: 0
-    SpeakerName: ChildEnd
+    SpeakerName: Child
     PreviousMessage: 2
     NextMessage: 4
     MessageText: You don't have to keep rubbing it in.
     Clip: {fileID: 8300000, guid: e6cc32f7d0b6e7a43b7ff38b8c6a05c4, type: 3}
   - ID: 4
     Speaker: 0
-    SpeakerName: ChildEnd
+    SpeakerName: Child
     PreviousMessage: 3
     NextMessage: 5
     MessageText: But I know it's not just me.
     Clip: {fileID: 8300000, guid: 8b3d29d7041b3cd479b34cb128143d61, type: 3}
   - ID: 5
     Speaker: 0
-    SpeakerName: ChildEnd
+    SpeakerName: Child
     PreviousMessage: 4
     NextMessage: 6
     MessageText: '[isPointingForward]You don''t care about anyone but yourself.'
     Clip: {fileID: 8300000, guid: 2f90348832f62c249859bcf6cf245a8f, type: 3}
   - ID: 6
     Speaker: 0
-    SpeakerName: ChildEnd
+    SpeakerName: Child
     PreviousMessage: 5
     NextMessage: 7
     MessageText: But it's okay.
     Clip: {fileID: 8300000, guid: 4c451088d21fc7d4f8cf0d289112e8aa, type: 3}
   - ID: 7
     Speaker: 0
-    SpeakerName: ChildEnd
+    SpeakerName: Child
     PreviousMessage: 6
     NextMessage: 8
     MessageText: '[isAngry]I don''t care anymore.'
     Clip: {fileID: 8300000, guid: 87e4b5b8e728401449212babab192cba, type: 3}
   - ID: 8
     Speaker: 0
-    SpeakerName: ChildEnd
+    SpeakerName: Child
     PreviousMessage: 7
     NextMessage: 9
     MessageText: I won't miss you, just like you don't miss me.
     Clip: {fileID: 8300000, guid: 423499cc4766e3c41b17728227a1e8bb, type: 3}
   - ID: 9
     Speaker: 0
-    SpeakerName: ChildEnd
+    SpeakerName: Child
     PreviousMessage: 8
     NextMessage: 10
     MessageText: '[isPointingForward]And if you''re being honest with yourself you
@@ -110,14 +110,14 @@ MonoBehaviour:
     Clip: {fileID: 8300000, guid: ff2d9cd6a13bb924e840bb894431dd72, type: 3}
   - ID: 10
     Speaker: 0
-    SpeakerName: ChildEnd
+    SpeakerName: Child
     PreviousMessage: 9
     NextMessage: 11
     MessageText: '[isTalking1]But that is, what you wanted, right?'
     Clip: {fileID: 8300000, guid: 924ea0d0a9b15b041aae739cb44dc619, type: 3}
   - ID: 11
     Speaker: 0
-    SpeakerName: ChildEnd
+    SpeakerName: Child
     PreviousMessage: 10
     NextMessage: 12
     MessageText: Being alone.

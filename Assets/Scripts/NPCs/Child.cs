@@ -64,16 +64,18 @@ public class Child : MonoBehaviour
         }
     }
 
-    private void PlayChildEndDialgoue()
-    {   
+    public IEnumerator PlayChildEndDialgoue(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+
         if (sceneManager.ending == "good")
         {
-            StartCoroutine(initiateConversationWithDelay(5.0f, "EndGoodChild"));
+            StartCoroutine(initiateConversationWithDelay(0f, "EndGoodChild"));
         } else if (sceneManager.ending == "bad")
         {
-            StartCoroutine(initiateConversationWithDelay(5.0f, "EndBadChild"));
+            StartCoroutine(initiateConversationWithDelay(0f, "EndBadChild"));
         } else{
-            StartCoroutine(initiateConversationWithDelay(5.0f, "EndNeutralChild"));
+            StartCoroutine(initiateConversationWithDelay(0f, "EndNeutralChild"));
         }
             
     }
@@ -254,7 +256,7 @@ public class Child : MonoBehaviour
                         endDialoguePlayed = true;
                         IdleAnimation();
                         sceneManager.sceneNumber = 3;
-                        PlayChildEndDialgoue();
+                        StartCoroutine(PlayChildEndDialgoue(4));
                     }
                     break;
                 case "endChildEnd":

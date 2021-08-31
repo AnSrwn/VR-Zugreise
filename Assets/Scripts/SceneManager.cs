@@ -101,7 +101,14 @@ public class SceneManager : MonoBehaviour
         ending = CalculateEnding();
         characterManager.startFourthScene();
         dialogueManager.sceneNumber = 3;
-        audioManager.PlaySet(AudioManager.MusicSet.Space);
+
+        if (ending == "bad")
+        {
+            audioManager.PlaySet(AudioManager.MusicSet.Nothing);
+        } else {
+            audioManager.PlaySet(AudioManager.MusicSet.Space);
+
+        }
 
         sceneNumber = 3;
     }
