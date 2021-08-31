@@ -19,6 +19,18 @@ MonoBehaviour:
   - ID: 54
     Name: GiveTicket
     FirstMessage: 55
+  - ID: 61
+    Name: ShowPaper
+    FirstMessage: 62
+  - ID: 63
+    Name: ShowHandle
+    FirstMessage: 64
+  - ID: 67
+    Name: ShowPigeon
+    FirstMessage: 66
+  - ID: 71
+    Name: ShowRaven
+    FirstMessage: 70
   Speakers:
   - ID: 0
     Name: Conductor
@@ -371,6 +383,70 @@ MonoBehaviour:
     MessageText: But just standing by and looking on would suit you just fine as
       well, I suppose.[endTicketDialogue]
     Clip: {fileID: 8300000, guid: fc763a39bd2cae14587e4d8f03f12ca1, type: 3}
+  - ID: 62
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: -1
+    NextMessage: -1
+    MessageText: Thank you very much, but it really is not your job to clean up this
+      train.
+    Clip: {fileID: 8300000, guid: d939d688182b0c840b97d2edfc8a754e, type: 3}
+  - ID: 64
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: -1
+    NextMessage: 65
+    MessageText: Was this really necessary?
+    Clip: {fileID: 8300000, guid: c3d471f955c5b8f499c99722cc920ec6, type: 3}
+  - ID: 65
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 64
+    NextMessage: -1
+    MessageText: Haven't you broken enough things already?
+    Clip: {fileID: 8300000, guid: 3cadf848e1b183841824837c2bc33055, type: 3}
+  - ID: 66
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: -1
+    NextMessage: 68
+    MessageText: Is this an offer of peace of some kind?
+    Clip: {fileID: 8300000, guid: d3f8311d7addd104f89b433c357564d9, type: 3}
+  - ID: 68
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 66
+    NextMessage: 69
+    MessageText: Don't you worry.
+    Clip: {fileID: 8300000, guid: 94b9d2d5106869a4099b1c9493958dd0, type: 3}
+  - ID: 69
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 68
+    NextMessage: -1
+    MessageText: I'm not the one you have to appease.
+    Clip: {fileID: 8300000, guid: d6cf760eac1d81246a2d3c6b593c3151, type: 3}
+  - ID: 70
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: -1
+    NextMessage: 72
+    MessageText: Why are you showing me this?
+    Clip: {fileID: 8300000, guid: a9011bcff79a24549af002b00f718f22, type: 3}
+  - ID: 72
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 70
+    NextMessage: 73
+    MessageText: I do hope this is not a bad omen.
+    Clip: {fileID: 8300000, guid: 8e2c23c7888177b42b5e411c41372d46, type: 3}
+  - ID: 73
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: 72
+    NextMessage: -1
+    MessageText: Well, I am sure he deserved it, right?
+    Clip: {fileID: 8300000, guid: 7b0f97657e1e2a74ead34a42ae359951, type: 3}
   Choices:
   - ID: 8
     isAction: 0

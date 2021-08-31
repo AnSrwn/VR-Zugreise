@@ -12,6 +12,10 @@ TagManager:
   - BrokenWindow
   - Ticket
   - Toy
+  - Paper
+  - Handle
+  - Pigeon
+  - Raven
   layers:
   - Default
   - TransparentFX

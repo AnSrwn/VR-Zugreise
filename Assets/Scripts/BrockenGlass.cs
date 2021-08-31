@@ -23,9 +23,11 @@ public class BrockenGlass : MonoBehaviour
 
         if (sceneManager.honestAboutTicket)
         {
+            bird.tag = "Pigeon";
             bird.transform.GetChild(0).GetComponent<SkinnedMeshRenderer>().material = whiteBird;
         } else
         {
+            bird.tag = "Raven";
             bird.transform.GetChild(0).GetComponent<SkinnedMeshRenderer>().material = blackBird;
         }
     }
