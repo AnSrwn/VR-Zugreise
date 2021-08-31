@@ -5,12 +5,18 @@ public class ChoiceButton : MonoBehaviour
 {
     public Image fill;
     public float currentValue = 0;
-    public float maxValue;
+    public float maxValue = 100;
 
     public int number;
     public DialogueManager dialogueManager;
 
     void Start() {
+        fill.fillAmount = Normalize();
+    }
+
+    private void OnEnable() {
+        currentValue = 0;
+        maxValue = 100;
         fill.fillAmount = Normalize();
     }
 
