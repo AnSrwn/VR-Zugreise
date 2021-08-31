@@ -152,6 +152,7 @@ public class Child : MonoBehaviour
                     break;
                 case "positiveRocketAnswer":
                     VictoryJumpAnimation();
+                    spaceManager.LightRocket();
                     break;
                 case "negativeRocketAnswer":
                     AngryAnimation();
@@ -168,6 +169,7 @@ public class Child : MonoBehaviour
                     break;
                 case "positiveCowAnswer":
                     Talking1Animation();
+                    spaceManager.LightCow();
                     break;
                 case "negativeCowAnswer":
                     AngryAnimation();
@@ -184,6 +186,7 @@ public class Child : MonoBehaviour
                     break;
                 case "positiveAliensAnswer":
                     DancingAnimation();
+                    spaceManager.LightAliens();
                     break;
                 case "negativeAliensAnswer":
                     AngryAnimation();
@@ -200,6 +203,7 @@ public class Child : MonoBehaviour
                     break;
                 case "positiveAstronautAnswer":
                     Talking1Animation();
+                    spaceManager.LightAstronaut();
                     break;
                 case "negativeAstronautAnswer":
                     AngryAnimation();
