@@ -12,6 +12,7 @@ public class Child : MonoBehaviour
     private Animator animator;
 
     private bool introSpaceDialoguePlayed = false;
+    private bool toysPlayed = false;
     private bool rocketPlayed = false;
     private bool cowPlayed = false;
     private bool aliensPlayed = false;
@@ -125,9 +126,25 @@ public class Child : MonoBehaviour
                     DancingAnimation();
                     break;
                 case "endIntroSpace":
+                    if (!toysPlayed)
+                    {
+                        toysPlayed = true;
+                        IdleAnimation();
+
+                        if (sceneManager.toyMissing)
+                        {
+                            StartCoroutine(initiateConversationWithDelay(1.0f, "ToysGone"));
+                        } else{
+                            StartCoroutine(initiateConversationWithDelay(1.0f, "ToysPresent"));
+                        }
+                        
+                    }
+                    break;
+                case "endToys":
                     if (!rocketPlayed)
                     {
                         rocketPlayed = true;
+                    
                         IdleAnimation();
                         spaceManager.StartRocket();
                         StartCoroutine(initiateConversationWithDelay(7.0f, "Rocket"));

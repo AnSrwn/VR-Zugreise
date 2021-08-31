@@ -28,6 +28,12 @@ MonoBehaviour:
   - ID: 42
     Name: Astronaut
     FirstMessage: 43
+  - ID: 51
+    Name: ToysGone
+    FirstMessage: 52
+  - ID: 60
+    Name: ToysPresent
+    FirstMessage: 61
   Speakers:
   - ID: 0
     Name: Child
@@ -42,6 +48,12 @@ MonoBehaviour:
     Name: Child
     Icon: {fileID: 0}
   - ID: 41
+    Name: Child
+    Icon: {fileID: 0}
+  - ID: 50
+    Name: Child
+    Icon: {fileID: 0}
+  - ID: 59
     Name: Child
     Icon: {fileID: 0}
   Messages:
@@ -287,6 +299,84 @@ MonoBehaviour:
     NextMessage: -1
     MessageText: '[negativeAstronautAnswer]I... I know that...[endAstronautDialogue]'
     Clip: {fileID: 8300000, guid: 9ffc4e24e9e87ba478ed9d4f9d0b464d, type: 3}
+  - ID: 52
+    Speaker: 50
+    SpeakerName: Child
+    PreviousMessage: -1
+    NextMessage: 53
+    MessageText: '[isTalking1]I... I hope my toys show up again soon.'
+    Clip: {fileID: 8300000, guid: 71007314cd589d84cb59ae8d2fbbd48c, type: 3}
+  - ID: 53
+    Speaker: 50
+    SpeakerName: Child
+    PreviousMessage: 52
+    NextMessage: 54
+    MessageText: '[isAngry]I just put them down on at my seat, but when I came back
+      the were gone!'
+    Clip: {fileID: 8300000, guid: 443a3cf455d4b1240bdbe219332fe9c9, type: 3}
+  - ID: 54
+    Speaker: 50
+    SpeakerName: Child
+    PreviousMessage: 53
+    NextMessage: 55
+    MessageText: '[isTalking1]I''ve looked around for them everywhere!'
+    Clip: {fileID: 8300000, guid: 3bdeafb93ce7774418bfaaa0effa832a, type: 3}
+  - ID: 55
+    Speaker: 50
+    SpeakerName: Child
+    PreviousMessage: 54
+    NextMessage: 56
+    MessageText: Uhm, I know I'm a little old to still be playing with toys.
+    Clip: {fileID: 8300000, guid: 623e2be9802adb04eae88696ceef1910, type: 3}
+  - ID: 56
+    Speaker: 50
+    SpeakerName: Child
+    PreviousMessage: 55
+    NextMessage: 57
+    MessageText: '[isVictoryJump]But I just like them very much.'
+    Clip: {fileID: 8300000, guid: d7d7842d3ac53de4fa08aabf9a563a4d, type: 3}
+  - ID: 57
+    Speaker: 50
+    SpeakerName: Child
+    PreviousMessage: 56
+    NextMessage: 58
+    MessageText: '[isAngry]I hope no one took them away...'
+    Clip: {fileID: 8300000, guid: 25f951513c47e29418c1ed37a4d9b29b, type: 3}
+  - ID: 58
+    Speaker: 50
+    SpeakerName: Child
+    PreviousMessage: 57
+    NextMessage: -1
+    MessageText: I miss them already.[endToys]
+    Clip: {fileID: 8300000, guid: e7bee84b340b9fb4cb66467bf3114aae, type: 3}
+  - ID: 61
+    Speaker: 59
+    SpeakerName: Child
+    PreviousMessage: -1
+    NextMessage: 62
+    MessageText: '[isVictoryJump]Space is just the best!'
+    Clip: {fileID: 8300000, guid: 4af2ebd01648e7649929ca605a00dd2d, type: 3}
+  - ID: 62
+    Speaker: 59
+    SpeakerName: Child
+    PreviousMessage: 61
+    NextMessage: 63
+    MessageText: '[isTalking1]I even brought all of my space toys with me, you know!'
+    Clip: {fileID: 8300000, guid: 776542e280b50f240bcac704b8ea1e63, type: 3}
+  - ID: 63
+    Speaker: 59
+    SpeakerName: Child
+    PreviousMessage: 62
+    NextMessage: 64
+    MessageText: '[isDancing]I love them so much!'
+    Clip: {fileID: 8300000, guid: 922b79470731d2d489a7b5267233497a, type: 3}
+  - ID: 64
+    Speaker: 59
+    SpeakerName: Child
+    PreviousMessage: 63
+    NextMessage: -1
+    MessageText: I'm so glad I didn't lose them![endToys]
+    Clip: {fileID: 8300000, guid: 32ef6cac111d229418292dfcabfb94ac, type: 3}
   Choices:
   - ID: 6
     isAction: 0
