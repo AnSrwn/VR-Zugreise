@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using System;
 using TMPro;
 using System.Collections;
+using System.Linq;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     public string actionSpeaker;
     public static event Action messageActionAvailable;
     public QuantumTek.QuantumDialogue.QD_DialogueHandler qdHandler;
+    public TeleportManager teleportManager;
 
     public GameObject floatingCanvas;
     public TextMeshProUGUI messageText;
@@ -45,10 +47,22 @@ public class DialogueManager : MonoBehaviour
 
         qdHandler.SetConversation(conversation);
         SetText();
+
+        string[] excluded = { "NpcConversation01", "NpcConversation02", "ConductorChildConversation" };
+        if (!excluded.Contains(conversation))
+        {
+            teleportManager.Dialogue(sceneNumber, TeleportManager.Event.Start);
+        }
     }
 
     private void endConversation()
     {
+        // TODO: add final dialogue
+        string[] included = { "IntroConversation", "AskForTicket", "GiveTicket" };
+        if (included.Contains(activeConversation))
+        {
+            teleportManager.Dialogue(sceneNumber, TeleportManager.Event.End);
+        }
         activeConversation = "";
         activeActionNodeId = -1;
         // messageAction = null;
