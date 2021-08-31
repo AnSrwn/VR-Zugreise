@@ -10,6 +10,7 @@ public class Child : MonoBehaviour
     public AudioSource audioSource;
     public GameObject childPositionThirdScene;
     public GameObject conductor;
+    public EndingManager endingManager;
     private Animator animator;
 
 
@@ -262,6 +263,7 @@ public class Child : MonoBehaviour
                 case "endChildEnd":
                     if (!endConducterDialoguePlayed)
                     {
+                        endingManager.FadeOut();
                         endConducterDialoguePlayed = true;
                         conductor.GetComponent<Conductor>().PlayConductorEndDialgoue();
                         gameObject.SetActive(false);

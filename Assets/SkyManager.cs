@@ -47,6 +47,11 @@ public class SkyManager : MonoBehaviour
         StartCoroutine(FadeIn(duration));
     }
 
+    public void StartFadeOut(float duration)
+    {
+        StartCoroutine(FadeOut(duration));
+    }
+
     IEnumerator RotateLight(float duration, float endRotation)
     {
         float startRotation = dirLight.transform.eulerAngles.x;
@@ -76,6 +81,18 @@ public class SkyManager : MonoBehaviour
     {
         float t = 0;
         while (t < duration)
+        {
+            t += Time.deltaTime;
+            Double x = t / duration;
+            lightComp.intensity = (float)Math.Pow((float)x, 4f);
+            yield return null;
+        }
+    }
+
+    IEnumerator FadeOut(float duration)
+    {
+        float t = -duration;
+        while (t < 0)
         {
             t += Time.deltaTime;
             Double x = t / duration;

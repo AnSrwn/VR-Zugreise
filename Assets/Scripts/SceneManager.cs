@@ -13,6 +13,7 @@ public class SceneManager : MonoBehaviour
     public EnvironmentManager environmentManager;
     public AudioManager audioManager;
     public SkyManager skyManager;
+    public EndingManager endingManager;
 
     public GameObject interactableObjects;
 
@@ -142,12 +143,15 @@ public class SceneManager : MonoBehaviour
 
         if (badDecisions <= 2)
         {
+            endingManager.GoodEnding();
             return "good";
         } else if (goodDecisions <= 2)
         {
+            endingManager.BadEnding();
             return "bad";
         } else
         {
+            endingManager.NeutralEnding();
             return "neutral";
         }
     }
