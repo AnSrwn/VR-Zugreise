@@ -16,6 +16,7 @@ public class Conductor : MonoBehaviour
     private bool conductorChildConversationPlayed = false;
     private bool askedForTicket = false;
     private bool gaveTicket = false;
+    private bool showedPaper = false;
 
     private void Start()
     {
@@ -53,7 +54,12 @@ public class Conductor : MonoBehaviour
                 }
                 break;
 
-            case "Bird":
+            case "Paper":
+                if (sceneManager.sceneNumber == 1 && askedForTicket && !showedPaper)
+                {
+                    showedPaper = true;
+                    initiateConversation("ShowPaper");
+                }
                 break;
 
             case "Ticket":

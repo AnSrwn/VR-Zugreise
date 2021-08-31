@@ -19,6 +19,9 @@ MonoBehaviour:
   - ID: 54
     Name: GiveTicket
     FirstMessage: 55
+  - ID: 61
+    Name: ShowPaper
+    FirstMessage: 62
   Speakers:
   - ID: 0
     Name: Conductor
@@ -371,6 +374,13 @@ MonoBehaviour:
     MessageText: But just standing by and looking on would suit you just fine as
       well, I suppose.[endTicketDialogue]
     Clip: {fileID: 8300000, guid: fc763a39bd2cae14587e4d8f03f12ca1, type: 3}
+  - ID: 62
+    Speaker: 0
+    SpeakerName: Conductor
+    PreviousMessage: -1
+    NextMessage: -1
+    MessageText: Test
+    Clip: {fileID: 8300000, guid: d939d688182b0c840b97d2edfc8a754e, type: 3}
   Choices:
   - ID: 8
     isAction: 0
