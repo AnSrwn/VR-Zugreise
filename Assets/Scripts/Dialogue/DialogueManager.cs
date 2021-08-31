@@ -192,6 +192,7 @@ public class DialogueManager : MonoBehaviour
 
             if (text.Substring(text.Length - 1, 1) == "]") {
                 actionSpeaker = npcName;
+                
                 int fromIndex = text.IndexOf("[") + 1;
                 int toIndex = text.IndexOf("]");
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class SceneManager : MonoBehaviour
 {
@@ -19,12 +20,19 @@ public class SceneManager : MonoBehaviour
     public bool friendlyToAttendant = true;
     public bool honestAboutTicket = true;
     public bool toyMissing = false;
+    public bool spaceFriendly = true;
+    public bool rocketFriendly = true;
+    public bool cowFriendly = true;
+    public bool aliensFriendly = true;
+    public bool astronautFriendly = true;
+
+    public string ending = "good";
 
     private void Start()
     {
         startFirstScene();
-        // startSecondScene();
-        // StartCoroutine(StartThirdScene(1));
+        startSecondScene();
+        StartCoroutine(StartThirdScene(1));
     }
 
     private void Update()
@@ -50,6 +58,9 @@ public class SceneManager : MonoBehaviour
 
             case 2:
                 startThirdScene();
+                break;
+            case 3:
+                startFourthScene();
                 break;
         }
     }
@@ -85,6 +96,16 @@ public class SceneManager : MonoBehaviour
         sceneNumber = 2;
     }
 
+    private void startFourthScene()
+    {
+        ending = CalculateEnding();
+        characterManager.startFourthScene();
+        dialogueManager.sceneNumber = 3;
+        audioManager.PlaySet(AudioManager.MusicSet.Space);
+
+        sceneNumber = 3;
+    }
+
     public IEnumerator StartThirdScene(float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
@@ -94,5 +115,33 @@ public class SceneManager : MonoBehaviour
             yield return null;
         }
         sceneNumber = 2;
+    }
+
+    private string CalculateEnding()
+    {
+        bool[] decisions = new bool[8] {
+            friendlyToAttendant,
+            honestAboutTicket,
+            !toyMissing,
+            spaceFriendly,
+            rocketFriendly,
+            cowFriendly,
+            aliensFriendly,
+            astronautFriendly
+        };
+
+        int goodDecisions = decisions.Count(c => c);
+        int badDecisions = decisions.Count(c => !c);
+
+        if (badDecisions <= 2)
+        {
+            return "good";
+        } else if (goodDecisions <= 2)
+        {
+            return "bad";
+        } else
+        {
+            return "neutral";
+        }
     }
 }

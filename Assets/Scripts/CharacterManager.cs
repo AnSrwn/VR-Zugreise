@@ -48,4 +48,18 @@ public class CharacterManager : MonoBehaviour
         npcMan.SetActive(false);
         npcWoman.SetActive(false);
     }
+
+    public void startFourthScene()
+    {
+        dude.SetActive(false);
+        attendant.SetActive(false);
+        
+        conductor.SetActive(true);
+        conductor.transform.GetChild(0).gameObject.SetActive(false);
+        conductor.transform.GetChild(1).gameObject.SetActive(false);
+
+        child.SetActive(true);
+        npcMan.SetActive(false);
+        npcWoman.SetActive(false);
+    }
 }

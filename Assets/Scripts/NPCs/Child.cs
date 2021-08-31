@@ -17,6 +17,7 @@ public class Child : MonoBehaviour
     private bool cowPlayed = false;
     private bool aliensPlayed = false;
     private bool astronautPlayed = false;
+    private bool endDialoguePlayed = false;
 
     private void Start()
     {
@@ -48,14 +49,11 @@ public class Child : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Player":
-                GameObject player = other.gameObject;
                 if (sceneManager.sceneNumber == 2)
                 {
                     if (!introSpaceDialoguePlayed)
                     {
                         introSpaceDialoguePlayed = true;
-                        Vector3 delta = new Vector3(player.transform.position.x - transform.position.x, 0.0f, player.transform.position.z - transform.position.z);
-                        transform.rotation = Quaternion.LookRotation(delta);
                         initiateConversation("IntroSpace");
                     }
                 }
@@ -63,8 +61,30 @@ public class Child : MonoBehaviour
         }
     }
 
+    private void PlayEndDialgoue()
+    {   
+        if (sceneManager.ending == "good")
+        {
+            StartCoroutine(initiateConversationWithDelay(2.0f, "EndGoodChild"));
+        } else if (sceneManager.ending == "bad")
+        {
+            StartCoroutine(initiateConversationWithDelay(2.0f, "EndBadChild"));
+        } else{
+            StartCoroutine(initiateConversationWithDelay(2.0f, "EndNeutralChild"));
+        }
+            
+    }
+
+    private void LookIntoPlayersDirection()
+    {
+        Vector3 delta = new Vector3(Camera.main.transform.position.x - transform.position.x, 0.0f, Camera.main.transform.position.z - transform.position.z);
+        transform.rotation = Quaternion.LookRotation(delta);
+    }
+
     public void initiateConversation(string conversation)
     {
+        LookIntoPlayersDirection();
+
         List<Speaker> npcSpeakers = new List<Speaker>();
         npcSpeakers.Add(new Speaker("Child", gameObject, audioSource));
 
@@ -210,7 +230,14 @@ public class Child : MonoBehaviour
                     spaceManager.DestroyAstronaut();
                     break;
                 case "endAstronautDialogue":
-                    IdleAnimation();
+                    if (!endDialoguePlayed)
+                    {
+                        endDialoguePlayed = true;
+                        IdleAnimation();
+                        sceneManager.sceneNumber = 3;
+                        PlayEndDialgoue();
+                    }
+                    
                     break;
             }
         }
