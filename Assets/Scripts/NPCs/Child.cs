@@ -68,12 +68,12 @@ public class Child : MonoBehaviour
     {   
         if (sceneManager.ending == "good")
         {
-            StartCoroutine(initiateConversationWithDelay(2.0f, "EndGoodChild"));
+            StartCoroutine(initiateConversationWithDelay(5.0f, "EndGoodChild"));
         } else if (sceneManager.ending == "bad")
         {
-            StartCoroutine(initiateConversationWithDelay(2.0f, "EndBadChild"));
+            StartCoroutine(initiateConversationWithDelay(5.0f, "EndBadChild"));
         } else{
-            StartCoroutine(initiateConversationWithDelay(2.0f, "EndNeutralChild"));
+            StartCoroutine(initiateConversationWithDelay(5.0f, "EndNeutralChild"));
         }
             
     }
@@ -262,6 +262,7 @@ public class Child : MonoBehaviour
                     {
                         endConducterDialoguePlayed = true;
                         conductor.GetComponent<Conductor>().PlayConductorEndDialgoue();
+                        gameObject.SetActive(false);
                     }
                     break;
             }
