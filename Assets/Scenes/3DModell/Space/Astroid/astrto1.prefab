@@ -154,8 +154,8 @@ MonoBehaviour:
   randomizeYRotation: 1
   randomizeZRotation: 1
   randomizeHeight: 1
-  minHeight: 0
-  maxHeight: 5
+  minHeight: -10
+  maxHeight: 50
   randomizeScale: 1
   minScale: 90
   maxScale: 150
