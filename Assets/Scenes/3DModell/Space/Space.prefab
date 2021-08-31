@@ -51,8 +51,10 @@ MonoBehaviour:
   - {fileID: 7790681032265907364, guid: ae23e1cb2b703f947a13a2cc5c18d900, type: 3}
   runtimerotation: 0
   rotate: 1
+  respawn: 0
   parent: {fileID: 1424022438554182143}
-  duration: 100
+  duration: 90
+  rotationParent: {fileID: 0}
 --- !u!1 &120421328458860237
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,8 +226,10 @@ MonoBehaviour:
   - {fileID: 1176676143523620404, guid: a695eb05eb1f2c744878d3d5c4fbfcc4, type: 3}
   runtimerotation: 0
   rotate: 0
+  respawn: 0
   parent: {fileID: 1464618110770528550}
   duration: 20
+  rotationParent: {fileID: 0}
 --- !u!1 &1464618110842306642
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,6 +388,10 @@ MonoBehaviour:
   rocket: {fileID: 1464618110770528548}
   aliens: {fileID: 27207184981784015}
   astronaut: {fileID: 8074849616656424437}
+  glowingCow: {fileID: 0}
+  glowingRocket: {fileID: 0}
+  glowingPlanet: {fileID: 0}
+  glowingAstronaut: {fileID: 0}
 --- !u!1 &2906968765724588634
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,8 +443,10 @@ MonoBehaviour:
   - {fileID: 7790681032265907364, guid: 0de59e96ded7437449f83aa68097b295, type: 3}
   runtimerotation: 0
   rotate: 0
+  respawn: 0
   parent: {fileID: 2906968765724588629}
   duration: 100
+  rotationParent: {fileID: 0}
 --- !u!1 &2906968765992061134
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,8 +591,10 @@ MonoBehaviour:
   - {fileID: 9204748543332915415, guid: 7d418d25cf41bdd4cb75bf7c357dfca9, type: 3}
   runtimerotation: 0.1
   rotate: 1
+  respawn: 0
   parent: {fileID: 2906968766294008613}
-  duration: 120
+  duration: 30
+  rotationParent: {fileID: 0}
 --- !u!1 &3403848431068074137
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,8 +736,10 @@ MonoBehaviour:
   - {fileID: 4698353049123258576, guid: ecbaabfd7743d594c8dc6b5884c26d9b, type: 3}
   runtimerotation: 0.1
   rotate: 1
+  respawn: 0
   parent: {fileID: 4612117780730962548}
-  duration: 120
+  duration: 30
+  rotationParent: {fileID: 0}
 --- !u!1 &9026646277939752999
 GameObject:
   m_ObjectHideFlags: 0
