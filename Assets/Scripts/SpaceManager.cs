@@ -10,6 +10,7 @@ public class SpaceManager : MonoBehaviour
     public GameObject astronaut;
     public Material glowingCow;
     public Material glowingRocket;
+    public Material glowingPlanet;
 
     private void Start() {
         cow.SetActive(false);
@@ -60,6 +61,13 @@ public class SpaceManager : MonoBehaviour
     public void DestroyAliens()
     {
         aliens.SetActive(false);
+    }
+
+    public void LightAliens()
+    {
+        Material[] mats = aliens.GetComponentInChildren<MeshRenderer>().materials;
+        mats[0] = glowingPlanet;
+        aliens.GetComponentInChildren<MeshRenderer>().materials = mats;
     }
 
     public void StartAstronaut()
