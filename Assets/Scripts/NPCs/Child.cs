@@ -6,6 +6,7 @@ public class Child : MonoBehaviour
 {
     public DialogueManager dialogueManager;
     public SceneManager sceneManager;
+    public SpaceManager spaceManager;
     public AudioSource audioSource;
     public GameObject childPositionThirdScene;
     private Animator animator;
@@ -60,9 +61,19 @@ public class Child : MonoBehaviour
         dialogueManager.initiateConversation(conversation, npcSpeakers);
     }
 
+    private IEnumerator initiateConversationWithDelay(float delayTime, string conversation)
+    {
+        yield return new WaitForSeconds(delayTime);
+        initiateConversation(conversation);
+    }
+
     private void onMessageAction()
     {
-        if ((dialogueManager.activeConversation == "IntroSpace")
+        if ((dialogueManager.activeConversation == "IntroSpace"
+            || dialogueManager.activeConversation == "Rocket"
+            || dialogueManager.activeConversation == "Cow"
+            ||  dialogueManager.activeConversation == "Aliens"
+            || dialogueManager.activeConversation == "Astronaut")
            && dialogueManager.messageAction != null
            && dialogueManager.actionSpeaker == "Child")
         {
@@ -74,21 +85,11 @@ public class Child : MonoBehaviour
                     break;
                 case ChildAnimationCondition.IS_TALKING1:
                     print("Child " + ChildAnimationCondition.IS_TALKING1);
-                    animator.SetBool(ChildAnimationCondition.IS_IDLE, false);
-                    animator.SetBool(ChildAnimationCondition.IS_TALKING1, true);
-                    animator.SetBool(ChildAnimationCondition.IS_ANGRY, false);
-                    animator.SetBool(ChildAnimationCondition.IS_SITTING_HAPPY, false);
-                    animator.SetBool(ChildAnimationCondition.IS_VICTORY_JUMP, false);
-                    animator.SetBool(ChildAnimationCondition.IS_POINTING_FORWARD, false);
+                    Talking1Animation();
                     break;
                 case ChildAnimationCondition.IS_ANGRY:
                     print("Child " + ChildAnimationCondition.IS_ANGRY);
-                    animator.SetBool(ChildAnimationCondition.IS_IDLE, false);
-                    animator.SetBool(ChildAnimationCondition.IS_TALKING1, false);
-                    animator.SetBool(ChildAnimationCondition.IS_ANGRY, true);
-                    animator.SetBool(ChildAnimationCondition.IS_SITTING_HAPPY, false);
-                    animator.SetBool(ChildAnimationCondition.IS_VICTORY_JUMP, false);
-                    animator.SetBool(ChildAnimationCondition.IS_POINTING_FORWARD, false);
+                    AngryAnimation();
                     break;
                 case ChildAnimationCondition.IS_SITTING_HAPPY:
                     print("Child " + ChildAnimationCondition.IS_SITTING_HAPPY);
@@ -96,12 +97,7 @@ public class Child : MonoBehaviour
                     break;
                 case ChildAnimationCondition.IS_VICTORY_JUMP:
                     print("Child " + ChildAnimationCondition.IS_VICTORY_JUMP);
-                    animator.SetBool(ChildAnimationCondition.IS_IDLE, false);
-                    animator.SetBool(ChildAnimationCondition.IS_TALKING1, false);
-                    animator.SetBool(ChildAnimationCondition.IS_ANGRY, false);
-                    animator.SetBool(ChildAnimationCondition.IS_SITTING_HAPPY, false);
-                    animator.SetBool(ChildAnimationCondition.IS_VICTORY_JUMP, true);
-                    animator.SetBool(ChildAnimationCondition.IS_POINTING_FORWARD, false);
+                    VictoryJumpAnimation();
                     break;
                 case ChildAnimationCondition.IS_POINTING_FORWARD:
                     print("Child " + ChildAnimationCondition.IS_POINTING_FORWARD);
@@ -111,9 +107,109 @@ public class Child : MonoBehaviour
                     animator.SetBool(ChildAnimationCondition.IS_SITTING_HAPPY, false);
                     animator.SetBool(ChildAnimationCondition.IS_VICTORY_JUMP, false);
                     animator.SetBool(ChildAnimationCondition.IS_POINTING_FORWARD, true);
+                    animator.SetBool(ChildAnimationCondition.IS_DANCING, false);
+                    break;
+                case ChildAnimationCondition.IS_DANCING:
+                    print("Child " + ChildAnimationCondition.IS_DANCING);
+                    DancingAnimation();
+                    break;
+                case "endIntroSpace":
+                    IdleAnimation();
+                    spaceManager.StartRocket();
+                    StartCoroutine(initiateConversationWithDelay(5.0f, "Rocket"));
+                    break;
+                case "positiveRocketAnswer":
+                    VictoryJumpAnimation();
+                    break;
+                case "negativeRocketAnswer":
+                    AngryAnimation();
+                    spaceManager.DestroyRocket();
+                    break;
+                case "endRocketDialogue":
+                    IdleAnimation();
+                    spaceManager.StartCow();
+                    StartCoroutine(initiateConversationWithDelay(5.0f, "Cow"));
+                    break;
+                case "positiveCowAnswer":
+                    Talking1Animation();
+                    break;
+                case "negativeCowAnswer":
+                    AngryAnimation();
+                    spaceManager.DestroyCow();
+                    break;
+                case "endCowDialogue":
+                    IdleAnimation();
+                    spaceManager.StartAliens();
+                    StartCoroutine(initiateConversationWithDelay(5.0f, "Aliens"));
+                    break;
+                case "positiveAliensAnswer":
+                    DancingAnimation();
+                    break;
+                case "negativeAliensAnswer":
+                    AngryAnimation();
+                    spaceManager.DestroyAliens();
+                    break;
+                case "endAliensDialogue":
+                    IdleAnimation();
+                    spaceManager.StartAstronaut();
+                    StartCoroutine(initiateConversationWithDelay(5.0f, "Astronaut"));
+                    break;
+                case "positiveAstronautAnswer":
+                    Talking1Animation();
+                    break;
+                case "negativeAstronautAnswer":
+                    AngryAnimation();
+                    spaceManager.DestroyAstronaut();
+                    break;
+                case "endAstronautDialogue":
+                    IdleAnimation();
                     break;
             }
         }
+    }
+
+    private void DancingAnimation()
+    {
+        animator.SetBool(ChildAnimationCondition.IS_IDLE, false);
+        animator.SetBool(ChildAnimationCondition.IS_TALKING1, false);
+        animator.SetBool(ChildAnimationCondition.IS_ANGRY, false);
+        animator.SetBool(ChildAnimationCondition.IS_SITTING_HAPPY, false);
+        animator.SetBool(ChildAnimationCondition.IS_VICTORY_JUMP, false);
+        animator.SetBool(ChildAnimationCondition.IS_POINTING_FORWARD, false);
+        animator.SetBool(ChildAnimationCondition.IS_DANCING, true);
+    }
+
+    private void Talking1Animation()
+    {
+        animator.SetBool(ChildAnimationCondition.IS_IDLE, false);
+        animator.SetBool(ChildAnimationCondition.IS_TALKING1, true);
+        animator.SetBool(ChildAnimationCondition.IS_ANGRY, false);
+        animator.SetBool(ChildAnimationCondition.IS_SITTING_HAPPY, false);
+        animator.SetBool(ChildAnimationCondition.IS_VICTORY_JUMP, false);
+        animator.SetBool(ChildAnimationCondition.IS_POINTING_FORWARD, false);
+        animator.SetBool(ChildAnimationCondition.IS_DANCING, false);
+    }
+
+    private void AngryAnimation()
+    {
+        animator.SetBool(ChildAnimationCondition.IS_IDLE, false);
+        animator.SetBool(ChildAnimationCondition.IS_TALKING1, false);
+        animator.SetBool(ChildAnimationCondition.IS_ANGRY, true);
+        animator.SetBool(ChildAnimationCondition.IS_SITTING_HAPPY, false);
+        animator.SetBool(ChildAnimationCondition.IS_VICTORY_JUMP, false);
+        animator.SetBool(ChildAnimationCondition.IS_POINTING_FORWARD, false);
+        animator.SetBool(ChildAnimationCondition.IS_DANCING, false);
+    }
+
+    private void VictoryJumpAnimation()
+    {
+        animator.SetBool(ChildAnimationCondition.IS_IDLE, false);
+        animator.SetBool(ChildAnimationCondition.IS_TALKING1, false);
+        animator.SetBool(ChildAnimationCondition.IS_ANGRY, false);
+        animator.SetBool(ChildAnimationCondition.IS_SITTING_HAPPY, false);
+        animator.SetBool(ChildAnimationCondition.IS_VICTORY_JUMP, true);
+        animator.SetBool(ChildAnimationCondition.IS_POINTING_FORWARD, false);
+        animator.SetBool(ChildAnimationCondition.IS_DANCING, false);
     }
 
     private void SittingHappyAnimation()
@@ -124,6 +220,7 @@ public class Child : MonoBehaviour
         animator.SetBool(ChildAnimationCondition.IS_SITTING_HAPPY, true);
         animator.SetBool(ChildAnimationCondition.IS_VICTORY_JUMP, false);
         animator.SetBool(ChildAnimationCondition.IS_POINTING_FORWARD, false);
+        animator.SetBool(ChildAnimationCondition.IS_DANCING, false);
     }
 
     private void IdleAnimation()
@@ -134,6 +231,7 @@ public class Child : MonoBehaviour
         animator.SetBool(ChildAnimationCondition.IS_SITTING_HAPPY, false);
         animator.SetBool(ChildAnimationCondition.IS_VICTORY_JUMP, false);
         animator.SetBool(ChildAnimationCondition.IS_POINTING_FORWARD, false);
+        animator.SetBool(ChildAnimationCondition.IS_DANCING, false);
     }
 }
 
@@ -145,5 +243,6 @@ public static class ChildAnimationCondition
         IS_ANGRY = "isAngry",
         IS_SITTING_HAPPY = "isSittingHappy",
         IS_VICTORY_JUMP = "isVictoryJump",
-        IS_POINTING_FORWARD = "isPointingForward";
+        IS_POINTING_FORWARD = "isPointingForward",
+        IS_DANCING = "isDancing";
 }

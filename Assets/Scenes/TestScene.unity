@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.004200428, g: 0.0047738533, b: 0.0035192675, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3870,6 +3870,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 138948bffb5fe0e42bf8b00c1cd67b81, type: 3}
+--- !u!114 &175861868 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4988866418437567429, guid: 138948bffb5fe0e42bf8b00c1cd67b81,
+    type: 3}
+  m_PrefabInstance: {fileID: 175861867}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1904765098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fab71dd347ed32459fc5966ab5fed16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &177109036
 GameObject:
   m_ObjectHideFlags: 0
@@ -17659,6 +17671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 873851350}
   sceneManager: {fileID: 1514499557}
+  spaceManager: {fileID: 175861868}
   audioSource: {fileID: 851923307074322315}
   childPositionThirdScene: {fileID: 1569583763}
 --- !u!1 &826349455

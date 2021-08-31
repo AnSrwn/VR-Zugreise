@@ -16,8 +16,32 @@ MonoBehaviour:
   - ID: 1
     Name: IntroSpace
     FirstMessage: 2
+  - ID: 12
+    Name: Rocket
+    FirstMessage: 14
+  - ID: 21
+    Name: Cow
+    FirstMessage: 22
+  - ID: 30
+    Name: Aliens
+    FirstMessage: 31
+  - ID: 42
+    Name: Astronaut
+    FirstMessage: 43
   Speakers:
   - ID: 0
+    Name: Child
+    Icon: {fileID: 0}
+  - ID: 13
+    Name: Child
+    Icon: {fileID: 0}
+  - ID: 20
+    Name: Child
+    Icon: {fileID: 0}
+  - ID: 29
+    Name: Child
+    Icon: {fileID: 0}
+  - ID: 41
     Name: Child
     Icon: {fileID: 0}
   Messages:
@@ -62,7 +86,7 @@ MonoBehaviour:
     SpeakerName: Child
     PreviousMessage: 7
     NextMessage: -1
-    MessageText: '[isIdle]That''s what a rocket is for, right.'
+    MessageText: '[isIdle]That''s what a rocket is for, right.[endIntroSpace]'
     Clip: {fileID: 8300000, guid: f78e7d0e800c44a4a9fd7b724522c727, type: 3}
   - ID: 9
     Speaker: 0
@@ -83,8 +107,186 @@ MonoBehaviour:
     SpeakerName: Child
     PreviousMessage: 10
     NextMessage: -1
-    MessageText: '[isIdle]Nevermind...'
+    MessageText: '[isIdle]Nevermind...[endIntroSpace]'
     Clip: {fileID: 8300000, guid: 13ba2c90b1ad9f34e8c049d0bbe55aef, type: 3}
+  - ID: 14
+    Speaker: 13
+    SpeakerName: Child
+    PreviousMessage: -1
+    NextMessage: 15
+    MessageText: '[isPointingForward]Wow, looks like they have a rocket too!'
+    Clip: {fileID: 8300000, guid: ea4a81e459979b9468f28c9ed4122bfe, type: 3}
+  - ID: 15
+    Speaker: 13
+    SpeakerName: Child
+    PreviousMessage: 14
+    NextMessage: 16
+    MessageText: '[isIdle]Do you think they also build it themselves?'
+    Clip: {fileID: 8300000, guid: af3a342fd072f764fbd98b28e3b91f0d, type: 3}
+  - ID: 17
+    Speaker: 13
+    SpeakerName: Child
+    PreviousMessage: 16
+    NextMessage: -1
+    MessageText: '[negativeRocketAnswer]I mean, I guess you are right.[endRocketDialogue]'
+    Clip: {fileID: 8300000, guid: 83f9d85e795805342a68c7fbe44ee442, type: 3}
+  - ID: 18
+    Speaker: 13
+    SpeakerName: Child
+    PreviousMessage: -1
+    NextMessage: 19
+    MessageText: '[positiveRocketAnswer]It looks so awesome!'
+    Clip: {fileID: 8300000, guid: 3943eea6244fbab469684373f4ea835a, type: 3}
+  - ID: 19
+    Speaker: 13
+    SpeakerName: Child
+    PreviousMessage: 18
+    NextMessage: -1
+    MessageText: I wonder if they would let me fly with it too.[endRocketDialogue]
+    Clip: {fileID: 8300000, guid: 0b093654996473d4cba3025927395f0c, type: 3}
+  - ID: 22
+    Speaker: 20
+    SpeakerName: Child
+    PreviousMessage: -1
+    NextMessage: 23
+    MessageText: '[isVictoryJump]Look look! '
+    Clip: {fileID: 8300000, guid: 39424c591fd68db4db65e841a1dca80e, type: 3}
+  - ID: 23
+    Speaker: 20
+    SpeakerName: Child
+    PreviousMessage: 22
+    NextMessage: 24
+    MessageText: '[isIdle]There''s a cow out there!'
+    Clip: {fileID: 8300000, guid: 7e93384af43d4fb4c8098c0a1975c9b9, type: 3}
+  - ID: 25
+    Speaker: 20
+    SpeakerName: Child
+    PreviousMessage: -1
+    NextMessage: 26
+    MessageText: '[negativeCowAnswer]Yeah, you''re right.'
+    Clip: {fileID: 8300000, guid: 5dd156f92e1b13e429c94eb50a88e510, type: 3}
+  - ID: 26
+    Speaker: 20
+    SpeakerName: Child
+    PreviousMessage: 25
+    NextMessage: -1
+    MessageText: There's no way a cow would be in space.[endCowDialogue]
+    Clip: {fileID: 8300000, guid: 41883415558790f429476ffd7ed8cf12, type: 3}
+  - ID: 27
+    Speaker: 20
+    SpeakerName: Child
+    PreviousMessage: 24
+    NextMessage: 28
+    MessageText: '[positiveCowAnswer]I bet it''s some kind of cow scientist!'
+    Clip: {fileID: 8300000, guid: 0843a53cb8742404e841751b82c4cb7c, type: 3}
+  - ID: 28
+    Speaker: 20
+    SpeakerName: Child
+    PreviousMessage: 27
+    NextMessage: -1
+    MessageText: They are probably trying to find out if there are more space cows
+      out there.[endCowDialogue]
+    Clip: {fileID: 8300000, guid: 00a47b5c4e8e6d54ba8cbfe78f8f458d, type: 3}
+  - ID: 31
+    Speaker: 29
+    SpeakerName: Child
+    PreviousMessage: -1
+    NextMessage: 32
+    MessageText: '[isPointingForward]Now there''s even more aliens!'
+    Clip: {fileID: 8300000, guid: b85fa9d1eaf9c6f4a8a2e08fc6c4cb3f, type: 3}
+  - ID: 32
+    Speaker: 29
+    SpeakerName: Child
+    PreviousMessage: 31
+    NextMessage: 33
+    MessageText: Do you think they are waiting for the others to join them?
+    Clip: {fileID: 8300000, guid: 9d502daccc672e543b0560ad1a5f4984, type: 3}
+  - ID: 33
+    Speaker: 29
+    SpeakerName: Child
+    PreviousMessage: 32
+    NextMessage: 34
+    MessageText: '[isIdle]They look like they have a lot of fun!'
+    Clip: {fileID: 8300000, guid: c4330225fcb48dd47ac03bb5db5b5956, type: 3}
+  - ID: 35
+    Speaker: 29
+    SpeakerName: Child
+    PreviousMessage: 34
+    NextMessage: 36
+    MessageText: '[positiveAliensAnswer]That would be so awesome!'
+    Clip: {fileID: 8300000, guid: 5f3f38a922293564ca9d6c47d9765c04, type: 3}
+  - ID: 36
+    Speaker: 29
+    SpeakerName: Child
+    PreviousMessage: 35
+    NextMessage: -1
+    MessageText: I wonder what they would think of my dancing?[endAliensDialogue]
+    Clip: {fileID: 8300000, guid: bcf9bc011801cdb458adfdbd929a83eb, type: 3}
+  - ID: 37
+    Speaker: 29
+    SpeakerName: Child
+    PreviousMessage: -1
+    NextMessage: 38
+    MessageText: '[negativeAliensAnswer]N... no...'
+    Clip: {fileID: 8300000, guid: d3f56da71b6a4d444961ccda2bb8d502, type: 3}
+  - ID: 38
+    Speaker: 29
+    SpeakerName: Child
+    PreviousMessage: 37
+    NextMessage: 39
+    MessageText: They're just dancing.
+    Clip: {fileID: 8300000, guid: 41d0116e417834145a25d249991c3bab, type: 3}
+  - ID: 39
+    Speaker: 29
+    SpeakerName: Child
+    PreviousMessage: 38
+    NextMessage: -1
+    MessageText: 'It''s... it''s just for fun...[endAliensDialogue]
+
+'
+    Clip: {fileID: 8300000, guid: 56a671f396897184aa64a57476af2d95, type: 3}
+  - ID: 43
+    Speaker: 41
+    SpeakerName: Child
+    PreviousMessage: -1
+    NextMessage: 44
+    MessageText: '[isTalking1]Hey, there''s my astronaut!'
+    Clip: {fileID: 8300000, guid: 7b781dba46911864d9f4fd8a8d6fa28a, type: 3}
+  - ID: 44
+    Speaker: 41
+    SpeakerName: Child
+    PreviousMessage: 43
+    NextMessage: 45
+    MessageText: They grow up so fast!
+    Clip: {fileID: 8300000, guid: 656cb2267ec4ca84da4caa703bf3594b, type: 3}
+  - ID: 45
+    Speaker: 41
+    SpeakerName: Child
+    PreviousMessage: 44
+    NextMessage: 46
+    MessageText: '[isIdle]Now he can even go flying outside without my help.'
+    Clip: {fileID: 8300000, guid: db23e483b4aa1fb468af9c5696d43b19, type: 3}
+  - ID: 47
+    Speaker: 41
+    SpeakerName: Child
+    PreviousMessage: -1
+    NextMessage: 48
+    MessageText: '[positiveAstronautAnswer]You''re right!'
+    Clip: {fileID: 8300000, guid: c8c2e01ade1071741a9eb104f7addb89, type: 3}
+  - ID: 48
+    Speaker: 41
+    SpeakerName: Child
+    PreviousMessage: 47
+    NextMessage: -1
+    MessageText: I guess I'm a pretty good teacher![endAstronautDialogue]
+    Clip: {fileID: 8300000, guid: 3834b75688ff054458d7477569b3248c, type: 3}
+  - ID: 49
+    Speaker: 41
+    SpeakerName: Child
+    PreviousMessage: 46
+    NextMessage: -1
+    MessageText: '[negativeAstronautAnswer]I... I know that...[endAstronautDialogue]'
+    Clip: {fileID: 8300000, guid: 9ffc4e24e9e87ba478ed9d4f9d0b464d, type: 3}
   Choices:
   - ID: 6
     isAction: 0
@@ -92,3 +294,27 @@ MonoBehaviour:
     - Where are we?
     - What the hell are you talking about?
     NextMessages: 0700000009000000
+  - ID: 16
+    isAction: 0
+    Choices:
+    - Yeah, for sure!
+    - That thing would never be able to fly.
+    NextMessages: 1200000011000000
+  - ID: 24
+    isAction: 0
+    Choices:
+    - Stop being silly!
+    - Yeah you're right! I can see it too!
+    NextMessages: 190000001b000000
+  - ID: 34
+    isAction: 0
+    Choices:
+    - I'm pretty sure they are having a stroke.
+    - Perhaps we can go and party with them?
+    NextMessages: 2500000023000000
+  - ID: 46
+    isAction: 0
+    Choices:
+    - But only because you taught him.
+    - That's just a toy.
+    NextMessages: 2f00000031000000
