@@ -3580,7 +3580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dirLight: {fileID: 51995828}
-  fadeIn: 0
+  fadeIn: 1
 --- !u!1 &171732617
 GameObject:
   m_ObjectHideFlags: 0
