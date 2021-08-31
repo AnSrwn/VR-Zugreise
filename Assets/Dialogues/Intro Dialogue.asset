@@ -286,7 +286,7 @@ MonoBehaviour:
     SpeakerName: NpcWoman
     PreviousMessage: 40
     NextMessage: -1
-    MessageText: "[isAngry]Stop it. That\u2019s not funny![isTalking]"
+    MessageText: "[isAngry]Stop it. That\u2019s not funny![NpcConversation01Ended]"
     Clip: {fileID: 8300000, guid: e9cfbe9393e507c42a0e29267128fe48, type: 3}
   - ID: 43
     Speaker: 33

@@ -11,6 +11,7 @@ public class NpcMan : MonoBehaviour
     private Animator animator;
     private bool firstDialoguePlayed = false;
     private bool secondDialoguePlayed = false;
+    private bool firstDialogueEnded = false;
 
     private void Start()
     {
@@ -29,12 +30,12 @@ public class NpcMan : MonoBehaviour
             case "Player":
                 if (!firstDialoguePlayed)
                 {
-                    initiateConversation("NpcConversation01");
                     firstDialoguePlayed = true;
-                } else if (!secondDialoguePlayed)
+                    initiateConversation("NpcConversation01");
+                } else if (firstDialogueEnded && !secondDialoguePlayed)
                 {
-                    initiateConversation("NpcConversation02");
                     secondDialoguePlayed = true;
+                    initiateConversation("NpcConversation02");
                 }
                 break;
         }
@@ -88,6 +89,13 @@ public class NpcMan : MonoBehaviour
                     animator.SetBool(NpcManAnimationCondition.IS_TALKING, false);
                     animator.SetBool(NpcManAnimationCondition.IS_ANGRY, false);
                     animator.SetBool(NpcManAnimationCondition.IS_DISAPPROVAL, true);
+                    break;
+                case "NpcConversation01Ended":
+                    firstDialogueEnded = true;
+                    animator.SetBool(NpcManAnimationCondition.IS_IDLE, false);
+                    animator.SetBool(NpcManAnimationCondition.IS_TALKING, true);
+                    animator.SetBool(NpcManAnimationCondition.IS_ANGRY, false);
+                    animator.SetBool(NpcManAnimationCondition.IS_DISAPPROVAL, false);
                     break;
             }
         }
