@@ -12,7 +12,7 @@ public class AudioManager : MonoBehaviour
 
 	public Sound[] sounds;
 
-	public enum MusicSet {Woods, Bathroom, Conductor, Ocean, Space}
+	public enum MusicSet {Woods, Bathroom, Conductor, Ocean, Space, Nothing}
 
 	void Awake()
 	{
@@ -90,6 +90,15 @@ public class AudioManager : MonoBehaviour
 				Sound space = getSoundByName("Space");
 				space.source.Play();
 				StartCoroutine(FadeMixerGroup.StartFade(mixer, space.name + "Volume", 4f, 1f));
+				break;
+			case MusicSet.Nothing:
+				Sound[] allSounds = new Sound[2];
+				allSounds[0] = getSoundByName("Train");
+				allSounds[1] = getSoundByName("Space");
+				foreach (var item in allSounds)
+				{
+					StartCoroutine(FadeMixerGroup.StartFade(mixer, item.name + "Volume", 10f, 0f));
+				}
 				break;
 			default:
 				Debug.LogWarning(set + " is not a valid Music set.");
