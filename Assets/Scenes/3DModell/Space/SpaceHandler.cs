@@ -10,9 +10,11 @@ public class SpaceHandler : MonoBehaviour
     public float runtimerotation;
     float rotationvalue = 0;
     public bool rotate;
+    public bool respawn = false;
     int currentInstances = 0;
     public Transform parent;
     public float duration;
+    public GameObject rotationParent;
 
     void Start()
     {
@@ -44,6 +46,13 @@ public class SpaceHandler : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-        transform.position = targetPosition;
+
+        if (respawn)
+        {
+            CurrentObject.transform.parent = rotationParent.transform;
+            CurrentObject.transform.localScale = new Vector3(-100, 100, 100);
+            CurrentObject.transform.localRotation = Quaternion.Euler(180, 90, 0);
+        }
+
     }
 }
