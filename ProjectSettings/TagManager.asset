@@ -16,6 +16,7 @@ TagManager:
   - Handle
   - Pigeon
   - Raven
+  - Radio
   layers:
   - Default
   - TransparentFX

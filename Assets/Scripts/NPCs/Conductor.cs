@@ -12,6 +12,7 @@ public class Conductor : MonoBehaviour
     public AudioSource childAudioSource;
     public GameObject window;
     public GameObject interactableObjects;
+    public AudioSource radio;
     private Animator animator;
     private bool conductorChildConversationPlayed = false;
     private bool askedForTicket = false;
@@ -19,6 +20,7 @@ public class Conductor : MonoBehaviour
     private bool showedPaper = false;
     private bool showedHandle = false;
     private bool showedBird = false;
+    private bool showedRadio = false;
 
     private void Start()
     {
@@ -93,6 +95,14 @@ public class Conductor : MonoBehaviour
                 }
                 break;
 
+            case "Radio":
+                if (sceneManager.sceneNumber == 1 && askedForTicket && !showedRadio)
+                {
+                    showedRadio = true;
+                    initiateConversation("ShowRadio");
+                }
+                break;
+
             case "Ticket":
                 if (sceneManager.sceneNumber == 1 && askedForTicket && !gaveTicket)
                 {
@@ -134,7 +144,8 @@ public class Conductor : MonoBehaviour
     private void onMessageAction()
     {
         if ((dialogueManager.activeConversation == "AskForTicket"
-            || dialogueManager.activeConversation == "GiveTicket")
+            || dialogueManager.activeConversation == "GiveTicket"
+            || dialogueManager.activeConversation == "ShowRadio")
            && dialogueManager.messageAction != null
            && dialogueManager.actionSpeaker == "Conductor")
         {
@@ -203,6 +214,9 @@ public class Conductor : MonoBehaviour
                     print("endTicketDialogue");
                     playIdleAnimation();
                     audioManager.PlaySet(AudioManager.MusicSet.Ocean);
+                    break;
+                case "turnOffRadio":
+                    radio.enabled = false;
                     break;
             }
         }
