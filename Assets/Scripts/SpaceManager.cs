@@ -11,6 +11,7 @@ public class SpaceManager : MonoBehaviour
     public Material glowingCow;
     public Material glowingRocket;
     public Material glowingPlanet;
+    public Material glowingAstronaut;
 
     private void Start() {
         cow.SetActive(false);
@@ -78,5 +79,12 @@ public class SpaceManager : MonoBehaviour
     public void DestroyAstronaut()
     {
         astronaut.SetActive(false);
+    }
+
+    public void LightAstronaut()
+    {
+        Material[] mats = astronaut.GetComponentInChildren<SkinnedMeshRenderer>().materials;
+        mats[1] = glowingAstronaut;
+        astronaut.GetComponentInChildren<SkinnedMeshRenderer>().materials = mats;
     }
 }

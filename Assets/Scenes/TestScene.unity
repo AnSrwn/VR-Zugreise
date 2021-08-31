@@ -3725,6 +3725,11 @@ PrefabInstance:
       propertyPath: glowingRocket
       value: 
       objectReference: {fileID: 2100000, guid: 2eac5fd8f279f154897f5032fe867000, type: 2}
+    - target: {fileID: 4988866418437567429, guid: 138948bffb5fe0e42bf8b00c1cd67b81,
+        type: 3}
+      propertyPath: glowingAstronaut
+      value: 
+      objectReference: {fileID: 2100000, guid: ddc5a0986e25df04fa4fea77c3333693, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 138948bffb5fe0e42bf8b00c1cd67b81, type: 3}
 --- !u!114 &175861868 stripped
